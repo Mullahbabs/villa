@@ -1,0 +1,2530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Villa Devonté | Luxury Stay, Restaurant, Lounge & Hot Tub</title>
+<meta name="description" content="Villa Devonté is a premium hospitality destination offering luxury rooms, an elegant restaurant, a warm lounge and a private hot tub experience. Reserve, order and book instantly on WhatsApp.">
+<meta name="theme-color" content="#492A15">
+<link rel="canonical" href="https://villadevonte.com/">
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Villa Devonté | Stay. Dine. Unwind. Experience.">
+<meta property="og:description" content="Luxury rooms, restaurant, lounge and hot tub. Reserve, order and book instantly on WhatsApp.">
+<meta property="og:image" content="https://villadevonte.com/og-image.jpg">
+<meta property="og:url" content="https://villadevonte.com/">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Resort",
+  "name":"Villa Devonté",
+  "description":"Premium hospitality destination with luxury rooms, restaurant, lounge, hot tub and events.",
+  "url":"https://villadevonte.com/",
+  "telephone":"+234 801 234 5678",
+  "email":"hello@villadevonte.com",
+  "priceRange":"₦₦₦",
+  "servesCuisine":["African","Continental"],
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"12 Devonté Close, Lekki Phase 1",
+    "addressLocality":"Lagos",
+    "addressCountry":"NG"
+  },
+  "sameAs":["https://instagram.com/villadevonte"]
+}
+</script>
+
+<style>
+/* ============================================================
+   VILLA DEVONTÉ — DESIGN TOKENS
+   ============================================================ */
+:root{
+  --brand:#492A15;
+  --brand-dark:#2E1A0C;
+  --brand-soft:#5C3720;
+  --sand:#DBC1AC;
+  --sand-soft:#EADCCE;
+  --cream:#FAF6F1;
+  --ink:#0B0B0B;
+  --white:#FFFFFF;
+  --muted:#6E5C4C;
+  --line:rgba(73,42,21,.14);
+  --line-light:rgba(219,193,172,.22);
+  --wa:#25D366;
+  --maxw:1280px;
+  --pad:clamp(20px,5vw,56px);
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --header-h:72px;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box}
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:var(--header-h);
+  -webkit-text-size-adjust:100%;
+}
+body{
+  margin:0;
+  font-family:'Jost',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  font-weight:300;
+  font-size:16px;
+  line-height:1.7;
+  color:var(--ink);
+  background:var(--cream);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+body.locked{overflow:hidden}
+img{max-width:100%;display:block;height:auto}
+h1,h2,h3,h4,h5{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-weight:400;
+  line-height:1.12;
+  margin:0;
+  letter-spacing:.005em;
+}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
+.skip{
+  position:absolute;left:-9999px;top:0;z-index:999;
+  background:var(--brand);color:#fff;padding:12px 20px;
+}
+.skip:focus{left:12px;top:12px}
+
+/* ============================================================
+   LAYOUT HELPERS
+   ============================================================ */
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad);width:100%}
+.section{padding:clamp(64px,9vw,132px) 0}
+.section--tight{padding:clamp(48px,6vw,88px) 0}
+.section--cream{background:var(--cream)}
+.section--white{background:var(--white)}
+.section--sand{background:var(--sand-soft)}
+.section--brand{background:var(--brand);color:var(--sand)}
+.section--ink{background:var(--ink);color:var(--sand)}
+
+.eyebrow{
+  font-size:.68rem;
+  letter-spacing:.34em;
+  text-transform:uppercase;
+  font-weight:500;
+  color:var(--brand-soft);
+  margin:0 0 1.1rem;
+}
+.section--brand .eyebrow,.section--ink .eyebrow{color:var(--sand);opacity:.8}
+
+.sec-head{max-width:680px;margin-bottom:clamp(36px,5vw,64px)}
+.sec-head.center{margin-inline:auto;text-align:center}
+h2.sec-title{font-size:clamp(1.9rem,5.2vw,3.4rem);margin-bottom:1rem}
+.lede{font-size:clamp(.98rem,2.4vw,1.08rem);color:var(--muted);max-width:62ch}
+.section--brand .lede,.section--ink .lede{color:var(--sand);opacity:.82}
+
+.grid{display:grid;gap:clamp(20px,3vw,34px)}
+.g-2{grid-template-columns:1fr}
+.g-3{grid-template-columns:1fr}
+.g-4{grid-template-columns:repeat(2,1fr)}
+@media(min-width:760px){
+  .g-2{grid-template-columns:1fr 1fr}
+  .g-3{grid-template-columns:repeat(2,1fr)}
+  .g-4{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:1040px){
+  .g-3{grid-template-columns:repeat(3,1fr)}
+  .g-4{grid-template-columns:repeat(4,1fr)}
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6em;
+  padding:1.02rem 1.7rem;
+  min-height:52px;
+  font-size:.72rem;letter-spacing:.19em;text-transform:uppercase;font-weight:500;
+  border:1px solid transparent;
+  transition:background .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease),transform .25s var(--ease);
+  white-space:nowrap;text-align:center;line-height:1;
+}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand-dark)}
+.btn-sand{background:var(--sand);color:var(--brand)}
+.btn-sand:hover{background:#fff}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--brand);border-color:#fff}
+.btn-outline{border-color:var(--brand);color:var(--brand)}
+.btn-outline:hover{background:var(--brand);color:#fff}
+.btn-wa{background:var(--wa);color:#06301a}
+.btn-wa:hover{background:#1fbe5b}
+.btn-block{width:100%}
+.btn-sm{min-height:44px;padding:.75rem 1.1rem;font-size:.66rem;letter-spacing:.14em}
+.btn-row{display:flex;flex-wrap:wrap;gap:14px}
+
+/* ============================================================
+   HEADER / NAV
+   ============================================================ */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:90;
+  padding:10px var(--pad);
+  transition:background .45s var(--ease),box-shadow .45s var(--ease),padding .45s var(--ease);
+}
+.site-header.scrolled,
+.site-header.solid{
+  background:rgba(250,246,241,.94);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  box-shadow:0 1px 0 var(--line);
+  padding:6px var(--pad);
+}
+.header-inner{
+  max-width:var(--maxw);margin-inline:auto;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  min-height:52px;
+}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo-mark{
+  width:36px;height:36px;flex:0 0 36px;
+  display:grid;place-items:center;
+  border:1px solid var(--sand);color:var(--sand);
+  font-family:'Cormorant Garamond',serif;font-size:.95rem;letter-spacing:.06em;
+  transition:.4s var(--ease);
+}
+.logo-text{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.12rem;letter-spacing:.2em;text-transform:uppercase;
+  color:#fff;transition:color .4s var(--ease);
+}
+.site-header.scrolled .logo-text,
+.site-header.solid .logo-text{color:var(--brand)}
+.site-header.scrolled .logo-mark,
+.site-header.solid .logo-mark{border-color:var(--brand);color:var(--brand)}
+
+.nav-desktop{display:none}
+@media(min-width:1100px){
+  .nav-desktop{
+    display:flex;align-items:center;gap:clamp(10px,1.4vw,22px);
+  }
+  .nav-desktop a{
+    font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;font-weight:400;
+    color:rgba(255,255,255,.86);
+    padding:6px 0;position:relative;transition:color .3s var(--ease);
+    white-space:nowrap;
+  }
+  .site-header.scrolled .nav-desktop a,
+  .site-header.solid .nav-desktop a{color:var(--muted)}
+  .nav-desktop a::after{
+    content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;
+    background:currentColor;transition:right .35s var(--ease);
+  }
+  .nav-desktop a:hover::after,
+  .nav-desktop a.active::after{right:0}
+  .nav-desktop a:hover,
+  .nav-desktop a.active{color:#fff}
+  .site-header.scrolled .nav-desktop a:hover,
+  .site-header.scrolled .nav-desktop a.active,
+  .site-header.solid .nav-desktop a:hover,
+  .site-header.solid .nav-desktop a.active{color:var(--brand)}
+}
+
+.header-actions{display:flex;align-items:center;gap:6px}
+.icon-btn{
+  width:46px;height:46px;display:grid;place-items:center;position:relative;
+  color:#fff;transition:color .4s var(--ease);
+}
+.site-header.scrolled .icon-btn,
+.site-header.solid .icon-btn{color:var(--brand)}
+.cart-count{
+  position:absolute;top:6px;right:4px;
+  min-width:18px;height:18px;padding:0 4px;
+  background:var(--sand);color:var(--brand);
+  border-radius:99px;font-size:.62rem;font-weight:600;
+  display:grid;place-items:center;line-height:1;
+  transform:scale(0);transition:transform .3s var(--ease);
+}
+.cart-count.on{transform:scale(1)}
+
+.hamburger{
+  width:46px;height:46px;display:grid;place-items:center;gap:0;
+  color:#fff;transition:color .4s var(--ease);
+}
+.site-header.scrolled .hamburger,
+.site-header.solid .hamburger{color:var(--brand)}
+.hamburger span{
+  display:block;width:22px;height:1.5px;background:currentColor;margin:3px 0;
+  transition:transform .35s var(--ease),opacity .25s var(--ease);
+}
+.hamburger.open span:nth-child(1){transform:translateY(4.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-4.5px) rotate(-45deg)}
+@media(min-width:1100px){.hamburger{display:none}}
+
+/* Mobile menu */
+.mobile-menu{
+  position:fixed;inset:0;z-index:85;
+  background:var(--brand);color:var(--sand);
+  padding:calc(var(--header-h) + 24px) var(--pad) 40px;
+  overflow-y:auto;
+  transform:translateY(-100%);
+  transition:transform .55s var(--ease);
+  visibility:hidden;
+}
+.mobile-menu.open{transform:translateY(0);visibility:visible}
+.mobile-menu nav{display:flex;flex-direction:column;max-width:560px;margin-inline:auto}
+.mobile-menu nav a{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.5rem,7vw,2.1rem);
+  padding:.5rem 0;
+  border-bottom:1px solid var(--line-light);
+  display:flex;align-items:center;justify-content:space-between;
+  opacity:0;transform:translateY(14px);
+  transition:opacity .5s var(--ease),transform .5s var(--ease);
+}
+.mobile-menu.open nav a{opacity:1;transform:none}
+.mobile-menu nav a span{font-family:'Jost',sans-serif;font-size:.62rem;letter-spacing:.2em;opacity:.45}
+.mobile-menu .mm-cta{margin-top:32px;display:flex;flex-direction:column;gap:12px}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;min-height:100svh;min-height:100vh;
+  display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden;
+}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:heroZoom 16s var(--ease) forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(11,11,11,.62) 0%,rgba(11,11,11,.32) 38%,rgba(11,11,11,.82) 100%);
+}
+.hero-inner{position:relative;z-index:2;padding:calc(var(--header-h) + 40px) var(--pad) 90px;max-width:900px;width:100%}
+.hero h1{
+  font-size:clamp(2.6rem,13vw,7.5rem);
+  letter-spacing:.07em;
+  line-height:1;
+  margin-bottom:1.1rem;
+  text-shadow:0 2px 40px rgba(0,0,0,.35);
+}
+.hero-tag{
+  font-size:clamp(.72rem,3vw,.92rem);
+  letter-spacing:.42em;
+  text-transform:uppercase;
+  color:var(--sand);
+  margin-bottom:2.2rem;
+  font-weight:400;
+}
+.hero .btn-row{justify-content:center}
+.hero-scroll{
+  position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;
+  font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.6);
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+}
+.hero-scroll::after{
+  content:"";width:1px;height:36px;background:linear-gradient(180deg,var(--sand),transparent);
+  animation:scrollPulse 2.4s ease-in-out infinite;
+}
+@keyframes scrollPulse{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+.card{
+  background:var(--white);
+  display:flex;flex-direction:column;
+  border:1px solid var(--line);
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease);
+  overflow:hidden;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 50px -28px rgba(73,42,21,.4)}
+.card-media{position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--brand)}
+.card-media img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.card:hover .card-media img{transform:scale(1.05)}
+.card-body{padding:clamp(20px,3vw,28px);display:flex;flex-direction:column;flex:1;gap:.5rem}
+.card-body h3{font-size:clamp(1.25rem,3.4vw,1.6rem)}
+.card-meta{
+  font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--brand-soft);margin:0;
+}
+.card-body p{font-size:.94rem;color:var(--muted);margin:0}
+.card-actions{display:flex;gap:10px;margin-top:auto;padding-top:1.2rem;flex-wrap:wrap}
+.card-actions .btn{flex:1 1 auto}
+.price{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.4rem;color:var(--brand);margin:0;
+}
+.price span{font-family:'Jost',sans-serif;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.badge{
+  position:absolute;top:14px;left:14px;
+  background:var(--brand);color:var(--sand);
+  font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
+  padding:7px 12px;font-weight:500;
+}
+.badge--sand{background:var(--sand);color:var(--brand)}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about-grid{display:grid;gap:clamp(32px,5vw,64px);align-items:center}
+@media(min-width:960px){.about-grid{grid-template-columns:1fr 1fr}}
+.about-gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.about-gallery .tall{grid-row:span 2}
+.about-gallery img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1}
+.about-gallery .tall img{aspect-ratio:auto;height:100%}
+@media(min-width:960px){.about-gallery{grid-template-rows:1fr 1fr}}
+.about-text p{color:var(--muted);font-size:1rem}
+.about-text p:first-of-type{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.15rem,3vw,1.4rem);
+  color:var(--brand);line-height:1.5;
+}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px;border-top:1px solid var(--line);padding-top:26px}
+.stat b{display:block;font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,4.5vw,2.2rem);color:var(--brand);line-height:1}
+.stat span{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+
+/* ============================================================
+   SPLIT FEATURE
+   ============================================================ */
+.split{display:grid;gap:0;align-items:stretch}
+@media(min-width:900px){.split{grid-template-columns:1fr 1fr}}
+.split-media{position:relative;min-height:320px;overflow:hidden}
+.split-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.split-body{
+  padding:clamp(32px,6vw,80px);
+  display:flex;flex-direction:column;justify-content:center;
+}
+.split-body h2{font-size:clamp(1.8rem,5vw,3rem);margin-bottom:1rem}
+.split-body p{color:var(--muted);max-width:52ch}
+.section--brand .split-body p,.section--ink .split-body p{color:var(--sand);opacity:.85}
+.split-body .btn-row{margin-top:1.8rem}
+.info-list{list-style:none;padding:0;margin:1.6rem 0 0;display:grid;gap:10px}
+.info-list li{display:flex;gap:12px;font-size:.9rem;align-items:flex-start}
+.info-list li::before{content:"";width:5px;height:5px;background:var(--sand);margin-top:9px;flex:0 0 5px}
+.section--white .info-list li::before,.section--cream .info-list li::before{background:var(--brand)}
+
+/* ============================================================
+   MENU
+   ============================================================ */
+.menu-tabs{display:flex;gap:10px;justify-content:center;margin-bottom:22px;flex-wrap:wrap}
+.tab{
+  padding:.8rem 1.6rem;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;
+  border:1px solid var(--line);color:var(--muted);transition:.35s var(--ease);min-height:46px;
+}
+.tab.active{background:var(--brand);border-color:var(--brand);color:#fff}
+.chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
+.chip{
+  padding:.5rem 1rem;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;
+  border:1px solid var(--line);color:var(--muted);transition:.3s var(--ease);min-height:38px;
+}
+.chip.active{background:var(--sand);border-color:var(--sand);color:var(--brand);font-weight:500}
+.menu-grid{display:grid;gap:clamp(16px,2.5vw,26px);grid-template-columns:1fr}
+@media(min-width:640px){.menu-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1040px){.menu-grid{grid-template-columns:repeat(3,1fr)}}
+.menu-card{
+  background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;
+  transition:box-shadow .4s var(--ease),transform .4s var(--ease);
+}
+.menu-card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -26px rgba(73,42,21,.45)}
+.menu-card.sold-out{opacity:.55}
+.menu-card-img{aspect-ratio:16/10;overflow:hidden;background:var(--brand)}
+.menu-card-img img{width:100%;height:100%;object-fit:cover}
+.menu-card-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1;gap:6px}
+.menu-card-body h4{font-size:1.18rem;line-height:1.2}
+.menu-card-body p{font-size:.85rem;color:var(--muted);margin:0;flex:1}
+.menu-card-foot{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  margin-top:14px;padding-top:14px;border-top:1px solid var(--line);
+}
+.menu-card-foot .price{font-size:1.2rem}
+.qty{display:flex;align-items:center;border:1px solid var(--line)}
+.qty button{width:38px;height:42px;display:grid;place-items:center;font-size:1rem;color:var(--brand);transition:background .25s}
+.qty button:hover{background:var(--sand-soft)}
+.qty input{
+  width:38px;height:42px;text-align:center;border:0;background:transparent;
+  font-size:.88rem;font-weight:500;padding:0;
+}
+
+/* ============================================================
+   EVENTS
+   ============================================================ */
+.event-card{position:relative;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.event-card:hover{transform:translateY(-4px);box-shadow:0 22px 50px -30px rgba(73,42,21,.45)}
+.event-media{aspect-ratio:16/10;overflow:hidden;position:relative;background:var(--brand)}
+.event-media img{width:100%;height:100%;object-fit:cover}
+.event-date{
+  position:absolute;top:0;left:0;background:var(--sand);color:var(--brand);
+  padding:10px 14px;text-align:center;line-height:1;
+}
+.event-date b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.5rem}
+.event-date span{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase}
+.event-body{padding:22px;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.event-body h3{font-size:1.35rem}
+.event-body p{font-size:.9rem;color:var(--muted);margin:0}
+.event-meta{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-soft)}
+.event-body .btn{margin-top:auto}
+
+/* ============================================================
+   FORMS
+   ============================================================ */
+.form-card{
+  background:#fff;border:1px solid var(--line);
+  padding:clamp(24px,5vw,52px);
+}
+.form-grid{display:grid;gap:18px}
+@media(min-width:700px){.form-grid{grid-template-columns:1fr 1fr}.span-2{grid-column:1/-1}}
+.field{display:flex;flex-direction:column;gap:7px}
+.field label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brand-soft);font-weight:500}
+.field input,.field select,.field textarea{
+  width:100%;padding:.95rem 1rem;min-height:52px;
+  border:1px solid var(--line);background:var(--cream);
+  font-size:.95rem;font-weight:300;
+  transition:border-color .3s var(--ease),background .3s var(--ease);
+  border-radius:0;appearance:none;
+}
+.field textarea{min-height:110px;resize:vertical;line-height:1.6}
+.field select{
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23492A15' stroke-width='1.4' fill='none'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 16px center;padding-right:44px;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--brand);background:#fff;
+}
+.field .err{font-size:.72rem;color:#B3261E;display:none}
+.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:#B3261E}
+.field.invalid .err{display:block}
+.form-note{font-size:.8rem;color:var(--muted);margin-top:18px;display:flex;gap:10px;align-items:flex-start}
+.form-note svg{flex:0 0 16px;margin-top:3px}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-grid{display:grid;gap:clamp(28px,4vw,48px)}
+@media(min-width:900px){.contact-grid{grid-template-columns:1fr 1fr}}
+.contact-item{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.section--brand .contact-item{border-color:var(--line-light)}
+.contact-item svg{flex:0 0 20px;margin-top:4px;color:var(--sand)}
+.section--white .contact-item svg{color:var(--brand)}
+.contact-item b{display:block;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;opacity:.7;font-weight:500;margin-bottom:3px}
+.contact-item a:hover{text-decoration:underline}
+.map-frame{
+  border:1px solid var(--line);height:100%;min-height:340px;
+  filter:grayscale(.35) contrast(1.05);width:100%;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer{background:var(--ink);color:var(--sand);padding:clamp(56px,8vw,96px) 0 0}
+.footer-grid{display:grid;gap:clamp(28px,4vw,48px);grid-template-columns:1fr}
+@media(min-width:640px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.footer-grid{grid-template-columns:1.6fr 1fr 1fr 1.2fr}}
+.site-footer h4{
+  font-family:'Jost',sans-serif;font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;
+  color:#fff;margin-bottom:1.3rem;font-weight:500;
+}
+.footer-brand .logo-text{color:#fff;font-size:1.3rem}
+.footer-brand p{font-size:.88rem;opacity:.66;max-width:38ch;margin-top:1.1rem}
+.footer-links{list-style:none;padding:0;margin:0;display:grid;gap:11px}
+.footer-links a{font-size:.88rem;opacity:.72;transition:opacity .3s,color .3s}
+.footer-links a:hover{opacity:1;color:#fff}
+.footer-bottom{
+  margin-top:clamp(40px,6vw,64px);padding:24px 0;
+  border-top:1px solid rgba(219,193,172,.16);
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;
+  font-size:.72rem;opacity:.6;letter-spacing:.06em;
+}
+
+/* ============================================================
+   FLOATING WHATSAPP + CART FAB
+   ============================================================ */
+.fab-stack{
+  position:fixed;right:16px;bottom:16px;z-index:70;
+  display:flex;flex-direction:column;align-items:flex-end;gap:10px;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.fab{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--wa);color:#06301a;
+  padding:14px 20px;border-radius:99px;
+  font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+  box-shadow:0 12px 30px -8px rgba(37,211,102,.55),0 4px 12px rgba(0,0,0,.14);
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+  white-space:nowrap;
+}
+.fab:hover{transform:translateY(-3px);box-shadow:0 18px 38px -10px rgba(37,211,102,.6)}
+.fab:active{transform:translateY(0)}
+.fab svg{flex:0 0 20px}
+.fab-cart{
+  background:var(--brand);color:var(--sand);
+  box-shadow:0 12px 30px -10px rgba(73,42,21,.6);
+}
+.fab-cart:hover{box-shadow:0 18px 38px -12px rgba(73,42,21,.65)}
+.fab-label{display:none}
+@media(min-width:520px){.fab-label{display:inline}}
+@media(min-width:1100px){.fab-stack{right:26px;bottom:26px}}
+
+/* ============================================================
+   CART DRAWER
+   ============================================================ */
+.drawer{
+  position:fixed;top:0;right:0;bottom:0;z-index:120;
+  width:min(440px,100%);background:var(--cream);
+  display:flex;flex-direction:column;
+  transform:translateX(102%);transition:transform .5s var(--ease);
+  box-shadow:-20px 0 60px -20px rgba(0,0,0,.35);
+}
+.drawer.open{transform:translateX(0)}
+.drawer-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:22px 24px;border-bottom:1px solid var(--line);flex:0 0 auto;
+}
+.drawer-head h3{font-size:1.3rem}
+.drawer-body{flex:1;overflow-y:auto;padding:20px 24px;display:flex;flex-direction:column;gap:14px}
+.drawer-foot{flex:0 0 auto;padding:20px 24px calc(24px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:#fff}
+.cart-line{display:flex;gap:14px;align-items:center;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.cart-line img{width:62px;height:62px;object-fit:cover;flex:0 0 62px}
+.cart-line .cl-info{flex:1;min-width:0}
+.cart-line b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;line-height:1.25}
+.cart-line small{font-size:.76rem;color:var(--muted);display:block}
+.cart-total{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px}
+.cart-total b{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--brand);font-weight:500}
+.empty-cart{text-align:center;color:var(--muted);font-size:.92rem;padding:50px 10px}
+.close-x{width:40px;height:40px;display:grid;place-items:center;font-size:1.3rem;color:var(--muted);transition:color .3s}
+.close-x:hover{color:var(--brand)}
+
+/* ============================================================
+   MODAL
+   ============================================================ */
+.modal{position:fixed;inset:0;z-index:130;display:none}
+.modal.open{display:block}
+.modal-backdrop{position:absolute;inset:0;background:rgba(11,11,11,.72);backdrop-filter:blur(4px);animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.modal-panel{
+  position:relative;z-index:1;background:var(--cream);
+  min-height:100%;overflow-y:auto;
+  animation:slideUp .45s var(--ease);
+}
+@keyframes slideUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media(min-width:900px){
+  .modal-panel{
+    max-width:1060px;margin:44px auto;min-height:0;
+    max-height:calc(100vh - 88px);border:1px solid var(--line);
+  }
+}
+.modal-close{
+  position:sticky;top:0;z-index:5;display:flex;justify-content:flex-end;
+  padding:12px 16px 0;background:linear-gradient(180deg,var(--cream) 60%,transparent);
+}
+.modal-close button{
+  width:44px;height:44px;display:grid;place-items:center;font-size:1.4rem;
+  background:rgba(255,255,255,.9);border:1px solid var(--line);color:var(--brand);
+}
+.modal-content{padding:0 clamp(20px,4vw,48px) clamp(32px,5vw,56px)}
+.modal-hero{aspect-ratio:16/9;overflow:hidden;background:var(--brand);margin-bottom:28px}
+.modal-hero img{width:100%;height:100%;object-fit:cover}
+.modal-content h2{font-size:clamp(1.7rem,5vw,2.7rem);margin-bottom:.6rem}
+.gallery-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0}
+.gallery-thumbs img{aspect-ratio:1;object-fit:cover;cursor:pointer;opacity:.65;transition:opacity .3s}
+.gallery-thumbs img:hover,.gallery-thumbs img.active{opacity:1}
+.amenity-list{list-style:none;padding:0;margin:0;display:grid;gap:9px;grid-template-columns:1fr}
+@media(min-width:640px){.amenity-list{grid-template-columns:1fr 1fr}}
+.amenity-list li{font-size:.9rem;color:var(--muted);display:flex;gap:10px}
+.amenity-list li::before{content:"";width:5px;height:5px;background:var(--sand);margin-top:9px;flex:0 0 5px}
+.detail-bar{
+  display:flex;flex-wrap:wrap;gap:22px;padding:20px 0;margin:22px 0;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.detail-bar div{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.detail-bar b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.2rem;letter-spacing:0;text-transform:none;color:var(--brand);font-weight:500}
+.ticket-row{
+  display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;
+  padding:18px 0;border-bottom:1px solid var(--line);
+}
+.ticket-row .tr-info{flex:1 1 220px}
+.ticket-row b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:500}
+.ticket-row small{display:block;font-size:.8rem;color:var(--muted);margin-top:2px}
+.ticket-row .price{font-size:1.15rem;white-space:nowrap}
+
+/* ============================================================
+   ADMIN PANEL
+   ============================================================ */
+.admin-panel{
+  position:fixed;inset:0;z-index:200;background:var(--cream);
+  overflow-y:auto;display:none;
+}
+.admin-panel.open{display:block}
+.admin-inner{max-width:900px;margin:0 auto;padding:24px var(--pad) 80px}
+.admin-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0 22px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.admin-head h2{font-size:1.7rem}
+.admin-note{font-size:.84rem;color:var(--muted);background:var(--sand-soft);padding:14px 16px;border-left:2px solid var(--sand);margin-bottom:28px}
+.admin-panel h3{font-size:1.15rem;margin:32px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.admin-row{
+  display:grid;grid-template-columns:1fr;gap:10px;padding:12px 0;
+  border-bottom:1px solid var(--line);align-items:center;
+}
+@media(min-width:700px){.admin-row{grid-template-columns:1.6fr 1fr auto}}
+.admin-row span{font-size:.9rem}
+.admin-row label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:8px}
+.admin-row input[type=number],.admin-row input[type=text]{
+  border:1px solid var(--line);padding:8px 10px;background:#fff;width:100%;min-height:38px;font-size:.88rem;
+}
+.admin-row input[type=checkbox]{width:18px;height:18px;accent-color:var(--brand)}
+.admin-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px;position:sticky;bottom:0;background:var(--cream);padding:18px 0;border-top:1px solid var(--line)}
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+.toast{
+  position:fixed;left:50%;bottom:100px;transform:translate(-50%,20px);
+  background:var(--brand);color:#fff;padding:13px 22px;
+  font-size:.78rem;letter-spacing:.08em;z-index:150;
+  opacity:0;pointer-events:none;transition:opacity .35s var(--ease),transform .35s var(--ease);
+  max-width:calc(100% - 32px);text-align:center;
+}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* ============================================================
+   REVEAL ANIMATION
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .hero-media img{animation:none;transform:none}
+  *{animation-duration:.001ms !important;transition-duration:.001ms !important}
+}
+
+/* Divider ornament */
+.ornament{display:flex;align-items:center;gap:14px;justify-content:center;margin-bottom:1.4rem}
+.ornament::before,.ornament::after{content:"";height:1px;width:44px;background:var(--sand);opacity:.6}
+.ornament span{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--sand);opacity:.8}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="header">
+  <div class="header-inner">
+    <a href="#home" class="logo" aria-label="Villa Devonté — home">
+      <span class="logo-mark">VD</span>
+      <span class="logo-text">Villa Devonté</span>
+    </a>
+
+    <nav class="nav-desktop" id="navDesktop" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#restaurant">Restaurant</a>
+      <a href="#lounge">Lounge</a>
+      <a href="#hottub">Hot Tub</a>
+      <a href="#menu">Menu</a>
+      <a href="#events">Events</a>
+      <a href="#reservation">Reservation</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" data-open-cart aria-label="View your order">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 2-1.55L21 8H6"/>
+          <circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= MOBILE MENU ================= -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav aria-label="Mobile navigation">
+    <a href="#home">Home <span>01</span></a>
+    <a href="#about">About <span>02</span></a>
+    <a href="#rooms">Rooms <span>03</span></a>
+    <a href="#restaurant">Restaurant <span>04</span></a>
+    <a href="#lounge">Lounge <span>05</span></a>
+    <a href="#hottub">Hot Tub <span>06</span></a>
+    <a href="#menu">Menu <span>07</span></a>
+    <a href="#events">Events <span>08</span></a>
+    <a href="#reservation">Reservation <span>09</span></a>
+    <a href="#contact">Contact <span>10</span></a>
+  </nav>
+  <div class="mm-cta">
+    <button class="btn btn-sand btn-block" data-open-cart>View My Order</button>
+    <button class="btn btn-ghost btn-block" data-wa="customer-service">Chat With Villa Devonté</button>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="home">
+    <div class="hero-media">
+      <img id="heroImage" src="" alt="Villa Devonté exterior at dusk" fetchpriority="high">
+    </div>
+    <div class="hero-inner">
+      <h1>VILLA DEVONTÉ</h1>
+      <p class="hero-tag">Stay. Dine. Unwind. Experience.</p>
+      <div class="btn-row">
+        <button class="btn btn-sand" data-scroll="#reservation">Reserve Your Stay</button>
+        <button class="btn btn-ghost" data-scroll="#about">Explore Villa Devonté</button>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- ================= WELCOME / ABOUT ================= -->
+  <section class="section section--cream" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-gallery reveal" id="aboutGallery"></div>
+        <div class="about-text reveal">
+          <p class="eyebrow">About Villa Devonté</p>
+          <h2 class="sec-title">An experience, not simply a place to stay</h2>
+          <p id="aboutLead"></p>
+          <p id="aboutBody"></p>
+          <div class="stat-row">
+            <div class="stat"><b>5</b><span>Signature Rooms</span></div>
+            <div class="stat"><b>40+</b><span>Menu Creations</span></div>
+            <div class="stat"><b>24/7</b><span>WhatsApp Concierge</span></div>
+          </div>
+          <div class="btn-row" style="margin-top:32px">
+            <button class="btn btn-outline" data-scroll="#rooms">View Rooms</button>
+            <button class="btn btn-primary" data-wa="customer-service">Chat With Us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ROOMS ================= -->
+  <section class="section section--white" id="rooms">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="eyebrow">Rooms &amp; Suites</p>
+        <h2 class="sec-title">Rest in Devonté comfort</h2>
+        <p class="lede" style="margin-inline:auto">Every room is finished with warm textures, soft lighting and the quiet luxury that makes Villa Devonté feel like home — only better.</p>
+      </div>
+      <div class="grid g-3" id="roomsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= RESTAURANT ================= -->
+  <section class="section section--cream" id="restaurant" style="padding:0">
+    <div class="split">
+      <div class="split-media reveal">
+        <img id="restaurantImage" src="" alt="Villa Devonté restaurant dining room" loading="lazy">
+      </div>
+      <div class="split-body reveal">
+        <p class="eyebrow">The Restaurant</p>
+        <h2>Seasonal plates, bold local flavour</h2>
+        <p id="restaurantIntro"></p>
+        <ul class="info-list" id="restaurantPoints"></ul>
+        <div class="btn-row">
+          <button class="btn btn-primary" data-scroll="#menu">View Menu</button>
+          <button class="btn btn-outline" data-wa="food-order">Order on WhatsApp</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LOUNGE ================= -->
+  <section class="section section--brand" id="lounge" style="padding:0">
+    <div class="split">
+      <div class="split-body reveal">
+        <p class="eyebrow">The Lounge</p>
+        <h2>Low light, slow music, good company</h2>
+        <p id="loungeIntro"></p>
+        <ul class="info-list" id="loungePoints"></ul>
+        <div class="btn-row">
+          <button class="btn btn-sand" data-wa="lounge-enquiry">Reserve / Enquire</button>
+          <button class="btn btn-ghost" data-scroll="#events">Lounge Events</button>
+        </div>
+      </div>
+      <div class="split-media reveal" style="min-height:340px">
+        <img id="loungeImage" src="" alt="Villa Devonté lounge interior" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOT TUB ================= -->
+  <section class="section section--white" id="hottub">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="eyebrow">The Hot Tub</p>
+        <h2 class="sec-title">Warm water, open sky</h2>
+        <p class="lede" style="margin-inline:auto" id="hotTubIntro"></p>
+      </div>
+
+      <div class="grid g-2" style="align-items:start">
+        <div class="reveal">
+          <img id="hotTubImage" src="" alt="Villa Devonté hot tub at sunset" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+        </div>
+        <div class="reveal">
+          <div class="grid" id="hotTubSessions" style="gap:0"></div>
+          <ul class="info-list" id="hotTubRules" style="margin-top:26px"></ul>
+          <div class="form-grid" style="margin-top:28px">
+            <div class="field">
+              <label for="tubDate">Preferred Date</label>
+              <input type="date" id="tubDate">
+            </div>
+            <div class="field">
+              <label for="tubSession">Session</label>
+              <select id="tubSession"></select>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block" style="margin-top:16px" data-book-tub>Book Hot Tub Experience</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MENU ================= -->
+  <section class="section section--cream" id="menu">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="eyebrow">Menu &amp; Ordering</p>
+        <h2 class="sec-title">Choose. Add. Send on WhatsApp.</h2>
+        <p class="lede" style="margin-inline:auto">Build your order below — your selections, quantities and total are sent straight to the Villa Devonté team on WhatsApp. No account, no checkout forms.</p>
+      </div>
+
+      <div class="menu-tabs reveal" role="tablist" aria-label="Menu groups">
+        <button class="tab active" role="tab" aria-selected="true" data-group="food">Food</button>
+        <button class="tab" role="tab" aria-selected="false" data-group="drinks">Drinks</button>
+      </div>
+      <div class="chips reveal" id="menuChips"></div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= EVENTS ================= -->
+  <section class="section section--white" id="events">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="eyebrow">Events</p>
+        <h2 class="sec-title">Nights worth dressing up for</h2>
+        <p class="lede" style="margin-inline:auto">From sunset sessions to live jazz brunches — browse what's coming and revisit the nights we've shared.</p>
+      </div>
+
+      <div class="menu-tabs reveal" role="tablist" aria-label="Event categories">
+        <button class="tab active" role="tab" aria-selected="true" data-events="upcoming">Upcoming Events</button>
+        <button class="tab" role="tab" aria-selected="false" data-events="previous">Previous Events</button>
+      </div>
+      <div class="grid g-3" id="eventsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= RESERVATION ================= -->
+  <section class="section section--brand" id="reservation">
+    <div class="wrap">
+      <div class="grid g-2" style="align-items:center;gap:clamp(32px,5vw,72px)">
+        <div class="reveal">
+          <p class="eyebrow">Reservation</p>
+          <h2 class="sec-title">Request your stay</h2>
+          <p class="lede">Tell us when you're coming and what you'd like. Your request is sent directly to the Villa Devonté team on WhatsApp — we confirm availability and payment personally.</p>
+          <ul class="info-list">
+            <li>No account or registration required</li>
+            <li>Response from our team on WhatsApp</li>
+            <li>Flexible check-in from 2:00 PM</li>
+          </ul>
+        </div>
+
+        <form class="form-card reveal" id="reservationForm" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="resName">Full Name *</label>
+              <input type="text" id="resName" name="name" autocomplete="name" required>
+              <span class="err">Please enter your name</span>
+            </div>
+            <div class="field">
+              <label for="resPhone">Phone Number *</label>
+              <input type="tel" id="resPhone" name="phone" autocomplete="tel" required>
+              <span class="err">Please enter your phone number</span>
+            </div>
+            <div class="field">
+              <label for="resIn">Check-in Date *</label>
+              <input type="date" id="resIn" name="checkin" required>
+              <span class="err">Select a check-in date</span>
+            </div>
+            <div class="field">
+              <label for="resOut">Check-out Date *</label>
+              <input type="date" id="resOut" name="checkout" required>
+              <span class="err">Select a check-out date</span>
+            </div>
+            <div class="field">
+              <label for="resGuests">Number of Guests *</label>
+              <select id="resGuests" name="guests" required>
+                <option value="">Select</option>
+                <option>1 Guest</option><option>2 Guests</option><option>3 Guests</option>
+                <option>4 Guests</option><option>5 Guests</option><option>6+ Guests</option>
+              </select>
+              <span class="err">Select number of guests</span>
+            </div>
+            <div class="field">
+              <label for="resRoom">Room Preference</label>
+              <select id="resRoom" name="room"><option value="">No preference</option></select>
+            </div>
+            <div class="field span-2">
+              <label for="resNotes">Additional Request</label>
+              <textarea id="resNotes" name="notes" placeholder="Airport pickup, early check-in, dietary needs, celebration setup…"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-sand btn-block" style="margin-top:22px">Send Reservation Request</button>
+          <p class="form-note">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2 3 6v6c0 5 3.8 9.3 9 10 5.2-.7 9-5 9-10V6z"/></svg>
+            Your details open in WhatsApp as a pre-filled <strong>ROOM RESERVATION</strong> message. Nothing is stored on this website.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section section--cream" id="contact">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="eyebrow">Contact</p>
+        <h2 class="sec-title">We're a message away</h2>
+        <p class="lede" style="margin-inline:auto">Our team responds on WhatsApp throughout the day. For bookings, orders, events or anything else — just say hello.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <div><b>Address</b><span id="cAddress"></span></div>
+          </div>
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <div><b>Phone</b><a id="cPhone" href="#"></a></div>
+          </div>
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.9-.9L3 21l1.9-4.9A8.4 8.4 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4z"/></svg>
+            <div><b>WhatsApp</b><a id="cWhatsapp" href="#" target="_blank" rel="noopener"></a></div>
+          </div>
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15"/><path d="m3 5 9 7 9-7"/></svg>
+            <div><b>Email</b><a id="cEmail" href="#"></a></div>
+          </div>
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            <div><b>Instagram</b><a id="cInstagram" href="#" target="_blank" rel="noopener"></a></div>
+          </div>
+          <div class="contact-item" style="border-bottom:0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
+            <div><b>Operating Hours</b><span id="cHours"></span></div>
+          </div>
+
+          <button class="btn btn-wa btn-block" style="margin-top:26px" data-wa="customer-service">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.7 14.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1a12 12 0 0 1-5.9-5.2c-.4-.7-.6-1.5-.4-2.2.1-.5.6-1.2 1-1.4.3-.2.7-.2.9 0l.9 1.5c.1.3 0 .5-.1.7l-.5.6c-.2.2-.2.4-.1.6.4.8 1.4 1.9 2.4 2.3.2.1.4.1.6-.1l.6-.6c.2-.2.4-.2.7-.1l1.5.8c.3.2.4.5.1.9z"/></svg>
+            Contact Customer Service
+          </button>
+        </div>
+
+        <div class="reveal">
+          <iframe class="map-frame" id="mapFrame" title="Villa Devonté location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-mark">VD</span>
+          <span class="logo-text">Villa Devonté</span>
+        </a>
+        <p id="footerDesc"></p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About Villa Devonté</a></li>
+          <li><a href="#rooms">Rooms &amp; Suites</a></li>
+          <li><a href="#restaurant">Restaurant</a></li>
+          <li><a href="#lounge">Lounge</a></li>
+          <li><a href="#hottub">Hot Tub</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#events">Events</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Guest Services</h4>
+        <ul class="footer-links">
+          <li><a href="#reservation">Reservation Request</a></li>
+          <li><a href="#" data-wa="food-order">Food Order</a></li>
+          <li><a href="#" data-wa="drink-order">Drink Order</a></li>
+          <li><a href="#" data-wa="hot-tub-booking">Hot Tub Booking</a></li>
+          <li><a href="#" data-wa="event-ticket">Event Tickets</a></li>
+          <li><a href="#" data-wa="lounge-enquiry">Lounge Enquiry</a></li>
+          <li><a href="#" data-wa="customer-service">Customer Service</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><span id="fAddress"></span></li>
+          <li><a id="fPhone" href="#"></a></li>
+          <li><a id="fEmail" href="#"></a></li>
+          <li><a id="fInstagram" href="#" target="_blank" rel="noopener"></a></li>
+          <li><span id="fHours"></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Villa Devonté. All Rights Reserved.</span>
+      <span style="display:flex;gap:18px;align-items:center">
+        <a href="#" id="staffLink" style="opacity:.7">Staff</a>
+        <span>Designed for WhatsApp-first hospitality.</span>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= FLOATING ACTIONS ================= -->
+<div class="fab-stack">
+  <button class="fab fab-cart" data-open-cart id="fabCart" style="display:none" aria-label="View your order">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+      <path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 2-1.55L21 8H6"/>
+      <circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/>
+    </svg>
+    <span class="fab-label">My Order</span>
+    <span id="fabCartCount">0</span>
+  </button>
+
+  <button class="fab" data-wa="customer-service" aria-label="Chat with Villa Devonté on WhatsApp">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.7 14.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1a12 12 0 0 1-5.9-5.2c-.4-.7-.6-1.5-.4-2.2.1-.5.6-1.2 1-1.4.3-.2.7-.2.9 0l.9 1.5c.1.3 0 .5-.1.7l-.5.6c-.2.2-.2.4-.1.6.4.8 1.4 1.9 2.4 2.3.2.1.4.1.6-.1l.6-.6c.2-.2.4-.2.7-.1l1.5.8c.3.2.4.5.1.9z"/></svg>
+    <span class="fab-label">Chat With Villa Devonté</span>
+  </button>
+</div>
+
+<!-- ================= CART DRAWER ================= -->
+<aside class="drawer" id="cartDrawer" aria-hidden="true" aria-label="Your order">
+  <div class="drawer-head">
+    <h3>Your Order</h3>
+    <button class="close-x" data-close-cart aria-label="Close order">✕</button>
+  </div>
+  <div class="drawer-body" id="cartBody"></div>
+  <div class="drawer-foot">
+    <div class="cart-total"><span style="font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)">Estimated Total</span><b id="cartTotal">₦0</b></div>
+    <button class="btn btn-wa btn-block" id="cartSend">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.7 14.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1a12 12 0 0 1-5.9-5.2c-.4-.7-.6-1.5-.4-2.2.1-.5.6-1.2 1-1.4.3-.2.7-.2.9 0l.9 1.5c.1.3 0 .5-.1.7l-.5.6c-.2.2-.2.4-.1.6.4.8 1.4 1.9 2.4 2.3.2.1.4.1.6-.1l.6-.6c.2-.2.4-.2.7-.1l1.5.8c.3.2.4.5.1.9z"/></svg>
+      Order Now
+    </button>
+    <button class="btn btn-outline btn-block" style="margin-top:10px" data-close-cart>Continue Browsing</button>
+  </div>
+</aside>
+
+<!-- ================= MODAL ================= -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-panel">
+    <div class="modal-close"><button data-close-modal aria-label="Close">✕</button></div>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+
+<!-- ================= ADMIN ================= -->
+<div class="admin-panel" id="adminPanel" aria-hidden="true">
+  <div class="admin-inner" id="adminInner"></div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ================================================================
+   VILLA DEVONTÉ — APPLICATION SCRIPT
+   ----------------------------------------------------------------
+   Structure:
+     1. Utilities
+     2. Default content (the "CMS" data layer)
+     3. State + persistence
+     4. WhatsApp engine
+     5. Renderers
+     6. Cart
+     7. Modal
+     8. Forms
+     9. Navigation
+    10. Admin / content manager
+    11. Boot
+   ================================================================ */
+
+/* ============================ 1. UTILITIES ============================ */
+const $  = (sel, root = document) => root.querySelector(sel);
+const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => (
+  { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]
+));
+
+/* Branded SVG placeholder used wherever a real photo hasn't been supplied.
+   Replace any `img` value in the content data with a real photo URL. */
+function ph(label, tone = 0) {
+  const palettes = [
+    ['#492A15', '#231207'],
+    ['#5C3720', '#2A1709'],
+    ['#3A2110', '#180C04'],
+    ['#6B4426', '#331B0C']
+  ];
+  const [a, b] = palettes[Math.abs(tone) % palettes.length];
+  const safe = esc(label);
+  const svg =
+`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs>
+<rect width="1200" height="800" fill="url(#g)"/>
+<circle cx="960" cy="140" r="230" fill="#DBC1AC" fill-opacity="0.06"/>
+<rect x="48" y="48" width="1104" height="704" fill="none" stroke="#DBC1AC" stroke-opacity="0.24"/>
+<text x="600" y="388" text-anchor="middle" fill="#DBC1AC" font-family="Georgia,serif" font-size="52" letter-spacing="8">${safe}</text>
+<text x="600" y="448" text-anchor="middle" fill="#DBC1AC" fill-opacity="0.5" font-family="Georgia,serif" font-size="19" letter-spacing="11">VILLA DEVONTÉ</text>
+</svg>`;
+  return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+}
+
+const imgSrc = (obj, label, tone = 0) => obj.img || ph(label, tone ?? obj.tone ?? 0);
+
+const money = n => content.contact.currency + Number(n || 0).toLocaleString('en-NG');
+
+const fmtDate = iso => {
+  try {
+    return new Date(iso + 'T12:00:00').toLocaleDateString('en-GB',
+      { weekday:'short', day:'numeric', month:'long', year:'numeric' });
+  } catch { return iso; }
+};
+
+const dayNum = iso => String(new Date(iso + 'T12:00:00').getDate()).padStart(2, '0');
+const monthShort = iso => new Date(iso + 'T12:00:00').toLocaleDateString('en-GB', { month:'short' });
+
+const deep = o => JSON.parse(JSON.stringify(o));
+
+/* ============================ 2. DEFAULT CONTENT ============================ */
+const DEFAULT_CONTENT = {
+  brand: {
+    name: 'Villa Devonté',
+    tagline: 'Stay. Dine. Unwind. Experience.',
+    description: 'Villa Devonté is a premium hospitality destination offering luxury rooms, an elegant restaurant, a warm lounge and a private hot tub experience — all a single WhatsApp message away.',
+    story: 'Villa Devonté began as a family home built around a courtyard, a long dining table and an open sky. Today it welcomes guests from across the world, but the spirit has never changed: generous hospitality, quiet luxury and food made to be shared.',
+    philosophy: 'We believe luxury should feel effortless. No queues, no forms, no accounts — just a conversation. Tell us what you need and our team makes it happen.'
+  },
+
+  contact: {
+    whatsapp: '2348012345678',            /* ← REPLACE with the real number, digits only, no + */
+    phoneDisplay: '+234 801 234 5678',
+    email: 'hello@villadevonte.com',
+    instagram: '@villadevonte',
+    instagramUrl: 'https://instagram.com/villadevonte',
+    address: '12 Devonté Close, Lekki Phase 1, Lagos, Nigeria',
+    mapsQuery: 'Lekki Phase 1, Lagos, Nigeria',
+    hours: 'Open daily · 8:00 AM – 12:00 AM',
+    currency: '₦'
+  },
+
+  restaurant: {
+    intro: 'Our kitchen pairs the bold, smoky flavours of West African cooking with the precision of a modern continental kitchen. Everything is prepared to order, plated simply and served in a room designed to slow you down.',
+    points: [
+      'Indoor dining room and open-air terrace',
+      'Chef\'s tasting menu available on request',
+      'Full bar with signature cocktails and wines',
+      'Room service available to all guests'
+    ]
+  },
+
+  lounge: {
+    intro: 'Low light, warm wood and a soundtrack that never rushes you. The Devonté Lounge is where evenings begin and end — signature cocktails, small plates and live sets on selected nights.',
+    points: [
+      'Signature cocktails & premium spirits',
+      'Live DJ and jazz nights',
+      'Private booth reservations available',
+      'Small plates served until midnight'
+    ],
+    hours: 'Daily · 5:00 PM – 2:00 AM'
+  },
+
+  hotTub: {
+    intro: 'A private, heated outdoor tub tucked into the gardens — steam rising under open sky, robes waiting and nowhere else to be. Available by session, day or night.',
+    hours: 'Daily · 10:00 AM – 10:00 PM',
+    sessions: [
+      { id:'day-pass', name:'Day Pass', price:25000, duration:'2 hours', includes:'Towels, robe, welcome drink' },
+      { id:'sunset-couples', name:'Couples Sunset Session', price:45000, duration:'2 hours', includes:'Private tub, sparkling wine, fruit platter' },
+      { id:'private-group', name:'Private Group Session', price:80000, duration:'3 hours', includes:'Up to 6 guests, attendant, grazing platters' }
+    ],
+    rules: [
+      'Sessions must be booked in advance',
+      'Shower before entering the tub',
+      'No glassware in or around the tub',
+      'Children under 12 must be supervised',
+      'Not recommended during pregnancy or for guests with heart conditions'
+    ]
+  },
+
+  rooms: [
+    {
+      id:'devonte-suite', name:'The Devonté Suite', price:150000, guests:2, bed:'King Bed', size:'62 m²', tone:0, available:true,
+      short:'Our signature suite with a private balcony overlooking the gardens.',
+      desc:'The Devonté Suite is the finest room in the villa. Floor-to-ceiling doors open onto a private balcony with garden views, while the interior pairs warm timber, natural linen and soft lighting. A deep soaking tub and rain shower complete the bathroom, and a complimentary hot tub session is included with every stay.',
+      amenities:['King-size bed','Private balcony','Complimentary hot tub session','Air conditioning','55" Smart TV','High-speed Wi-Fi','Ensuite rain shower & soaking tub','Breakfast for two','Daily housekeeping','24/7 room service']
+    },
+    {
+      id:'garden-villa', name:'Garden Villa Room', price:95000, guests:2, bed:'Queen Bed', size:'44 m²', tone:1, available:true,
+      short:'Ground-floor room opening directly onto the courtyard garden.',
+      desc:'Wake up, step out, and you are in the garden. The Garden Villa Room opens onto the courtyard through wide sliding doors, with a private seating area shaded by palms. Ideal for guests who want the outdoors within reach.',
+      amenities:['Queen-size bed','Direct garden access','Air conditioning','43" Smart TV','High-speed Wi-Fi','Ensuite shower','Breakfast for two','Daily housekeeping']
+    },
+    {
+      id:'executive-king', name:'Executive King', price:110000, guests:2, bed:'King Bed', size:'48 m²', tone:2, available:true,
+      short:'A generous work-and-rest room with a dedicated study nook.',
+      desc:'Designed for longer stays, the Executive King balances a spacious sleeping area with a dedicated desk and lounge chair. Blackout curtains and acoustic glazing keep the room quiet at any hour.',
+      amenities:['King-size bed','Dedicated workspace','Air conditioning','50" Smart TV','High-speed Wi-Fi','Ensuite shower','Breakfast for two','Daily housekeeping','In-room safe']
+    },
+    {
+      id:'classic-queen', name:'Classic Queen', price:75000, guests:2, bed:'Queen Bed', size:'34 m²', tone:3, available:true,
+      short:'Warm, simple and beautifully finished — our essential room.',
+      desc:'The Classic Queen holds everything you need and nothing you don\'t. Natural textures, soft lighting and a supremely comfortable bed make this the room our returning guests ask for by name.',
+      amenities:['Queen-size bed','Air conditioning','43" Smart TV','High-speed Wi-Fi','Ensuite shower','Breakfast for two','Daily housekeeping']
+    },
+    {
+      id:'terrace-twin', name:'Terrace Twin', price:85000, guests:3, bed:'Twin Beds + Daybed', size:'40 m²', tone:1, available:false,
+      short:'Flexible twin room with a private terrace — perfect for friends.',
+      desc:'Two full-size beds plus a daybed make the Terrace Twin ideal for friends or small families. A private terrace with seating extends the room outdoors, and the bathroom features a double vanity.',
+      amenities:['Twin beds + daybed','Private terrace','Air conditioning','43" Smart TV','High-speed Wi-Fi','Double vanity bathroom','Breakfast for three','Daily housekeeping']
+    }
+  ],
+
+  menu: [
+    /* ---- FOOD · Starters ---- */
+    { id:'f1', group:'food', category:'Starters', name:'Goat Pepper Soup', desc:'Slow-simmered goat in a fiery native broth with utazi leaves and scent leaf.', price:6500, tone:0, available:true },
+    { id:'f2', group:'food', category:'Starters', name:'Suya Skewers', desc:'Char-grilled beef skewers dusted in house yaji spice, served with red onion.', price:7000, tone:1, available:true },
+    { id:'f3', group:'food', category:'Starters', name:'Crispy Vegetable Spring Rolls', desc:'Hand-rolled spring rolls with a sweet chilli dip.', price:5500, tone:2, available:true },
+    { id:'f4', group:'food', category:'Starters', name:'Grilled Tiger Prawns', desc:'Four prawns grilled with garlic butter, chilli and lime.', price:9500, tone:3, available:true },
+
+    /* ---- FOOD · Main Courses ---- */
+    { id:'f5', group:'food', category:'Main Courses', name:'Grilled Chicken & Chips', desc:'Half chicken marinated for 24 hours, grilled over charcoal, with hand-cut chips.', price:12000, tone:1, available:true },
+    { id:'f6', group:'food', category:'Main Courses', name:'Pan-Seared Salmon', desc:'Atlantic salmon, lemon butter sauce, seasonal vegetables and herbed potatoes.', price:18500, tone:2, available:true },
+    { id:'f7', group:'food', category:'Main Courses', name:'Ribeye Steak', desc:'300g grass-fed ribeye cooked to your preference with peppercorn sauce.', price:24000, tone:0, available:true },
+    { id:'f8', group:'food', category:'Main Courses', name:'Seafood Pasta', desc:'Linguine with prawns, calamari and mussels in a light tomato and white wine sauce.', price:16500, tone:3, available:true },
+
+    /* ---- FOOD · Local Cuisine ---- */
+    { id:'f9',  group:'food', category:'Local Cuisine', name:'Jollof Rice & Chicken', desc:'Smoky party-style jollof rice with grilled chicken, fried plantain and coleslaw.', price:11000, tone:0, available:true },
+    { id:'f10', group:'food', category:'Local Cuisine', name:'Ofada Rice & Ayamase', desc:'Local ofada rice with rich green pepper stew, assorted meat and boiled egg.', price:12500, tone:1, available:true },
+    { id:'f11', group:'food', category:'Local Cuisine', name:'Pounded Yam & Egusi', desc:'Smooth pounded yam with melon seed soup, spinach and assorted meat.', price:11500, tone:2, available:true },
+    { id:'f12', group:'food', category:'Local Cuisine', name:'Native Jollof Rice', desc:'Palm oil rice with smoked fish, crayfish and traditional spices.', price:10500, tone:3, available:true },
+
+    /* ---- FOOD · Continental ---- */
+    { id:'f13', group:'food', category:'Continental', name:'Chicken Alfredo', desc:'Fettuccine tossed in a creamy parmesan sauce with grilled chicken breast.', price:14000, tone:1, available:true },
+    { id:'f14', group:'food', category:'Continental', name:'Devonté Beef Burger', desc:'200g beef patty, smoked cheddar, caramelised onion and truffle fries.', price:13500, tone:2, available:true },
+    { id:'f15', group:'food', category:'Continental', name:'Margherita Pizza', desc:'Stone-baked thin crust with San Marzano tomato, mozzarella and basil.', price:13000, tone:0, available:true },
+
+    /* ---- FOOD · Sides ---- */
+    { id:'f16', group:'food', category:'Sides', name:'Fried Plantain', desc:'Sweet ripe plantain, fried golden.', price:2500, tone:3, available:true },
+    { id:'f17', group:'food', category:'Sides', name:'Hand-Cut Fries', desc:'Thick-cut potatoes with sea salt.', price:3000, tone:1, available:true },
+    { id:'f18', group:'food', category:'Sides', name:'Coleslaw', desc:'Cabbage, carrot and a light creamy dressing.', price:2500, tone:2, available:true },
+
+    /* ---- FOOD · Desserts ---- */
+    { id:'f19', group:'food', category:'Desserts', name:'Chocolate Lava Cake', desc:'Warm dark chocolate cake with a molten centre and vanilla ice cream.', price:6500, tone:0, available:true },
+    { id:'f20', group:'food', category:'Desserts', name:'Baked Cheesecake', desc:'Vanilla cheesecake with a berry compote.', price:6000, tone:1, available:true },
+    { id:'f21', group:'food', category:'Desserts', name:'Seasonal Fruit Platter', desc:'Freshly cut tropical fruit, served chilled.', price:5000, tone:2, available:true },
+
+    /* ---- DRINKS · Signature Cocktails ---- */
+    { id:'d1', group:'drinks', category:'Signature Cocktails', name:'Devonté Sunset', desc:'Dark rum, passionfruit, lime and a whisper of hibiscus.', price:7500, tone:0, available:true },
+    { id:'d2', group:'drinks', category:'Signature Cocktails', name:'Palm Velvet', desc:'Whisky, palm sugar, bitters and orange oil.', price:8000, tone:1, available:true },
+    { id:'d3', group:'drinks', category:'Signature Cocktails', name:'Smoked Old Fashioned', desc:'Bourbon, smoked syrup and aromatic bitters.', price:8500, tone:2, available:true },
+    { id:'d4', group:'drinks', category:'Signature Cocktails', name:'Hibiscus Martini', desc:'Vodka, zobo reduction and fresh lime.', price:7500, tone:3, available:true },
+
+    /* ---- DRINKS · Mocktails ---- */
+    { id:'d5', group:'drinks', category:'Mocktails', name:'Virgin Mojito', desc:'Mint, lime, soda and cane sugar.', price:4500, tone:1, available:true },
+    { id:'d6', group:'drinks', category:'Mocktails', name:'Chapman Royale', desc:'The classic Nigerian Chapman, made properly.', price:5000, tone:2, available:true },
+    { id:'d7', group:'drinks', category:'Mocktails', name:'Passion Cooler', desc:'Passionfruit, pineapple, ginger and soda.', price:4500, tone:0, available:true },
+
+    /* ---- DRINKS · Soft Drinks ---- */
+    { id:'d8',  group:'drinks', category:'Soft Drinks', name:'Coca-Cola / Fanta / Sprite', desc:'Chilled canned soft drink.', price:1500, tone:3, available:true },
+    { id:'d9',  group:'drinks', category:'Soft Drinks', name:'Bottled Water', desc:'Still or sparkling, 75cl.', price:1000, tone:1, available:true },
+    { id:'d10', group:'drinks', category:'Soft Drinks', name:'Fresh Juice', desc:'Orange, pineapple or watermelon — pressed to order.', price:3500, tone:2, available:true },
+
+    /* ---- DRINKS · Wines ---- */
+    { id:'d11', group:'drinks', category:'Wines', name:'Cabernet Sauvignon', desc:'Full-bodied red, notes of blackcurrant and oak. Bottle.', price:32000, tone:0, available:true },
+    { id:'d12', group:'drinks', category:'Wines', name:'Chardonnay', desc:'Crisp white with citrus and vanilla. Bottle.', price:30000, tone:1, available:true },
+    { id:'d13', group:'drinks', category:'Wines', name:'Rosé', desc:'Dry, delicate and lightly floral. Bottle.', price:28000, tone:2, available:true },
+    { id:'d14', group:'drinks', category:'Wines', name:'Champagne', desc:'Brut, chilled and served with care. Bottle.', price:95000, tone:3, available:true },
+
+    /* ---- DRINKS · Other Beverages ---- */
+    { id:'d15', group:'drinks', category:'Other Beverages', name:'Coffee / Cappuccino', desc:'Freshly brewed, single origin.', price:2500, tone:1, available:true },
+    { id:'d16', group:'drinks', category:'Other Beverages', name:'Tea Selection', desc:'English breakfast, green, mint or chamomile.', price:2000, tone:2, available:true },
+    { id:'d17', group:'drinks', category:'Other Beverages', name:'Chilled Malt', desc:'Classic malt drink, served cold.', price:2000, tone:0, available:true }
+  ],
+
+  events: [
+    {
+      id:'sunset-session', status:'upcoming', title:'Devonté Sunset Session', date:'2026-03-14',
+      time:'5:00 PM – 11:00 PM', location:'Rooftop Terrace & Lounge', tone:0, available:true,
+      short:'Live DJ, signature cocktails and the best sunset view in the city.',
+      desc:'Our monthly Sunset Session returns to the rooftop. Expect a live DJ set from 6pm, our full signature cocktail list, and a small-plates menu served until late. Tables are limited and are released two weeks before each date.',
+      highlights:['Live DJ set from 6:00 PM','Complimentary welcome cocktail','Small plates menu until 11:00 PM','Rooftop terrace access'],
+      dressCode:'Smart casual — no sportswear or slippers',
+      tickets:[
+        { name:'Regular', price:10000, includes:'Entry + welcome cocktail' },
+        { name:'VIP', price:25000, includes:'Priority entry, reserved seating, bottle service for two' },
+        { name:'Table for 4', price:90000, includes:'Reserved table, 2 bottles of champagne, grazing platter' }
+      ]
+    },
+    {
+      id:'full-moon-tub', status:'upcoming', title:'Full Moon Hot Tub Night', date:'2026-03-28',
+      time:'7:00 PM – 11:00 PM', location:'Garden Hot Tub', tone:1, available:true,
+      short:'A private evening of warm water, candlelight and a curated soundtrack.',
+      desc:'On the night of the full moon, the garden becomes the venue. The hot tub is dressed with candles, the music is slow, and guests rotate through timed sessions. Light bites and warm drinks are served all evening.',
+      highlights:['Candlelit garden setting','45-minute private tub sessions','Warm drinks and light bites included','Live acoustic set at 9:00 PM'],
+      dressCode:'Swimwear and robes provided',
+      tickets:[
+        { name:'Single Session', price:35000, includes:'One 45-minute tub session + welcome drink' },
+        { name:'Couples Session', price:60000, includes:'Private session for two + sparkling wine' },
+        { name:'Evening Pass', price:80000, includes:'Full evening access, dinner plate and two drinks' }
+      ]
+    },
+    {
+      id:'jazz-brunch', status:'upcoming', title:'Sunday Jazz Brunch', date:'2026-04-05',
+      time:'12:00 PM – 4:00 PM', location:'The Restaurant', tone:2, available:true,
+      short:'A live jazz trio, a long table and an unhurried afternoon.',
+      desc:'Every first Sunday, our restaurant hosts a live jazz trio alongside an unlimited brunch service. Expect seasonal plates, a carving station, a dessert table and bottomless mimosas.',
+      highlights:['Live jazz trio','Unlimited brunch service','Carving station & dessert table','Bottomless mimosas option'],
+      dressCode:'Resort smart',
+      tickets:[
+        { name:'Brunch Only', price:20000, includes:'Full brunch buffet + soft drinks' },
+        { name:'Brunch & Mimosas', price:32000, includes:'Full brunch buffet + bottomless mimosas' },
+        { name:'Children (under 12)', price:9000, includes:'Full brunch buffet + juice' }
+      ]
+    },
+    {
+      id:'nye-gala', status:'previous', title:"New Year's Eve Gold Gala", date:'2025-12-31',
+      time:'8:00 PM – 3:00 AM', location:'Villa Devonté Grounds', tone:3, available:false,
+      short:'Black tie, live band, midnight fireworks — our biggest night yet.',
+      desc:'A sold-out evening of live music, a five-course tasting menu and a midnight fireworks display over the gardens. Thank you to everyone who joined us.',
+      highlights:['Five-course tasting menu','Live 9-piece band','Midnight fireworks','Champagne toast'],
+      dressCode:'Black tie',
+      tickets:[]
+    },
+    {
+      id:'wine-dine', status:'previous', title:'Devonté Wine & Dine', date:'2025-11-16',
+      time:'6:30 PM – 11:00 PM', location:'The Restaurant', tone:1, available:false,
+      short:'A six-course pairing dinner with a guest sommelier.',
+      desc:'An intimate evening of six courses paired with six wines, hosted by a guest sommelier. Every seat was filled within a week.',
+      highlights:['Six-course pairing menu','Guest sommelier','Limited to 30 seats'],
+      dressCode:'Smart elegant',
+      tickets:[]
+    },
+    {
+      id:'afrobeat-live', status:'previous', title:'Afrobeat Live Night', date:'2025-10-04',
+      time:'8:00 PM – 2:00 AM', location:'The Lounge', tone:0, available:false,
+      short:'Live band, full dance floor and a very late finish.',
+      desc:'Our first live Afrobeat night in the lounge — a full band, a packed floor and a finish well past midnight. We will be doing it again soon.',
+      highlights:['Live 7-piece Afrobeat band','Full lounge bar','Late-night small plates'],
+      dressCode:'Come as you are',
+      tickets:[]
+    }
+  ],
+
+  gallery: {
+    about: ['The Villa Exterior', 'Suite Interior', 'The Restaurant', 'The Lounge'],
+    hero: 'Villa Devonté at dusk',
+    restaurant: 'The Restaurant at Villa Devonté',
+    lounge: 'The Devonté Lounge',
+    hotTub: 'The Garden Hot Tub'
+  }
+};
+
+/* ============================ 3. STATE ============================ */
+const LS_CONTENT = 'vd_content_v1';
+const LS_CART    = 'vd_cart_v1';
+
+let content = (() => {
+  try {
+    const saved = localStorage.getItem(LS_CONTENT);
+    return saved ? JSON.parse(saved) : deep(DEFAULT_CONTENT);
+  } catch { return deep(DEFAULT_CONTENT); }
+})();
+
+let cart = (() => {
+  try { return JSON.parse(localStorage.getItem(LS_CART) || '[]'); }
+  catch { return []; }
+})();
+
+const saveContent = () => localStorage.setItem(LS_CONTENT, JSON.stringify(content));
+const saveCart = () => {
+  localStorage.setItem(LS_CART, JSON.stringify(cart));
+  renderCart();
+};
+
+/* ============================ 4. WHATSAPP ENGINE ============================ */
+const WA_LABELS = {
+  'room-reservation': 'ROOM RESERVATION',
+  'food-order':       'FOOD ORDER',
+  'drink-order':      'DRINK ORDER',
+  'food-drink-order': 'FOOD & DRINK ORDER',
+  'hot-tub-booking':  'HOT TUB BOOKING',
+  'event-ticket':     'EVENT TICKET',
+  'lounge-enquiry':   'LOUNGE ENQUIRY',
+  'customer-service': 'CUSTOMER SERVICE'
+};
+
+function waUrl(message) {
+  const number = String(content.contact.whatsapp).replace(/\D/g, '');
+  return 'https://wa.me/' + number + '?text=' + encodeURIComponent(message);
+}
+
+function openWA(message) {
+  window.open(waUrl(message), '_blank', 'noopener');
+}
+
+/** Every message starts with its label so the team instantly knows the intent. */
+function waMessage(label, bodyLines = []) {
+  return [
+    WA_LABELS[label] || 'CUSTOMER SERVICE',
+    content.brand.name,
+    '——————————————',
+    ...bodyLines,
+    '——————————————',
+    'Sent from villadevonte.com'
+  ].join('\n');
+}
+
+/* Generic labelled actions (buttons with data-wa) */
+const SIMPLE_ACTIONS = {
+  'customer-service': () => waMessage('customer-service', [
+    'Hello Villa Devonté, I would like to speak with customer service.'
+  ]),
+  'food-order': () => waMessage('food-order', [
+    'Hello Villa Devonté, I would like to place a food order.'
+  ]),
+  'drink-order': () => waMessage('drink-order', [
+    'Hello Villa Devonté, I would like to place a drink order.'
+  ]),
+  'hot-tub-booking': () => waMessage('hot-tub-booking', [
+    'Hello Villa Devonté, I would like to book the hot tub experience.'
+  ]),
+  'event-ticket': () => waMessage('event-ticket', [
+    'Hello Villa Devonté, I would like information on event tickets.'
+  ]),
+  'lounge-enquiry': () => waMessage('lounge-enquiry', [
+    'Hello Villa Devonté, I would like to make a lounge enquiry.'
+  ])
+};
+
+/* ============================ 5. RENDERERS ============================ */
+const CURRENCY = () => content.contact.currency;
+
+/* ---------- Rooms ---------- */
+function renderRooms() {
+  const grid = $('#roomsGrid');
+  if (!grid) return;
+  grid.innerHTML = content.rooms.map((r, i) => `
+    <article class="card reveal" style="transition-delay:${i * 60}ms">
+      <div class="card-media">
+        <img src="${imgSrc(r, r.name, r.tone)}" alt="${esc(r.name)} at Villa Devonté" loading="lazy">
+        ${r.available === false ? '<span class="badge">Fully Booked</span>' : ''}
+      </div>
+      <div class="card-body">
+        <p class="card-meta">${esc(r.guests)} Guests · ${esc(r.bed)} · ${esc(r.size)}</p>
+        <h3>${esc(r.name)}</h3>
+        <p>${esc(r.short)}</p>
+        <p class="price">${money(r.price)} <span>/ night</span></p>
+        <div class="card-actions">
+          <button class="btn btn-outline btn-sm" data-view-room="${r.id}">View Room</button>
+          <button class="btn btn-primary btn-sm" data-reserve-room="${r.id}" ${r.available === false ? 'disabled style="opacity:.5"' : ''}>Reserve Now</button>
+        </div>
+      </div>
+    </article>
+  `).join('');
+
+  /* Reservation form room dropdown */
+  const sel = $('#resRoom');
+  if (sel) {
+    sel.innerHTML = '<option value="">No preference</option>' +
+      content.rooms.map(r => `<option value="${esc(r.name)}">${esc(r.name)} — ${money(r.price)}/night</option>`).join('');
+  }
+  observeReveals();
+}
+
+/* ---------- Menu ---------- */
+let menuGroup = 'food';
+let menuCategory = 'All';
+
+function renderMenu() {
+  const grid = $('#menuGrid');
+  const chips = $('#menuChips');
+  if (!grid || !chips) return;
+
+  const groupItems = content.menu.filter(m => m.group === menuGroup);
+  const cats = ['All', ...new Set(groupItems.map(m => m.category))];
+  if (!cats.includes(menuCategory)) menuCategory = 'All';
+
+  chips.innerHTML = cats.map(c =>
+    `<button class="chip ${c === menuCategory ? 'active' : ''}" data-cat="${esc(c)}">${esc(c)}</button>`
+  ).join('');
+
+  const items = groupItems.filter(m => menuCategory === 'All' || m.category === menuCategory);
+
+  grid.innerHTML = items.map((m, i) => `
+    <article class="menu-card reveal ${m.available === false ? 'sold-out' : ''}" style="transition-delay:${(i % 6) * 50}ms">
+      <div class="menu-card-img">
+        <img src="${imgSrc(m, m.name, m.tone)}" alt="${esc(m.name)}" loading="lazy">
+      </div>
+      <div class="menu-card-body">
+        <p class="card-meta">${esc(m.category)}</p>
+        <h4>${esc(m.name)}</h4>
+        <p>${esc(m.desc)}</p>
+        <div class="menu-card-foot">
+          <span class="price">${money(m.price)}</span>
+          ${m.available === false
+            ? '<span class="badge badge--sand" style="position:static">Unavailable</span>'
+            : `<div class="qty">
+                 <button data-step="-1" data-target="qty-${m.id}" aria-label="Decrease quantity">−</button>
+                 <input type="text" inputmode="numeric" id="qty-${m.id}" value="1" readonly aria-label="Quantity">
+                 <button data-step="1" data-target="qty-${m.id}" aria-label="Increase quantity">+</button>
+               </div>
+               <button class="btn btn-primary btn-sm" data-add="${m.id}">Add</button>`}
+        </div>
+      </div>
+    </article>
+  `).join('');
+
+  observeReveals();
+}
+
+/* ---------- Events ---------- */
+let eventStatus = 'upcoming';
+
+function renderEvents() {
+  const grid = $('#eventsGrid');
+  if (!grid) return;
+  const list = content.events.filter(e => e.status === eventStatus);
+
+  if (!list.length) {
+    grid.innerHTML = '<p style="color:var(--muted)">No events in this category yet. Follow us on Instagram for announcements.</p>';
+    return;
+  }
+
+  grid.innerHTML = list.map((e, i) => `
+    <article class="event-card reveal" style="transition-delay:${i * 60}ms">
+      <div class="event-media">
+        <img src="${imgSrc(e, e.title, e.tone)}" alt="${esc(e.title)}" loading="lazy">
+        <div class="event-date"><b>${dayNum(e.date)}</b><span>${monthShort(e.date)}</span></div>
+      </div>
+      <div class="event-body">
+        <p class="event-meta">${esc(e.time)} · ${esc(e.location)}</p>
+        <h3>${esc(e.title)}</h3>
+        <p>${esc(e.short)}</p>
+        <div class="btn-row" style="margin-top:16px">
+          <button class="btn btn-outline btn-sm" data-view-event="${e.id}">Details</button>
+          ${e.status === 'upcoming'
+            ? `<button class="btn btn-primary btn-sm" data-view-event="${e.id}" data-buy="1">Get Tickets</button>`
+            : `<button class="btn btn-outline btn-sm" data-view-event="${e.id}">View Gallery</button>`}
+        </div>
+      </div>
+    </article>
+  `).join('');
+
+  observeReveals();
+}
+
+/* ---------- Split sections & static content ---------- */
+function renderStatics() {
+  const c = content, k = c.contact;
+
+  /* Hero */
+  const hero = $('#heroImage');
+  if (hero) hero.src = ph(c.gallery.hero, 0);
+
+  /* About */
+  const ag = $('#aboutGallery');
+  if (ag) {
+    ag.innerHTML = c.gallery.about.map((label, i) =>
+      `<div class="${i === 0 ? 'tall' : ''}"><img src="${ph(label, i)}" alt="${esc(label)} at Villa Devonté" loading="lazy"></div>`
+    ).join('');
+  }
+  const lead = $('#aboutLead');
+  if (lead) lead.textContent = c.brand.story;
+  const body = $('#aboutBody');
+  if (body) body.textContent = c.brand.philosophy;
+
+  /* Restaurant */
+  const ri = $('#restaurantImage');
+  if (ri) ri.src = ph(c.gallery.restaurant, 1);
+  const rintro = $('#restaurantIntro');
+  if (rintro) rintro.textContent = c.restaurant.intro;
+  const rp = $('#restaurantPoints');
+  if (rp) rp.innerHTML = c.restaurant.points.map(p => `<li>${esc(p)}</li>`).join('');
+
+  /* Lounge */
+  const li = $('#loungeImage');
+  if (li) li.src = ph(c.gallery.lounge, 2);
+  const lintro = $('#loungeIntro');
+  if (lintro) lintro.textContent = c.lounge.intro;
+  const lp = $('#loungePoints');
+  if (lp) lp.innerHTML = [...c.lounge.points, c.lounge.hours].map(p => `<li>${esc(p)}</li>`).join('');
+
+  /* Hot tub */
+  const hti = $('#hotTubImage');
+  if (hti) hti.src = ph(c.gallery.hotTub, 3);
+  const hintro = $('#hotTubIntro');
+  if (hintro) hintro.textContent = c.hotTub.intro;
+
+  const hs = $('#hotTubSessions');
+  if (hs) {
+    hs.innerHTML = c.hotTub.sessions.map(s => `
+      <div class="contact-item" style="align-items:flex-start">
+        <div style="flex:1">
+          <b style="font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brand-soft)">${esc(s.name)} · ${esc(s.duration)}</b>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--brand);line-height:1.2">${money(s.price)}</div>
+          <small style="color:var(--muted);font-size:.82rem">${esc(s.includes)}</small>
+        </div>
+      </div>
+    `).join('');
+  }
+  const hr = $('#hotTubRules');
+  if (hr) hr.innerHTML = c.hotTub.rules.map(r => `<li>${esc(r)}</li>`).join('');
+
+  const tubSel = $('#tubSession');
+  if (tubSel) {
+    tubSel.innerHTML = c.hotTub.sessions
+      .map(s => `<option value="${esc(s.name)}">${esc(s.name)} — ${money(s.price)}</option>`).join('');
+  }
+
+  /* Contact */
+  const set = (sel, val) => { const el = $(sel); if (el) el.textContent = val; };
+  set('#cAddress', k.address);
+  set('#cHours', k.hours);
+  set('#fAddress', k.address);
+  set('#fHours', k.hours);
+
+  const cPhone = $('#cPhone'); if (cPhone) { cPhone.textContent = k.phoneDisplay; cPhone.href = 'tel:' + k.phoneDisplay.replace(/\s/g, ''); }
+  const fPhone = $('#fPhone'); if (fPhone) { fPhone.textContent = k.phoneDisplay; fPhone.href = 'tel:' + k.phoneDisplay.replace(/\s/g, ''); }
+  const cEmail = $('#cEmail'); if (cEmail) { cEmail.textContent = k.email; cEmail.href = 'mailto:' + k.email; }
+  const fEmail = $('#fEmail'); if (fEmail) { fEmail.textContent = k.email; fEmail.href = 'mailto:' + k.email; }
+  const cIg = $('#cInstagram'); if (cIg) { cIg.textContent = k.instagram; cIg.href = k.instagramUrl; }
+  const fIg = $('#fInstagram'); if (fIg) { fIg.textContent = k.instagram; fIg.href = k.instagramUrl; }
+
+  const cWa = $('#cWhatsapp');
+  if (cWa) { cWa.textContent = k.phoneDisplay; cWa.href = waUrl(waMessage('customer-service', ['Hello Villa Devonté, I have an enquiry.'])); }
+
+  const fd = $('#footerDesc'); if (fd) fd.textContent = c.brand.description;
+
+  const map = $('#mapFrame');
+  if (map) map.src = 'https://www.google.com/maps?q=' + encodeURIComponent(k.mapsQuery) + '&output=embed';
+
+  /* Date minimums */
+  const today = new Date().toISOString().split('T')[0];
+  ['#resIn', '#resOut', '#tubDate'].forEach(s => { const el = $(s); if (el) el.min = today; });
+}
+
+/* ============================ 6. CART ============================ */
+function findMenuItem(id) { return content.menu.find(m => m.id === id); }
+
+function addToCart(id) {
+  const item = findMenuItem(id);
+  if (!item) return;
+  const input = $('#qty-' + id);
+  const qty = Math.max(1, parseInt(input?.value || 1, 10));
+  const existing = cart.find(l => l.id === id);
+  if (existing) existing.qty += qty;
+  else cart.push({ id, qty });
+  if (input) input.value = 1;
+  saveCart();
+  toast(qty + ' × ' + item.name + ' added to your order');
+}
+
+function renderCart() {
+  const body = $('#cartBody');
+  const totalEl = $('#cartTotal');
+  const count = cart.reduce((n, l) => n + l.qty, 0);
+  const total = cart.reduce((n, l) => {
+    const item = findMenuItem(l.id);
+    return n + (item ? item.price * l.qty : 0);
+  }, 0);
+
+  /* Badges */
+  const cc = $('#cartCount');
+  if (cc) { cc.textContent = count; cc.classList.toggle('on', count > 0); }
+  const fc = $('#fabCartCount'); if (fc) fc.textContent = count;
+  const fab = $('#fabCart'); if (fab) fab.style.display = count > 0 ? '' : 'none';
+
+  if (totalEl) totalEl.textContent = money(total);
+
+  if (!body) return;
+  if (!cart.length) {
+    body.innerHTML = '<div class="empty-cart">Your order is empty.<br>Add something from the menu to get started.</div>';
+    return;
+  }
+
+  body.innerHTML = cart.map(l => {
+    const item = findMenuItem(l.id);
+    if (!item) return '';
+    return `
+      <div class="cart-line">
+        <img src="${imgSrc(item, item.name, item.tone)}" alt="">
+        <div class="cl-info">
+          <b>${esc(item.name)}</b>
+          <small>${money(item.price)} each</small>
+          <div class="qty" style="margin-top:8px;display:inline-flex">
+            <button data-cart-step="-1" data-id="${item.id}" aria-label="Decrease">−</button>
+            <input type="text" value="${l.qty}" readonly aria-label="Quantity">
+            <button data-cart-step="1" data-id="${item.id}" aria-label="Increase">+</button>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div class="price" style="font-size:1.05rem">${money(item.price * l.qty)}</div>
+          <button data-cart-remove="${item.id}" style="font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px">Remove</button>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function cartStep(id, delta) {
+  const line = cart.find(l => l.id === id);
+  if (!line) return;
+  line.qty += delta;
+  if (line.qty <= 0) cart = cart.filter(l => l.id !== id);
+  saveCart();
+}
+
+function cartRemove(id) {
+  cart = cart.filter(l => l.id !== id);
+  saveCart();
+}
+
+function sendOrder() {
+  if (!cart.length) { toast('Your order is empty'); return; }
+
+  const lines = cart.map(l => {
+    const item = findMenuItem(l.id);
+    if (!item) return '';
+    return `${l.qty} × ${item.name} — ${money(item.price * l.qty)}`;
+  }).filter(Boolean);
+
+  const total = cart.reduce((n, l) => {
+    const item = findMenuItem(l.id);
+    return n + (item ? item.price * l.qty : 0);
+  }, 0);
+
+  const groups = new Set(cart.map(l => findMenuItem(l.id)?.group).filter(Boolean));
+  const label = groups.size > 1 ? 'food-drink-order' : (groups.has('drinks') ? 'drink-order' : 'food-order');
+
+  openWA(waMessage(label, [
+    'My order:',
+    '',
+    ...lines,
+    '',
+    `Estimated total: ${money(total)}`,
+    '',
+    'Please confirm availability and payment details.'
+  ]));
+}
+
+/* ============================ 7. MODAL ============================ */
+function openModal(html) {
+  const modal = $('#modal');
+  $('#modalContent').innerHTML = html;
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('locked');
+  $('.modal-panel').scrollTop = 0;
+}
+function closeModal() {
+  const modal = $('#modal');
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+  if (!$('#cartDrawer').classList.contains('open')) document.body.classList.remove('locked');
+}
+
+function openRoomModal(id) {
+  const r = content.rooms.find(x => x.id === id);
+  if (!r) return;
+  const gallery = [
+    imgSrc(r, r.name, r.tone),
+    ph(r.name + ' · Interior', r.tone + 1),
+    ph(r.name + ' · Bathroom', r.tone + 2),
+    ph(r.name + ' · View', r.tone + 3)
+  ];
+
+  openModal(`
+    <div class="modal-hero"><img id="roomMainImg" src="${gallery[0]}" alt="${esc(r.name)}"></div>
+    <p class="eyebrow">Room &amp; Suite</p>
+    <h2>${esc(r.name)}</h2>
+    <div class="detail-bar">
+      <div><b>${esc(r.guests)}</b>Guests</div>
+      <div><b>${esc(r.bed)}</b>Bed</div>
+      <div><b>${esc(r.size)}</b>Room Size</div>
+      <div><b>${money(r.price)}</b>Per Night</div>
+    </div>
+    <p style="color:var(--muted)">${esc(r.desc)}</p>
+
+    <div class="gallery-thumbs" id="roomThumbs">
+      ${gallery.map((g, i) => `<img src="${g}" alt="" data-thumb="${i}" class="${i === 0 ? 'active' : ''}">`).join('')}
+    </div>
+
+    <h3 style="font-size:1.4rem;margin:30px 0 16px">Amenities</h3>
+    <ul class="amenity-list">${r.amenities.map(a => `<li>${esc(a)}</li>`).join('')}</ul>
+
+    <div class="btn-row" style="margin-top:34px">
+      <button class="btn btn-primary" data-room-wa="${r.id}" ${r.available === false ? 'disabled style="opacity:.5"' : ''}>Reserve This Room</button>
+      <button class="btn btn-outline" data-room-form="${r.id}">Use Reservation Form</button>
+    </div>
+    <p class="form-note" style="margin-top:16px">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 3 6v6c0 5 3.8 9.3 9 10 5.2-.7 9-5 9-10V6z"/></svg>
+      Opens WhatsApp with a pre-filled <strong>ROOM RESERVATION</strong> message for this room.
+    </p>
+  `);
+
+  const thumbs = $('#roomThumbs');
+  if (thumbs) {
+    thumbs.addEventListener('click', e => {
+      const t = e.target.closest('[data-thumb]');
+      if (!t) return;
+      $('#roomMainImg').src = gallery[+t.dataset.thumb];
+      $$('#roomThumbs img').forEach(i => i.classList.remove('active'));
+      t.classList.add('active');
+    });
+  }
+}
+
+function openEventModal(id, focusTickets) {
+  const e = content.events.find(x => x.id === id);
+  if (!e) return;
+  const isPast = e.status === 'previous';
+  const gallery = [
+    imgSrc(e, e.title, e.tone),
+    ph(e.title + ' · 1', e.tone + 1),
+    ph(e.title + ' · 2', e.tone + 2),
+    ph(e.title + ' · 3', e.tone + 3)
+  ];
+
+  const ticketsHTML = (!isPast && e.tickets && e.tickets.length) ? `
+    <h3 style="font-size:1.4rem;margin:34px 0 6px">Ticket Categories</h3>
+    <p style="font-size:.86rem;color:var(--muted);margin-bottom:10px">Choose your tickets below, then send them straight to our team on WhatsApp.</p>
+    <div id="ticketList">
+      ${e.tickets.map((t, i) => `
+        <div class="ticket-row">
+          <div class="tr-info">
+            <b>${esc(t.name)}</b>
+            <small>${esc(t.includes)}</small>
+          </div>
+          <span class="price">${money(t.price)}</span>
+          <div class="qty">
+            <button data-step="-1" data-target="tk-${i}" aria-label="Decrease">−</button>
+            <input type="text" inputmode="numeric" id="tk-${i}" value="0" readonly aria-label="Quantity">
+            <button data-step="1" data-target="tk-${i}" aria-label="Increase">+</button>
+          </div>
+        </div>`).join('')}
+    </div>
+    <button class="btn btn-primary btn-block" style="margin-top:26px" data-buy-tickets="${e.id}">Buy Ticket on WhatsApp</button>
+  ` : '';
+
+  openModal(`
+    <div class="modal-hero"><img id="evMainImg" src="${gallery[0]}" alt="${esc(e.title)}"></div>
+    <p class="eyebrow">${isPast ? 'Previous Event' : 'Upcoming Event'}</p>
+    <h2>${esc(e.title)}</h2>
+    <div class="detail-bar">
+      <div><b>${fmtDate(e.date)}</b>Date</div>
+      <div><b>${esc(e.time)}</b>Time</div>
+      <div><b>${esc(e.location)}</b>Location</div>
+    </div>
+    <p style="color:var(--muted)">${esc(e.desc)}</p>
+
+    <div class="gallery-thumbs" id="evThumbs">
+      ${gallery.map((g, i) => `<img src="${g}" alt="" data-thumb="${i}" class="${i === 0 ? 'active' : ''}">`).join('')}
+    </div>
+
+    <h3 style="font-size:1.4rem;margin:30px 0 16px">Highlights</h3>
+    <ul class="amenity-list">${e.highlights.map(h => `<li>${esc(h)}</li>`).join('')}</ul>
+
+    <h3 style="font-size:1.4rem;margin:30px 0 10px">Dress Code</h3>
+    <p style="color:var(--muted)">${esc(e.dressCode)}</p>
+
+    ${ticketsHTML}
+
+    ${isPast ? `
+      <div class="btn-row" style="margin-top:32px">
+        <button class="btn btn-outline" data-wa="customer-service">Enquire About Future Events</button>
+      </div>` : ''}
+  `);
+
+  const thumbs = $('#evThumbs');
+  if (thumbs) {
+    thumbs.addEventListener('click', ev => {
+      const t = ev.target.closest('[data-thumb]');
+      if (!t) return;
+      $('#evMainImg').src = gallery[+t.dataset.thumb];
+      $$('#evThumbs img').forEach(i => i.classList.remove('active'));
+      t.classList.add('active');
+    });
+  }
+
+  if (focusTickets && !isPast) {
+    setTimeout(() => {
+      const el = $('#ticketList');
+      if (el) el.scrollIntoView({ behavior:'smooth', block:'center' });
+    }, 350);
+  }
+}
+
+function buyTickets(eventId) {
+  const e = content.events.find(x => x.id === eventId);
+  if (!e) return;
+  const chosen = [];
+  let total = 0;
+
+  e.tickets.forEach((t, i) => {
+    const input = $('#tk-' + i);
+    const qty = parseInt(input?.value || 0, 10);
+    if (qty > 0) {
+      chosen.push(`${qty} × ${t.name} — ${money(t.price * qty)}`);
+      total += t.price * qty;
+    }
+  });
+
+  if (!chosen.length) { toast('Please select at least one ticket'); return; }
+
+  openWA(waMessage('event-ticket', [
+    `Event: ${e.title}`,
+    `Date: ${fmtDate(e.date)}`,
+    `Time: ${e.time}`,
+    '',
+    ...chosen,
+    '',
+    `Total: ${money(total)}`,
+    '',
+    'Please confirm availability and payment details.'
+  ]));
+}
+
+/* ============================ 8. FORMS ============================ */
+function handleReservation(e) {
+  e.preventDefault();
+  const form = e.currentTarget;
+  const required = ['#resName', '#resPhone', '#resIn', '#resOut', '#resGuests'];
+  let valid = true;
+
+  required.forEach(sel => {
+    const el = $(sel);
+    const field = el.closest('.field');
+    if (!el.value.trim()) { field.classList.add('invalid'); valid = false; }
+    else field.classList.remove('invalid');
+  });
+
+  const inD = $('#resIn').value, outD = $('#resOut').value;
+  if (inD && outD && outD < inD) {
+    $('#resOut').closest('.field').classList.add('invalid');
+    $('#resOut').closest('.field').querySelector('.err').textContent = 'Check-out must be after check-in';
+    valid = false;
+  }
+
+  if (!valid) { toast('Please complete the required fields'); return; }
+
+  openWA(waMessage('room-reservation', [
+    `Name: ${$('#resName').value.trim()}`,
+    `Phone: ${$('#resPhone').value.trim()}`,
+    `Check-in: ${fmtDate(inD)}`,
+    `Check-out: ${fmtDate(outD)}`,
+    `Guests: ${$('#resGuests').value}`,
+    `Room Preference: ${$('#resRoom').value || 'No preference'}`,
+    `Additional Request: ${$('#resNotes').value.trim() || 'None'}`
+  ]));
+
+  toast('Opening WhatsApp with your reservation request…');
+}
+
+function reserveRoom(id) {
+  const r = content.rooms.find(x => x.id === id);
+  if (!r) return;
+  openWA(waMessage('room-reservation', [
+    `Room: ${r.name}`,
+    `Rate: ${money(r.price)} per night`,
+    '',
+    'Name:',
+    'Phone:',
+    'Check-in:',
+    'Check-out:',
+    'Guests:',
+    '',
+    'Please confirm availability.'
+  ]));
+}
+
+function bookHotTub() {
+  const session = $('#tubSession')?.value || '';
+  const date = $('#tubDate')?.value || '';
+  const s = content.hotTub.sessions.find(x => x.name === session);
+
+  openWA(waMessage('hot-tub-booking', [
+    `Session: ${session}`,
+    s ? `Price: ${money(s.price)} · ${s.duration}` : '',
+    `Preferred Date: ${date ? fmtDate(date) : 'To be confirmed'}`,
+    '',
+    'Name:',
+    'Phone:',
+    'Number of Guests:',
+    '',
+    'Please confirm availability.'
+  ].filter(Boolean)));
+}
+
+/* ============================ 9. NAVIGATION ============================ */
+function initNav() {
+  const header = $('#header');
+  const burger = $('#hamburger');
+  const menu = $('#mobileMenu');
+
+  const onScroll = () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  };
+  window.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+
+  const closeMenu = () => {
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    menu.classList.remove('open');
+    menu.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('locked');
+    if (!$('#modal').classList.contains('open') && !$('#cartDrawer').classList.contains('open')) {
+      header.classList.remove('solid');
+    }
+  };
+
+  burger.addEventListener('click', () => {
+    const open = !menu.classList.contains('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    menu.classList.toggle('open', open);
+    menu.setAttribute('aria-hidden', String(!open));
+    document.body.classList.toggle('locked', open);
+    header.classList.toggle('solid', open);
+    if (open) {
+      $$('#mobileMenu nav a').forEach((a, i) => {
+        a.style.transitionDelay = (80 + i * 45) + 'ms';
+      });
+    }
+  });
+
+  $$('#mobileMenu nav a').forEach(a => a.addEventListener('click', closeMenu));
+
+  /* Smooth scroll for data-scroll buttons */
+  document.addEventListener('click', ev => {
+    const t = ev.target.closest('[data-scroll]');
+    if (!t) return;
+    const target = $(t.dataset.scroll);
+    if (target) {
+      ev.preventDefault();
+      const top = target.getBoundingClientRect().top + window.scrollY - 70;
+      window.scrollTo({ top, behavior:'smooth' });
+      if (menu.classList.contains('open')) closeMenu();
+    }
+  });
+
+  /* Scroll spy */
+  const links = $$('#navDesktop a');
+  const sections = links
+    .map(a => $(a.getAttribute('href')))
+    .filter(Boolean);
+
+  if ('IntersectionObserver' in window && sections.length) {
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = '#' + entry.target.id;
+          links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === id));
+        }
+      });
+    }, { rootMargin:'-45% 0px -50% 0px', threshold:0 });
+    sections.forEach(s => spy.observe(s));
+  }
+}
+
+/* Reveal on scroll */
+let revealObserver = null;
+function observeReveals() {
+  const els = $$('.reveal:not(.in)');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(el => el.classList.add('in'));
+    return;
+  }
+  if (!revealObserver) {
+    revealObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin:'0px 0px -8% 0px', threshold:0.06 });
+  }
+  els.forEach(el => revealObserver.observe(el));
+}
+
+/* ============================ 10. ADMIN / CONTENT MANAGER ============================ */
+function getPath(obj, path) {
+  return path.split('.').reduce((o, k) => (o ? o[k] : undefined), obj);
+}
+function setPath(obj, path, value) {
+  const keys = path.split('.');
+  const last = keys.pop();
+  const target = keys.reduce((o, k) => o[k], obj);
+  target[last] = value;
+}
+
+function openAdmin() {
+  renderAdmin();
+  const p = $('#adminPanel');
+  p.classList.add('open');
+  p.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('locked');
+}
+function closeAdmin() {
+  const p = $('#adminPanel');
+  p.classList.remove('open');
+  p.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('locked');
+}
+
+function renderAdmin() {
+  const c = content;
+  const txt = (label, path, type = 'text') =>
+    `<label>${label}<input type="${type}" data-path="${path}" value="${esc(getPath(c, path))}"></label>`;
+
+  $('#adminInner').innerHTML = `
+    <div class="admin-head">
+      <h2>Staff Content Manager</h2>
+      <button class="close-x" data-close-admin aria-label="Close">✕</button>
+    </div>
+
+    <p class="admin-note">
+      <strong>How this works:</strong> edits are saved to this browser so you can preview them instantly.
+      Press <strong>Export JSON</strong> and replace <code>content.json</code> on the live server to publish for everyone.
+      No website rebuild required.
+    </p>
+
+    <h3>Brand &amp; Contact</h3>
+    ${txt('Villa name', 'brand.name')}
+    ${txt('Tagline', 'brand.tagline')}
+    ${txt('WhatsApp number (digits only, e.g. 2348012345678)', 'contact.whatsapp')}
+    ${txt('Phone (display)', 'contact.phoneDisplay')}
+    ${txt('Email', 'contact.email')}
+    ${txt('Instagram handle', 'contact.instagram')}
+    ${txt('Instagram URL', 'contact.instagramUrl')}
+    ${txt('Address', 'contact.address')}
+    ${txt('Google Maps search query', 'contact.mapsQuery')}
+    ${txt('Operating hours', 'contact.hours')}
+    ${txt('Currency symbol', 'contact.currency')}
+
+    <h3>Rooms</h3>
+    ${c.rooms.map((r, i) => `
+      <div class="admin-row">
+        <span>${esc(r.name)}</span>
+        <label>Price <input type="number" data-path="rooms.${i}.price" value="${r.price}"></label>
+        <label><input type="checkbox" data-path="rooms.${i}.available" ${r.available !== false ? 'checked' : ''}> Available</label>
+      </div>`).join('')}
+
+    <h3>Menu Items</h3>
+    ${c.menu.map((m, i) => `
+      <div class="admin-row">
+        <span>${esc(m.name)} <small style="color:var(--muted)">· ${esc(m.category)}</small></span>
+        <label>Price <input type="number" data-path="menu.${i}.price" value="${m.price}"></label>
+        <label><input type="checkbox" data-path="menu.${i}.available" ${m.available !== false ? 'checked' : ''}> Available</label>
+      </div>`).join('')}
+
+    <h3>Events &amp; Tickets</h3>
+    ${c.events.map((ev, i) => `
+      <div style="padding:16px 0;border-bottom:1px solid var(--line)">
+        <div class="admin-row" style="border:0;padding-bottom:6px">
+          <span><strong>${esc(ev.title)}</strong><br><small style="color:var(--muted)">${esc(ev.date)} · ${esc(ev.status)}</small></span>
+          <label>Status
+            <select data-path="events.${i}.status">
+              <option value="upcoming" ${ev.status === 'upcoming' ? 'selected' : ''}>Upcoming</option>
+              <option value="previous" ${ev.status === 'previous' ? 'selected' : ''}>Previous</option>
+            </select>
+          </label>
+          <label><input type="checkbox" data-path="events.${i}.available" ${ev.available !== false ? 'checked' : ''}> Active</label>
+        </div>
+        ${ev.tickets && ev.tickets.length ? ev.tickets.map((t, j) => `
+          <div class="admin-row" style="border:0;padding:6px 0">
+            <span style="padding-left:16px;color:var(--muted)">↳ ${esc(t.name)}</span>
+            <label>Price <input type="number" data-path="events.${i}.tickets.${j}.price" value="${t.price}"></label>
+            <span></span>
+          </div>`).join('') : ''}
+      </div>`).join('')}
+
+    <h3>Hot Tub Sessions</h3>
+    ${c.hotTub.sessions.map((s, i) => `
+      <div class="admin-row">
+        <span>${esc(s.name)}</span>
+        <label>Price <input type="number" data-path="hotTub.sessions.${i}.price" value="${s.price}"></label>
+        <span></span>
+      </div>`).join('')}
+
+    <div class="admin-actions">
+      <button class="btn btn-primary btn-sm" data-admin-save>Save Changes</button>
+      <button class="btn btn-outline btn-sm" data-admin-export>Export JSON</button>
+      <button class="btn btn-outline btn-sm" data-admin-import>Import JSON</button>
+      <button class="btn btn-outline btn-sm" data-admin-reset>Reset to Defaults</button>
+    </div>
+  `;
+}
+
+function applyAdminChanges() {
+  $$('#adminPanel [data-path]').forEach(el => {
+    const path = el.dataset.path;
+    let value;
+    if (el.type === 'checkbox') value = el.checked;
+    else if (el.type === 'number') value = Number(el.value) || 0;
+    else value = el.value;
+    setPath(content, path, value);
+  });
+  saveContent();
+  renderAll();
+}
+
+function exportContent() {
+  applyAdminChanges();
+  const blob = new Blob([JSON.stringify(content, null, 2)], { type:'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'content.json';
+  a.click();
+  URL.revokeObjectURL(url);
+  toast('content.json exported');
+}
+
+function importContent() {
+  const raw = prompt('Paste the content JSON below:');
+  if (!raw) return;
+  try {
+    const parsed = JSON.parse(raw);
+    content = parsed;
+    saveContent();
+    renderAll();
+    renderAdmin();
+    toast('Content imported successfully');
+  } catch {
+    toast('That JSON could not be parsed');
+  }
+}
+
+function resetContent() {
+  if (!confirm('Reset all content to the original defaults? This cannot be undone.')) return;
+  content = deep(DEFAULT_CONTENT);
+  saveContent();
+  renderAll();
+  renderAdmin();
+  toast('Content reset to defaults');
+}
+
+/* ============================ 11. TOAST ============================ */
+let toastTimer;
+function toast(msg) {
+  const el = $('#toast');
+  el.textContent = msg;
+  el.classList.add('on');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('on'), 2800);
+}
+
+/* ============================ 12. EVENT DELEGATION ============================ */
+function initDelegation() {
+  document.addEventListener('click', ev => {
+    const t = ev.target;
+
+    /* Quantity steppers */
+    const step = t.closest('[data-step]');
+    if (step) {
+      const input = document.getElementById(step.dataset.target);
+      if (input) {
+        let v = (parseInt(input.value, 10) || 0) + parseInt(step.dataset.step, 10);
+        v = Math.max(0, Math.min(50, v));
+        input.value = v;
+      }
+      return;
+    }
+
+    /* Add to order */
+    const add = t.closest('[data-add]');
+    if (add) { addToCart(add.dataset.add); return; }
+
+    /* Cart drawer steps */
+    const cstep = t.closest('[data-cart-step]');
+    if (cstep) { cartStep(cstep.dataset.id, parseInt(cstep.dataset.cartStep, 10)); return; }
+
+    const crem = t.closest('[data-cart-remove]');
+    if (crem) { cartRemove(crem.dataset.cartRemove); return; }
+
+    /* Menu group tabs */
+    const tab = t.closest('[data-group]');
+    if (tab) {
+      menuGroup = tab.dataset.group;
+      menuCategory = 'All';
+      $$('[data-group]').forEach(b => { b.classList.toggle('active', b === tab); b.setAttribute('aria-selected', String(b === tab)); });
+      renderMenu();
+      return;
+    }
+
+    /* Menu category chips */
+    const chip = t.closest('[data-cat]');
+    if (chip) { menuCategory = chip.dataset.cat; renderMenu(); return; }
+
+    /* Event status tabs */
+    const etab = t.closest('[data-events]');
+    if (etab) {
+      eventStatus = etab.dataset.events;
+      $$('[data-events]').forEach(b => { b.classList.toggle('active', b === etab); b.setAttribute('aria-selected', String(b === etab)); });
+      renderEvents();
+      return;
+    }
+
+    /* Rooms */
+    const vr = t.closest('[data-view-room]');
+    if (vr) { openRoomModal(vr.dataset.viewRoom); return; }
+    const rr = t.closest('[data-reserve-room]');
+    if (rr) { reserveRoom(rr.dataset.reserveRoom); return; }
+    const rw = t.closest('[data-room-wa]');
+    if (rw) { reserveRoom(rw.dataset.roomWa); return; }
+    const rf = t.closest('[data-room-form]');
+    if (rf) {
+      closeModal();
+      const r = content.rooms.find(x => x.id === rf.dataset.roomForm);
+      const sel = $('#resRoom');
+      if (r && sel) sel.value = r.name;
+      $('#reservation').scrollIntoView({ behavior:'smooth' });
+      return;
+    }
+
+    /* Events */
+    const ve = t.closest('[data-view-event]');
+    if (ve) { openEventModal(ve.dataset.viewEvent, ve.dataset.buy === '1'); return; }
+    const bt = t.closest('[data-buy-tickets]');
+    if (bt) { buyTickets(bt.dataset.buyTickets); return; }
+
+    /* WhatsApp generic actions */
+    const wa = t.closest('[data-wa]');
+    if (wa) {
+      ev.preventDefault();
+      const action = SIMPLE_ACTIONS[wa.dataset.wa];
+      if (action) openWA(action());
+      return;
+    }
+
+    /* Hot tub */
+    if (t.closest('[data-book-tub]')) { bookHotTub(); return; }
+
+    /* Cart open/close */
+    if (t.closest('[data-open-cart]')) {
+      renderCart();
+      $('#cartDrawer').classList.add('open');
+      $('#cartDrawer').setAttribute('aria-hidden', 'false');
+      document.body.classList.add('locked');
+      return;
+    }
+    if (t.closest('[data-close-cart]')) {
+      $('#cartDrawer').classList.remove('open');
+      $('#cartDrawer').setAttribute('aria-hidden', 'true');
+      if (!$('#modal').classList.contains('open')) document.body.classList.remove('locked');
+      return;
+    }
+
+    /* Modal */
+    if (t.closest('[data-close-modal]')) { closeModal(); return; }
+
+    /* Admin */
+    if (t.closest('[data-close-admin]')) { closeAdmin(); return; }
+    if (t.closest('[data-admin-save]')) { applyAdminChanges(); toast('Changes saved'); return; }
+    if (t.closest('[data-admin-export]')) { exportContent(); return; }
+    if (t.closest('[data-admin-import]')) { importContent(); return; }
+    if (t.closest('[data-admin-reset]')) { resetContent(); return; }
+  });
+
+  /* Escape closes overlays */
+  document.addEventListener('keydown', ev => {
+    if (ev.key !== 'Escape') return;
+    if ($('#modal').classList.contains('open')) closeModal();
+    if ($('#cartDrawer').classList.contains('open')) {
+      $('#cartDrawer').classList.remove('open');
+      document.body.classList.remove('locked');
+    }
+    if ($('#adminPanel').classList.contains('open')) closeAdmin();
+  });
+
+  /* Order send */
+  $('#cartSend')?.addEventListener('click', sendOrder);
+
+  /* Reservation form */
+  $('#reservationForm')?.addEventListener('submit', handleReservation);
+
+  /* Staff link */
+  $('#staffLink')?.addEventListener('click', ev => { ev.preventDefault(); openAdmin(); });
+
+  /* Hash-based admin access: index.html#admin */
+  if (location.hash === '#admin') openAdmin();
+  window.addEventListener('hashchange', () => {
+    if (location.hash === '#admin') openAdmin();
+  });
+}
+
+/* ============================ 13. RENDER ALL + BOOT ============================ */
+function renderAll() {
+  renderStatics();
+  renderRooms();
+  renderMenu();
+  renderEvents();
+  renderCart();
+  observeReveals();
+}
+
+function boot() {
+  renderAll();
+  initNav();
+  initDelegation();
+
+  /* Re-observe newly rendered content */
+  observeReveals();
+
+  /* Keep the reveal observer in sync after images load */
+  window.addEventListener('load', () => {
+    renderCart();
+    observeReveals();
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', boot);
+} else {
+  boot();
+}
+</script>
+</body>
+</html>
