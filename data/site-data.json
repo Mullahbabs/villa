@@ -1,0 +1,1102 @@
+{
+  "site": {
+    "name": "Villa Devonté",
+    "tagline": "Stay. Dine. Unwind. Experience.",
+    "description": "A private luxury villa, restaurant, lounge and hot tub destination in Lekki, Lagos — designed for slow mornings, long dinners and unforgettable nights.",
+    "currency": "₦",
+    "whatsapp": "2348012345678",
+    "phoneDisplay": "+234 801 234 5678",
+    "email": "reservations@villadevonte.com",
+    "address": "12 Devonté Close, Lekki Phase 1, Lagos, Nigeria",
+    "instagram": "https://instagram.com/villadevonte",
+    "instagramHandle": "@villadevonte",
+    "facebook": "https://facebook.com/villadevonte",
+    "tiktok": "https://tiktok.com/@villadevonte",
+    "mapEmbed": "https://www.google.com/maps?q=Lekki%20Phase%201%2C%20Lagos&output=embed",
+    "mapLink": "https://maps.google.com/?q=Lekki+Phase+1+Lagos",
+    "hours": [
+      { "label": "Restaurant", "value": "Daily · 8:00 AM – 11:00 PM" },
+      { "label": "Lounge", "value": "Daily · 5:00 PM – 2:00 AM" },
+      { "label": "Hot Tub", "value": "Daily · 9:00 AM – 10:00 PM" },
+      { "label": "Front Desk", "value": "24 Hours" },
+      { "label": "Check-in / Check-out", "value": "2:00 PM / 11:00 AM" }
+    ],
+    "footerNote": "© 2026 Villa Devonté. All Rights Reserved."
+  },
+
+  "nav": [
+    { "label": "Home", "href": "#/" },
+    { "label": "About", "href": "#/about" },
+    { "label": "Rooms", "href": "#/rooms" },
+    { "label": "Restaurant", "href": "#/restaurant" },
+    { "label": "Lounge", "href": "#/lounge" },
+    { "label": "Hot Tub", "href": "#/hot-tub" },
+    { "label": "Menu", "href": "#/menu" },
+    { "label": "Events", "href": "#/events" },
+    { "label": "Reservation", "href": "#/reservation" },
+    { "label": "Contact", "href": "#/contact" }
+  ],
+
+  "hero": {
+    "slides": [
+      {
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80",
+        "kicker": "Lekki · Lagos · Nigeria",
+        "title": "VILLA DEVONTÉ",
+        "subtitle": "Stay. Dine. Unwind. Experience.",
+        "primary": {
+          "label": "RESERVE YOUR STAY",
+          "waLabel": "ROOM RESERVATION",
+          "waLines": "I would like to reserve a stay at Villa Devonté."
+        },
+        "secondary": { "label": "EXPLORE VILLA DEVONTÉ", "href": "#/about" }
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=2000&q=80",
+        "kicker": "Suites & Rooms",
+        "title": "SLEEP IN LUXURY",
+        "subtitle": "Six private rooms. One unforgettable address.",
+        "primary": {
+          "label": "RESERVE YOUR STAY",
+          "waLabel": "ROOM RESERVATION",
+          "waLines": "I would like to reserve a stay at Villa Devonté."
+        },
+        "secondary": { "label": "VIEW ROOMS", "href": "#/rooms" }
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2000&q=80",
+        "kicker": "Restaurant · Lounge · Hot Tub",
+        "title": "DINE. DRINK. UNWIND.",
+        "subtitle": "A table, a cocktail and a warm soak — all in one place.",
+        "primary": { "label": "EXPLORE THE MENU", "href": "#/menu" },
+        "secondary": { "label": "BOOK HOT TUB", "href": "#/hot-tub" }
+      }
+    ]
+  },
+
+  "welcome": {
+    "eyebrow": "Welcome to Villa Devonté",
+    "title": "Not just a place to stay. An experience to remember.",
+    "body": [
+      "Villa Devonté was created for people who believe hospitality should feel personal. Tucked away in the quiet streets of Lekki Phase 1, our villa blends warm Nigerian generosity with quietly confident luxury.",
+      "Come for a night, stay for a weekend, or simply arrive for dinner and a cocktail by the water. Every corner of the property — from the sunlit suites to the softly lit lounge — is designed to slow you down."
+    ],
+    "image": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1400&q=80",
+    "stats": [
+      { "value": "6", "label": "Private Rooms" },
+      { "value": "40+", "label": "Menu Creations" },
+      { "value": "3", "label": "Experiences In One" },
+      { "value": "24/7", "label": "WhatsApp Concierge" }
+    ]
+  },
+
+  "experiences": [
+    {
+      "title": "Rooms & Suites",
+      "text": "Six individually styled rooms with premium linens, rain showers and garden views.",
+      "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "href": "#/rooms",
+      "cta": "VIEW ROOMS"
+    },
+    {
+      "title": "Restaurant",
+      "text": "Local Nigerian classics and continental plates, served from morning until late.",
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+      "href": "#/restaurant",
+      "cta": "EXPLORE RESTAURANT"
+    },
+    {
+      "title": "The Lounge",
+      "text": "Low light, signature cocktails, live sets and a soundtrack that runs till 2AM.",
+      "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1200&q=80",
+      "href": "#/lounge",
+      "cta": "ENTER THE LOUNGE"
+    },
+    {
+      "title": "Hot Tub",
+      "text": "A private, heated outdoor soak under the Lagos sky. Bookable by the hour.",
+      "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80",
+      "href": "#/hot-tub",
+      "cta": "BOOK A SESSION"
+    }
+  ],
+
+  "about": {
+    "eyebrow": "About Villa Devonté",
+    "title": "A villa built on warmth, detail and quiet luxury.",
+    "story": [
+      "Villa Devonté began with a simple idea: that a stay should feel like being welcomed into someone's home — only with better linen, better food and a much better bar.",
+      "What started as a private family residence in Lekki Phase 1 has grown into a full hospitality destination. The rooms remain intimate. The kitchen still cooks to order. The lounge still fills with friends who arrived as strangers.",
+      "We are a small team. We remember your name, your table and how you take your coffee. That is not a policy — it is simply how we were raised."
+    ],
+    "philosophy": [
+      {
+        "title": "Warmth First",
+        "text": "Genuine Nigerian hospitality — unhurried, attentive and never performative."
+      },
+      {
+        "title": "Detail Obsessed",
+        "text": "From the thread count to the playlist, everything at Villa Devonté is chosen on purpose."
+      },
+      {
+        "title": "Effortless Access",
+        "text": "No accounts, no forms to fight. One WhatsApp message and your table, room or ticket is arranged."
+      }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1470229722913-7ea0d1c1e7d4?auto=format&fit=crop&w=1400&q=80"
+    ]
+  },
+
+  "rooms": [
+    {
+      "id": "devonte-suite",
+      "name": "The Devonté Suite",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1400&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "short": "Our signature suite — king bed, private terrace and a freestanding tub.",
+      "description": "The Devonté Suite is the largest room in the villa and the one guests return for. Floor-to-ceiling windows open onto a private terrace overlooking the garden and pool. Inside, a king bed dressed in Egyptian cotton sits beside a freestanding soaking tub and a rain shower built for two. It is quiet, warm and deliberately unhurried.",
+      "amenities": [
+        "King bed",
+        "Private terrace",
+        "Freestanding bathtub",
+        "Rain shower",
+        "55\" Smart TV",
+        "Bluetooth sound system",
+        "Air conditioning",
+        "High-speed Wi-Fi",
+        "Mini bar",
+        "Nespresso machine",
+        "Daily housekeeping",
+        "Complimentary breakfast"
+      ],
+      "occupancy": "2 Adults",
+      "bed": "1 King",
+      "size": "52 sqm",
+      "view": "Garden & Pool",
+      "price": 180000,
+      "priceUnit": "per night"
+    },
+    {
+      "id": "garden-villa-room",
+      "name": "Garden Villa Room",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1400&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "short": "Ground-floor room opening directly onto the villa gardens.",
+      "description": "Set on the ground floor with sliding doors that open straight onto the lawn, the Garden Villa Room is our most peaceful stay. Wake up to birdsong, take your coffee on the patio, and let the garden be your living room.",
+      "amenities": [
+        "Queen bed",
+        "Garden patio",
+        "Walk-in rain shower",
+        "43\" Smart TV",
+        "Air conditioning",
+        "High-speed Wi-Fi",
+        "Mini bar",
+        "Tea & coffee station",
+        "Daily housekeeping",
+        "Complimentary breakfast"
+      ],
+      "occupancy": "2 Adults",
+      "bed": "1 Queen",
+      "size": "34 sqm",
+      "view": "Garden",
+      "price": 120000,
+      "priceUnit": "per night"
+    },
+    {
+      "id": "terrace-king",
+      "name": "Terrace King",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1400&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "short": "Upper-floor king room with a wide private balcony.",
+      "description": "A bright upper-floor room with a generous private balcony that catches the evening breeze. Ideal for guests who like to sit outside with a glass of wine before dinner downstairs.",
+      "amenities": [
+        "King bed",
+        "Private balcony",
+        "Rain shower",
+        "50\" Smart TV",
+        "Air conditioning",
+        "High-speed Wi-Fi",
+        "Mini bar",
+        "Work desk",
+        "Daily housekeeping",
+        "Complimentary breakfast"
+      ],
+      "occupancy": "2 Adults",
+      "bed": "1 King",
+      "size": "40 sqm",
+      "view": "Neighbourhood",
+      "price": 140000,
+      "priceUnit": "per night"
+    },
+    {
+      "id": "deluxe-queen",
+      "name": "Deluxe Queen",
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?auto=format&fit=crop&w=1400&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "short": "Comfortable queen room — our best value stay.",
+      "description": "Everything you need and nothing you don't. The Deluxe Queen is a calm, well-appointed room with a plush queen bed, a proper rain shower and blackout curtains for long lie-ins.",
+      "amenities": [
+        "Queen bed",
+        "Rain shower",
+        "43\" Smart TV",
+        "Air conditioning",
+        "High-speed Wi-Fi",
+        "Tea & coffee station",
+        "Blackout curtains",
+        "Daily housekeeping",
+        "Complimentary breakfast"
+      ],
+      "occupancy": "2 Adults",
+      "bed": "1 Queen",
+      "size": "28 sqm",
+      "view": "Courtyard",
+      "price": 95000,
+      "priceUnit": "per night"
+    },
+    {
+      "id": "executive-twin",
+      "name": "Executive Twin",
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "short": "Two full beds — perfect for friends or colleagues travelling together.",
+      "description": "A spacious twin room with two full beds, a work desk and plenty of storage. Popular with friends on a getaway and colleagues on a work trip.",
+      "amenities": [
+        "2 Full beds",
+        "Walk-in shower",
+        "48\" Smart TV",
+        "Air conditioning",
+        "High-speed Wi-Fi",
+        "Work desk",
+        "Mini fridge",
+        "Daily housekeeping",
+        "Complimentary breakfast"
+      ],
+      "occupancy": "2 Adults",
+      "bed": "2 Full",
+      "size": "36 sqm",
+      "view": "Courtyard",
+      "price": 110000,
+      "priceUnit": "per night"
+    },
+    {
+      "id": "the-loft",
+      "name": "The Loft",
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "short": "A double-height loft with a mezzanine lounge and skylight.",
+      "description": "Our most characterful room. The Loft opens into a double-height space with a mezzanine lounge, a skylight over the bed and a reading nook that guests tend to fight over.",
+      "amenities": [
+        "King bed",
+        "Mezzanine lounge",
+        "Skylight",
+        "Rain shower",
+        "55\" Smart TV",
+        "Air conditioning",
+        "High-speed Wi-Fi",
+        "Record player",
+        "Mini bar",
+        "Daily housekeeping",
+        "Complimentary breakfast"
+      ],
+      "occupancy": "2 Adults + 1 Child",
+      "bed": "1 King + Daybed",
+      "size": "46 sqm",
+      "view": "Rooftop",
+      "price": 160000,
+      "priceUnit": "per night"
+    }
+  ],
+
+  "restaurant": {
+    "eyebrow": "The Restaurant",
+    "title": "Nigerian soul. Continental polish. One kitchen.",
+    "intro": "Our kitchen cooks to order — nothing sits under a lamp. Expect the smoky jollof you grew up with, alongside steaks, pastas and seafood plated with a lighter hand.",
+    "body": [
+      "Breakfast runs from 8AM with fresh pastries, seasonal fruit and proper coffee. Lunch is relaxed and generous. Dinner is where the room slows down: candles on every table, the grill working hard and a wine list built to be drunk, not admired.",
+      "The restaurant is open to villa guests and to the public. Reservations are recommended for weekends and can be made in seconds on WhatsApp."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "highlights": [
+      {
+        "title": "Cooked To Order",
+        "text": "Every plate is fired when you order it — no buffets, no heat lamps."
+      },
+      {
+        "title": "Local & Continental",
+        "text": "Two kitchens in one: Nigerian classics and European comfort food."
+      },
+      {
+        "title": "Open Daily",
+        "text": "8:00 AM to 11:00 PM, seven days a week. Walk-ins welcome."
+      }
+    ],
+    "hours": [
+      { "label": "Breakfast", "value": "8:00 AM – 11:30 AM" },
+      { "label": "Lunch", "value": "12:30 PM – 4:00 PM" },
+      { "label": "Dinner", "value": "6:30 PM – 11:00 PM" },
+      { "label": "Last Order", "value": "10:30 PM" }
+    ]
+  },
+
+  "lounge": {
+    "eyebrow": "The Lounge",
+    "title": "Low light. Good sound. Better company.",
+    "intro": "Villa Devonté's lounge is where the villa changes character after dark. Velvet seating, a backlit bar and a resident DJ programme that runs Thursday through Sunday.",
+    "body": [
+      "The cocktail list leans on tropical fruit, dark spirits and house-made syrups. If you'd rather not choose, tell the bar what you usually drink and they will build something around it.",
+      "Tables are limited and weekends fill quickly. Reserve on WhatsApp and we'll hold your spot — no deposit required for standard tables."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "experiences": [
+      "Live sax & DJ sets — Thursday to Sunday",
+      "Private booth reservations for up to 8 guests",
+      "Bottle service with dedicated host",
+      "Signature cocktail flights (3 serves)",
+      "Birthday & celebration packages",
+      "Late kitchen menu until 11:00 PM"
+    ],
+    "signatureDrinks": [
+      {
+        "name": "Devonté Old Fashioned",
+        "desc": "Bourbon, brown sugar, cocoa bitters, orange oil"
+      },
+      {
+        "name": "Lekki Sunset",
+        "desc": "Dark rum, passionfruit, hibiscus, lime"
+      },
+      {
+        "name": "Palm Wine Spritz",
+        "desc": "Palm wine, prosecco, ginger, mint"
+      },
+      {
+        "name": "Sand & Smoke",
+        "desc": "Mezcal, tamarind, agave, chilli salt rim"
+      }
+    ],
+    "hours": [
+      { "label": "Monday – Wednesday", "value": "5:00 PM – 12:00 AM" },
+      { "label": "Thursday – Saturday", "value": "5:00 PM – 2:00 AM" },
+      { "label": "Sunday", "value": "4:00 PM – 12:00 AM" },
+      { "label": "Kitchen", "value": "Until 11:00 PM" }
+    ]
+  },
+
+  "hotTub": {
+    "eyebrow": "The Hot Tub",
+    "title": "A private heated soak, under the Lagos sky.",
+    "intro": "Our outdoor hot tub is heated to 38°C and screened for privacy. It is bookable by the hour — for couples, small groups or a quiet solo reset.",
+    "body": [
+      "Each session includes fresh towels, robes, a fruit platter and still water. Add a bottle of wine or a cocktail pitcher and we'll have it waiting on the deck when you arrive.",
+      "Sessions are limited to 6 guests and must be booked in advance. The tub is drained and sanitised between every booking."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "pricing": [
+      {
+        "title": "Day Session",
+        "price": 45000,
+        "unit": "per hour",
+        "text": "9:00 AM – 5:00 PM. Includes towels, robes and water.",
+        "includes": [
+          "Up to 4 guests",
+          "Towels & robes",
+          "Fruit platter",
+          "Still water"
+        ]
+      },
+      {
+        "title": "Evening Session",
+        "price": 65000,
+        "unit": "per hour",
+        "text": "5:00 PM – 10:00 PM. Candlelit deck and ambient sound.",
+        "includes": [
+          "Up to 6 guests",
+          "Towels & robes",
+          "Fruit platter & snacks",
+          "Candlelit deck setup"
+        ],
+        "featured": true
+      },
+      {
+        "title": "Private Buyout",
+        "price": 150000,
+        "unit": "per 2 hours",
+        "text": "Exclusive use of the deck, tub and bar service.",
+        "includes": [
+          "Up to 10 guests",
+          "Dedicated host",
+          "Bar service",
+          "Custom playlist"
+        ]
+      }
+    ],
+    "sessions": [
+      "09:00 AM",
+      "10:30 AM",
+      "12:00 PM",
+      "01:30 PM",
+      "03:00 PM",
+      "05:00 PM",
+      "06:30 PM",
+      "08:00 PM"
+    ],
+    "rules": [
+      "Bookings are confirmed on WhatsApp and held for 15 minutes past the start time.",
+      "Maximum 6 guests per standard session; 10 for private buyouts.",
+      "Shower before entering the tub. Swimwear required.",
+      "No glass near the tub — we provide unbreakable glassware.",
+      "Children under 12 must be supervised at all times.",
+      "Please disclose any medical conditions or pregnancy before booking.",
+      "Sessions may be rescheduled for weather at no cost."
+    ],
+    "hours": [
+      { "label": "Sessions", "value": "Daily · 9:00 AM – 10:00 PM" },
+      { "label": "Last Booking", "value": "8:00 PM" },
+      { "label": "Water Temperature", "value": "38°C / 100°F" },
+      { "label": "Capacity", "value": "Up to 6 guests" }
+    ]
+  },
+
+  "menu": {
+    "eyebrow": "Menu & Ordering",
+    "title": "Order in a few taps. Delivered to your table, room or door.",
+    "intro": "Browse the full menu below, choose your quantities and send your order straight to our kitchen on WhatsApp. No account, no checkout, no waiting.",
+    "note": "All prices are in Nigerian Naira (₦) and exclusive of 7.5% VAT. A 10% service charge applies to table service.",
+    "categories": [
+      {
+        "id": "starters",
+        "name": "Starters",
+        "type": "food",
+        "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80",
+        "items": [
+          {
+            "id": "st1",
+            "name": "Suya Beef Skewers",
+            "desc": "Grilled beef, house yaji spice, red onion, fresh tomato.",
+            "price": 7500,
+            "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80",
+            "tag": "Chef's Pick"
+          },
+          {
+            "id": "st2",
+            "name": "Peppered Gizzard",
+            "desc": "Slow-cooked gizzard tossed in scotch bonnet and bell pepper.",
+            "price": 6800,
+            "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "st3",
+            "name": "Prawn Spring Rolls",
+            "desc": "Crisp rolls with tiger prawn, sesame and sweet chilli dip.",
+            "price": 7200,
+            "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "st4",
+            "name": "Plantain & Pepper Dip",
+            "desc": "Sweet fried plantain with roasted pepper and garlic dip.",
+            "price": 4500,
+            "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=600&q=80",
+            "tag": "Vegetarian"
+          }
+        ]
+      },
+      {
+        "id": "main-courses",
+        "name": "Main Courses",
+        "type": "food",
+        "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
+        "items": [
+          {
+            "id": "mc1",
+            "name": "Grilled Ribeye",
+            "desc": "300g ribeye, garlic butter, rosemary potatoes, seasonal greens.",
+            "price": 24500,
+            "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80",
+            "tag": "Signature"
+          },
+          {
+            "id": "mc2",
+            "name": "Devonté Grilled Chicken",
+            "desc": "Half chicken, herb marinade, jollof rice, coleslaw.",
+            "price": 13500,
+            "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "mc3",
+            "name": "Pan-Seared Salmon",
+            "desc": "Atlantic salmon, lemon butter sauce, asparagus, crushed potatoes.",
+            "price": 21000,
+            "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "mc4",
+            "name": "Truffle Mushroom Pasta",
+            "desc": "Tagliatelle, wild mushrooms, truffle cream, aged parmesan.",
+            "price": 16500,
+            "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=600&q=80",
+            "tag": "Vegetarian"
+          }
+        ]
+      },
+      {
+        "id": "local-cuisine",
+        "name": "Local Cuisine",
+        "type": "food",
+        "image": "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?auto=format&fit=crop&w=1200&q=80",
+        "items": [
+          {
+            "id": "lc1",
+            "name": "Smoky Party Jollof",
+            "desc": "Long-grain rice cooked over open flame, served with fried plantain.",
+            "price": 9500,
+            "image": "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?auto=format&fit=crop&w=600&q=80",
+            "tag": "Most Loved"
+          },
+          {
+            "id": "lc2",
+            "name": "Egusi & Pounded Yam",
+            "desc": "Melon seed soup with assorted meat and stockfish, pounded yam.",
+            "price": 12500,
+            "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "lc3",
+            "name": "Seafood Okra",
+            "desc": "Fresh okra, prawns, crab and periwinkle in a light palm oil broth.",
+            "price": 15500,
+            "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "lc4",
+            "name": "Asun Rice Bowl",
+            "desc": "Spicy goat asun, seasoned rice, fried plantain, pepper sauce.",
+            "price": 11500,
+            "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80"
+          }
+        ]
+      },
+      {
+        "id": "continental",
+        "name": "Continental",
+        "type": "food",
+        "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1200&q=80",
+        "items": [
+          {
+            "id": "ct1",
+            "name": "Margherita Pizza",
+            "desc": "San Marzano tomato, fior di latte, basil, olive oil.",
+            "price": 14000,
+            "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "ct2",
+            "name": "Devonté Beef Burger",
+            "desc": "180g patty, smoked cheddar, caramelised onion, brioche, fries.",
+            "price": 13500,
+            "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "ct3",
+            "name": "Caesar Salad",
+            "desc": "Cos lettuce, parmesan, croutons, anchovy dressing.",
+            "price": 9500,
+            "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "ct4",
+            "name": "Fish & Chips",
+            "desc": "Beer-battered croaker, triple-cooked chips, tartare, lemon.",
+            "price": 14500,
+            "image": "https://images.unsplash.com/photo-1579208030886-b937da0925dc?auto=format&fit=crop&w=600&q=80"
+          }
+        ]
+      },
+      {
+        "id": "sides",
+        "name": "Sides",
+        "type": "food",
+        "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=1200&q=80",
+        "items": [
+          {
+            "id": "sd1",
+            "name": "Fried Plantain",
+            "desc": "Sweet, caramelised, lightly salted.",
+            "price": 3500,
+            "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "sd2",
+            "name": "Truffle Fries",
+            "desc": "Skin-on fries, truffle oil, parmesan, chives.",
+            "price": 5000,
+            "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "sd3",
+            "name": "Jollof Rice (Side)",
+            "desc": "A generous side portion of our smoky party jollof.",
+            "price": 4500,
+            "image": "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?auto=format&fit=crop&w=600&q=80"
+          }
+        ]
+      },
+      {
+        "id": "desserts",
+        "name": "Desserts",
+        "type": "food",
+        "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1200&q=80",
+        "items": [
+          {
+            "id": "ds1",
+            "name": "Chocolate Fondant",
+            "desc": "Warm dark chocolate cake, molten centre, vanilla ice cream.",
+            "price": 7500,
+            "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=600&q=80",
+            "tag": "Signature"
+          },
+          {
+            "id": "ds2",
+            "name": "Coconut Panna Cotta",
+            "desc": "Silky coconut cream, mango coulis, toasted coconut.",
+            "price": 6500,
+            "image": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "ds3",
+            "name": "Puff Puff & Caramel",
+            "desc": "Warm puff puff, salted caramel drizzle, vanilla cream.",
+            "price": 5500,
+            "image": "https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "ds4",
+            "name": "Seasonal Fruit Plate",
+            "desc": "Hand-cut tropical fruit, lime, mint.",
+            "price": 4500,
+            "image": "https://images.unsplash.com/photo-1519996529931-28324d5a630e?auto=format&fit=crop&w=600&q=80"
+          }
+        ]
+      },
+      {
+        "id": "signature-cocktails",
+        "name": "Signature Cocktails",
+        "type": "drink",
+        "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1200&q=80",
+        "items": [
+          {
+            "id": "ck1",
+            "name": "Devonté Old Fashioned",
+            "desc": "Bourbon, brown sugar, cocoa bitters, orange oil.",
+            "price": 8500,
+            "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=600&q=80",
+            "tag": "Signature"
+          },
+          {
+            "id": "ck2",
+            "name": "Lekki Sunset",
+            "desc": "Dark rum, passionfruit, hibiscus, lime.",
+            "price": 8000,
+            "image": "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "ck3",
+            "name": "Palm Wine Spritz",
+            "desc": "Palm wine, prosecco, ginger, mint.",
+            "price": 7500,
+            "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "ck4",
+            "name": "Sand & Smoke",
+            "desc": "Mezcal, tamarind, agave, chilli salt rim.",
+            "price": 9000,
+            "image": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "ck5",
+            "name": "Espresso Martini",
+            "desc": "Vodka, espresso, coffee liqueur, vanilla.",
+            "price": 8500,
+            "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80"
+          }
+        ]
+      },
+      {
+        "id": "mocktails",
+        "name": "Mocktails",
+        "type": "drink",
+        "image": "https://images.unsplash.com/photo-1546171753-97d7676e4602?auto=format&fit=crop&w=1200&q=80",
+        "items": [
+          {
+            "id": "mk1",
+            "name": "Virgin Lekki Sunset",
+            "desc": "Passionfruit, hibiscus, lime, soda.",
+            "price": 5000,
+            "image": "https://images.unsplash.com/photo-1546171753-97d7676e4602?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "mk2",
+            "name": "Ginger & Pineapple Cooler",
+            "desc": "Fresh pineapple, ginger, lime, mint.",
+            "price": 4500,
+            "image": "https://images.unsplash.com/photo-1543253687-c931c8e01820?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "mk3",
+            "name": "Cucumber Mint Fizz",
+            "desc": "Cucumber, mint, elderflower, sparkling water.",
+            "price": 4500,
+            "image": "https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=600&q=80"
+          }
+        ]
+      },
+      {
+        "id": "soft-drinks",
+        "name": "Soft Drinks",
+        "type": "drink",
+        "image": "https://images.unsplash.com/photo-1581006852262-e4307cf6283a?auto=format&fit=crop&w=1200&q=80",
+        "items": [
+          {
+            "id": "sf1",
+            "name": "Fresh Orange Juice",
+            "desc": "Pressed to order. No added sugar.",
+            "price": 3500,
+            "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "sf2",
+            "name": "Chapman",
+            "desc": "The Nigerian classic — bitters, citrus, cucumber.",
+            "price": 4000,
+            "image": "https://images.unsplash.com/photo-1581006852262-e4307cf6283a?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "sf3",
+            "name": "Still / Sparkling Water",
+            "desc": "750ml bottle, chilled.",
+            "price": 2000,
+            "image": "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=600&q=80"
+          }
+        ]
+      },
+      {
+        "id": "wines",
+        "name": "Wines & Bubbles",
+        "type": "drink",
+        "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1200&q=80",
+        "items": [
+          {
+            "id": "wn1",
+            "name": "House Red — Glass",
+            "desc": "Shiraz blend, dark fruit, soft tannins.",
+            "price": 6500,
+            "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "wn2",
+            "name": "House White — Glass",
+            "desc": "Chenin blanc, crisp, green apple, citrus.",
+            "price": 6500,
+            "image": "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "wn3",
+            "name": "Prosecco — Bottle",
+            "desc": "Extra dry, fine bubbles, served chilled.",
+            "price": 35000,
+            "image": "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?auto=format&fit=crop&w=600&q=80"
+          },
+          {
+            "id": "wn4",
+            "name": "Moët & Chandon — Bottle",
+            "desc": "Brut Impérial, 750ml. Served with ice bucket.",
+            "price": 165000,
+            "image": "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?auto=format&fit=crop&w=600&q=80",
+            "tag": "Celebration"
+          }
+        ]
+      }
+    ]
+  },
+
+  "events": {
+    "eyebrow": "Events at Villa Devonté",
+    "title": "Nights worth clearing your calendar for.",
+    "intro": "From live sax sessions in the lounge to candlelit wine dinners and full-moon hot tub soirées — our events calendar runs all year. Buy your ticket on WhatsApp in under a minute.",
+    "upcoming": [
+      {
+        "id": "sunset-sessions",
+        "title": "Devonté Sunset Sessions",
+        "date": "2026-02-14",
+        "dateLabel": "Sat, 14 February 2026",
+        "time": "6:00 PM – 1:00 AM",
+        "location": "The Lounge & Pool Deck",
+        "image": "https://images.unsplash.com/photo-1470229722913-7ea0d1c1e7d4?auto=format&fit=crop&w=1400&q=80",
+        "short": "Live sax, a resident DJ and sunset cocktails on the pool deck.",
+        "description": "We open the pool deck at golden hour for a slow, warm evening of live saxophone followed by a resident DJ set into the early hours. Signature cocktails, small plates and bottle service available all night.",
+        "highlights": [
+          "Live saxophone from 6:30 PM",
+          "Resident DJ from 9:00 PM",
+          "Sunset cocktail menu",
+          "Pool deck access all night",
+          "Late kitchen until 11:00 PM"
+        ],
+        "dressCode": "Smart casual. No sportswear or slippers.",
+        "gallery": [
+          "https://images.unsplash.com/photo-1470229722913-7ea0d1c1e7d4?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=1200&q=80"
+        ],
+        "tickets": [
+          {
+            "type": "Regular Entry",
+            "price": 15000,
+            "includes": "Entry, welcome cocktail, pool deck access."
+          },
+          {
+            "type": "VIP Entry",
+            "price": 40000,
+            "includes": "Priority entry, reserved seating, 2 signature cocktails, dedicated host."
+          },
+          {
+            "type": "Table for 4",
+            "price": 150000,
+            "includes": "Reserved table, 2 bottles of prosecco, platters for 4, dedicated host.",
+            "featured": true
+          }
+        ]
+      },
+      {
+        "id": "candlelight-wine",
+        "title": "Candlelight Dinner & Wine Pairing",
+        "date": "2026-03-07",
+        "dateLabel": "Sat, 7 March 2026",
+        "time": "7:00 PM – 11:00 PM",
+        "location": "The Restaurant",
+        "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=80",
+        "short": "A five-course tasting menu, each course paired with a hand-picked wine.",
+        "description": "Chef has designed a five-course tasting menu drawing on Nigerian and continental flavours, each course paired by our sommelier. Seating is limited to 40 guests, at communal and private tables.",
+        "highlights": [
+          "Five-course tasting menu",
+          "Five paired wines",
+          "Sommelier-led commentary",
+          "Limited to 40 guests",
+          "Vegetarian menu available on request"
+        ],
+        "dressCode": "Elegant. Jackets encouraged, not required.",
+        "gallery": [
+          "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80"
+        ],
+        "tickets": [
+          {
+            "type": "Per Person",
+            "price": 65000,
+            "includes": "Five courses, five wine pairings, still water."
+          },
+          {
+            "type": "Couples Table",
+            "price": 120000,
+            "includes": "Two seats at a private table, five courses each, five pairings each, a bottle to take home.",
+            "featured": true
+          },
+          {
+            "type": "Chef's Table (4)",
+            "price": 280000,
+            "includes": "Private table for 4 beside the kitchen, extended menu, sommelier host."
+          }
+        ]
+      },
+      {
+        "id": "full-moon-soiree",
+        "title": "Full Moon Hot Tub Soirée",
+        "date": "2026-03-28",
+        "dateLabel": "Sat, 28 March 2026",
+        "time": "7:30 PM – 12:00 AM",
+        "location": "Pool Deck & Hot Tub",
+        "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1400&q=80",
+        "short": "An evening soak under the full moon, with cocktails and a live acoustic set.",
+        "description": "Our monthly full-moon gathering. The hot tub runs all evening, the deck is lit with candles and lanterns, and an acoustic duo plays from 8:30 PM. Towels and robes are provided for all guests.",
+        "highlights": [
+          "Hot tub sessions included",
+          "Live acoustic duo from 8:30 PM",
+          "Candlelit pool deck",
+          "Towel & robe service",
+          "Cocktail pitchers available"
+        ],
+        "dressCode": "Resort chic. Swimwear required for the tub.",
+        "gallery": [
+          "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80"
+        ],
+        "tickets": [
+          {
+            "type": "Soak Pass",
+            "price": 30000,
+            "includes": "Deck entry, one hot tub session, towel and robe."
+          },
+          {
+            "type": "Soak Pass + Drinks",
+            "price": 55000,
+            "includes": "Deck entry, two hot tub sessions, towel and robe, 3 cocktails.",
+            "featured": true
+          },
+          {
+            "type": "Cabana for 6",
+            "price": 250000,
+            "includes": "Private cabana, unlimited tub access for 6, 2 cocktail pitchers, platters."
+          }
+        ]
+      }
+    ],
+    "previous": [
+      {
+        "id": "nye-gold-gala",
+        "title": "New Year's Eve Gold Gala",
+        "date": "2025-12-31",
+        "dateLabel": "Wed, 31 December 2025",
+        "time": "9:00 PM – 4:00 AM",
+        "location": "Full Villa Buyout",
+        "image": "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=1400&q=80",
+        "short": "A full-villa takeover to close the year — 300 guests, three bars, one sunrise.",
+        "description": "We closed 2025 with a full-villa buyout: three bars, a live band, a DJ, a midnight gold confetti drop and breakfast served at sunrise. Thank you to everyone who celebrated with us.",
+        "highlights": [
+          "300 guests",
+          "Live band + 2 DJs",
+          "Gold confetti midnight drop",
+          "Sunrise breakfast service",
+          "Full villa buyout"
+        ],
+        "dressCode": "Black tie with a touch of gold.",
+        "gallery": [
+          "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1470229722913-7ea0d1c1e7d4?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80"
+        ],
+        "tickets": []
+      },
+      {
+        "id": "jazz-grill-night",
+        "title": "Devonté Jazz & Grill Night",
+        "date": "2025-11-22",
+        "dateLabel": "Sat, 22 November 2025",
+        "time": "6:00 PM – 1:00 AM",
+        "location": "Pool Deck",
+        "image": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1400&q=80",
+        "short": "An open-fire grill, a five-piece jazz band and 180 guests on the deck.",
+        "description": "Our outdoor grill worked all night while a five-piece jazz band played two sets on the deck. The evening sold out in four days.",
+        "highlights": [
+          "Live 5-piece jazz band",
+          "Open-fire grill station",
+          "180 guests",
+          "Sold out in 4 days"
+        ],
+        "dressCode": "Smart casual.",
+        "gallery": [
+          "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80"
+        ],
+        "tickets": []
+      },
+      {
+        "id": "cocktail-masterclass",
+        "title": "Rooftop Cocktail Masterclass",
+        "date": "2025-10-18",
+        "dateLabel": "Sat, 18 October 2025",
+        "time": "4:00 PM – 7:00 PM",
+        "location": "Rooftop Terrace",
+        "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1400&q=80",
+        "short": "Twenty guests, four cocktails and a hands-on session with our head bartender.",
+        "description": "A small-group masterclass on the rooftop. Guests learned four signature serves, the theory behind balance and how to build a home bar without spending a fortune.",
+        "highlights": [
+          "Hands-on, 20 guests",
+          "Four signature cocktails",
+          "Take-home recipe cards",
+          "Rooftop sunset session"
+        ],
+        "dressCode": "Casual.",
+        "gallery": [
+          "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=1200&q=80"
+        ],
+        "tickets": []
+      }
+    ]
+  },
+
+  "socialGallery": {
+    "eyebrow": "Follow The Story",
+    "title": "@villadevonte",
+    "intro": "Tag us in your photos — we share our favourites every week.",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80"
+    ]
+  },
+
+  "whatsappLabels": {
+    "room": "ROOM RESERVATION",
+    "food": "FOOD ORDER",
+    "drink": "DRINK ORDER",
+    "foodDrink": "FOOD & DRINK ORDER",
+    "hotTub": "HOT TUB BOOKING",
+    "event": "EVENT TICKET",
+    "service": "CUSTOMER SERVICE",
+    "lounge": "LOUNGE ENQUIRY"
+  }
+}
