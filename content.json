@@ -143,7 +143,7 @@
     {
       "id": "classic-queen",
       "name": "Classic Queen",
-      "price": 85000,
+      "price": 95000,
       "guests": 2,
       "bed": "Queen Bed",
       "size": "34 m²",
@@ -164,7 +164,7 @@
     {
       "id": "terrace-twin",
       "name": "Terrace Twin",
-      "price": 80000,
+      "price": 89000,
       "guests": 3,
       "bed": "Twin Beds + Daybed",
       "size": "40 m²",

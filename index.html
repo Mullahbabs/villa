@@ -103,7 +103,7 @@
           "Segoe UI",
           Roboto,
           sans-serif;
-        font-weight: 300;
+        font-weight: bold;
         font-size: 16px;
         line-height: 1.7;
         color: var(--ink);
@@ -639,7 +639,7 @@
         position: absolute;
         inset: 0;
         z-index: 1;
-        background: linear-gradient(
+        background-image: linear-gradient(
           180deg,
           rgba(11, 11, 11, 0.62) 0%,
           rgba(11, 11, 11, 0.32) 38%,
@@ -756,6 +756,7 @@
       }
       .card-body p {
         font-size: 0.94rem;
+        font-weight: bolder;
         color: var(--muted);
         margin: 0;
       }
@@ -837,6 +838,7 @@
       }
       .about-text p {
         color: var(--muted);
+        font-weight: bolder;
         font-size: 1rem;
       }
       .about-text p:first-of-type {
@@ -861,8 +863,9 @@
         line-height: 1;
       }
       .stat span {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         letter-spacing: 0.2em;
+        font-weight: bolder;
         text-transform: uppercase;
         color: var(--muted);
       }
@@ -904,6 +907,7 @@
       }
       .split-body p {
         color: var(--muted);
+        font-weight: bolder;
         max-width: 52ch;
       }
       .section--brand .split-body p,
@@ -1276,7 +1280,7 @@
       .contact-item svg {
         flex: 0 0 20px;
         margin-top: 4px;
-        color: var(--sand);
+        color: var(--brand-dark);
       }
       .section--white .contact-item svg {
         color: var(--brand);
@@ -2004,8 +2008,8 @@
       <section class="hero" id="home">
         <div class="hero-media">
           <img
-            id="heroImage"
-            src=""
+            
+            src="img/suite-hotels.jpg"
             alt="Villa Devonté exterior at dusk"
             fetchpriority="high"
           />
@@ -4935,6 +4939,6 @@
         boot();
       }
     </script>
-    <script type="application/json" id="site-data" src="content.json"></script>
+    <script type="application/json" src="content.json"></script>
   </body>
 </html>
