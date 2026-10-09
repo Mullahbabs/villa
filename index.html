@@ -152,12 +152,13 @@
       .eyebrow {
         display: block;
         font-size: 0.66rem;
+
         letter-spacing: 0.34em;
         text-transform: uppercase;
         color: var(--brand);
         opacity: 0.8;
         margin-bottom: 1.1rem;
-        font-weight: 400;
+        font-weight: 600;
       }
       .h-display {
         font-size: clamp(2.4rem, 6.5vw, 4.6rem);
@@ -173,7 +174,7 @@
         font-size: clamp(0.98rem, 1.5vw, 1.08rem);
         color: var(--muted);
         max-width: 64ch;
-        font-weight: 300;
+        font-weight: bolder;
       }
       .center {
         text-align: center;
@@ -256,12 +257,12 @@
         gap: 0.6rem;
         padding: 1rem 1.85rem;
         font-family: var(--ff-body);
-        font-size: 0.7rem;
-        font-weight: 500;
+        font-size: 0.9rem;
+        font-weight: 800;
         letter-spacing: 0.18em;
         text-transform: uppercase;
         border: 1px solid transparent;
-        border-radius: 2px;
+        border-radius: 8px;
         cursor: pointer;
         transition: all 0.35s ease;
         white-space: nowrap;
@@ -275,6 +276,8 @@
       }
       .btn-primary {
         background: var(--brand);
+        border-radius: 8px;
+        font-weight: 800;
         color: var(--white);
         border-color: var(--brand);
       }
@@ -285,6 +288,7 @@
       .btn-sand {
         background: var(--sand);
         color: var(--brand-dark);
+        font-weight: bolder;
         border-color: var(--sand);
       }
       .btn-sand:hover {
@@ -604,8 +608,8 @@
         background: linear-gradient(
           180deg,
           rgba(20, 10, 4, 0.62) 0%,
-          rgba(20, 10, 4, 0.3) 38%,
-          rgba(20, 10, 4, 0.78) 100%
+          rgba(20, 10, 4, 0.62) 38%,
+          rgba(20, 10, 4, 0.62) 100%
         );
       }
       .hero-content {
@@ -821,12 +825,14 @@
       .card-text {
         font-size: 0.9rem;
         color: var(--muted);
+        font-weight: 400;
         line-height: 1.65;
         flex: 1;
         margin: 0;
       }
       .card-meta {
         font-size: 0.68rem;
+        font-weight: bold;
         letter-spacing: 0.16em;
         text-transform: uppercase;
         color: var(--brand);
@@ -841,6 +847,7 @@
       .card-price small {
         font-family: var(--ff-body);
         font-size: 0.62rem;
+        font-weight: bold;
         letter-spacing: 0.12em;
         text-transform: uppercase;
         opacity: 0.6;
@@ -890,6 +897,7 @@
         font-size: 0.88rem;
         color: var(--muted);
         display: flex;
+        font-weight: 400;
         gap: 9px;
         align-items: flex-start;
         line-height: 1.5;
@@ -920,6 +928,7 @@
       }
       .spec-list dt {
         font-size: 0.6rem;
+        font-weight: 400;
         letter-spacing: 0.2em;
         text-transform: uppercase;
         color: var(--muted);
@@ -971,6 +980,7 @@
       }
       .field label {
         font-size: 0.62rem;
+        font-weight: bold;
         letter-spacing: 0.2em;
         text-transform: uppercase;
         color: var(--muted);
@@ -984,7 +994,7 @@
         border-radius: 2px;
         background: var(--white);
         font-size: 0.95rem;
-        font-weight: 300;
+        font-weight: 400;
         transition:
           border-color 0.3s,
           box-shadow 0.3s;
@@ -1013,6 +1023,7 @@
         grid-column: 1/-1;
         font-size: 0.78rem;
         color: var(--muted);
+        font-weight: 400;
         margin: 0;
       }
       @media (max-width: 620px) {
@@ -1075,6 +1086,7 @@
         background: var(--white);
         border-radius: 100px;
         font-size: 0.63rem;
+        font-weight: 400;
         letter-spacing: 0.16em;
         text-transform: uppercase;
         cursor: pointer;
@@ -1105,7 +1117,8 @@
         font-size: clamp(1.4rem, 3vw, 2rem);
       }
       .menu-cat-head span {
-        font-size: 0.64rem;
+        font-size: 0.74rem;
+        font-weight: 400;
         letter-spacing: 0.2em;
         text-transform: uppercase;
         color: var(--muted);
@@ -1147,17 +1160,20 @@
       .menu-item-name {
         font-family: var(--ff-display);
         font-size: 1.16rem;
+        font-weight: 600;
         line-height: 1.25;
       }
       .menu-item-price {
         font-family: var(--ff-display);
-        font-size: 1.16rem;
+        font-size: 1.19rem;
         color: var(--brand);
+        font-weight: 600;
         white-space: nowrap;
       }
       .menu-item-desc {
         font-size: 0.86rem;
         color: var(--muted);
+        font-weight: 400;
         line-height: 1.6;
         margin: 5px 0 10px;
       }
@@ -1622,6 +1638,7 @@
       }
       .breadcrumb {
         font-size: 0.62rem;
+        font-weight: 500;
         letter-spacing: 0.2em;
         text-transform: uppercase;
         color: var(--muted);
@@ -1637,10 +1654,12 @@
         padding: 13px 0;
         border-bottom: 1px solid var(--line);
         font-size: 0.9rem;
+        font-weight: 500;
       }
       .info-list li span:first-child {
         color: var(--muted);
         font-size: 0.72rem;
+        font-weight: 600;
         letter-spacing: 0.14em;
         text-transform: uppercase;
         padding-top: 3px;
@@ -1767,17 +1786,17 @@
         "site": {
           "name": "Villa Devonté",
           "tagline": "Stay. Dine. Unwind. Experience.",
-          "description": "A private luxury villa, restaurant, lounge and hot tub destination in Lekki, Lagos — designed for slow mornings, long dinners and unforgettable nights.",
+          "description": "A private luxury villa, restaurant, lounge and hot tub destination in Calabar, Cross River — designed for slow mornings, long dinners and unforgettable nights.",
           "currency": "₦",
-          "whatsapp": "2348012345678",
+          "whatsapp": "2348160549506",
           "phoneDisplay": "+234 801 234 5678",
           "email": "reservations@villadevonte.com",
-          "address": "12 Devonté Close, Lekki Phase 1, Lagos, Nigeria",
+          "address": "12 Devonté Close, IBB Way, Calabar, Cross River",
           "instagram": "https://instagram.com/villadevonte",
           "instagramHandle": "@villadevonte",
           "facebook": "https://facebook.com/villadevonte",
           "tiktok": "https://tiktok.com/@villadevonte",
-          "mapEmbed": "https://www.google.com/maps?q=Lekki%20Phase%201%2C%20Lagos&output=embed",
+          "mapEmbed": "https://www.google.com/maps?q=Calabar%20Cross%20River&output=embed",
           "mapLink": "https://maps.google.com/?q=Lekki+Phase+1+Lagos",
           "hours": [
             { "label": "Restaurant", "value": "Daily · 8:00 AM – 11:00 PM" },
@@ -1806,7 +1825,7 @@
           "slides": [
             {
               "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80",
-              "kicker": "Lekki · Lagos · Nigeria",
+              "kicker": "IBB Way· Calabar · Nigeria",
               "title": "VILLA DEVONTÉ",
               "subtitle": "Stay. Dine. Unwind. Experience.",
               "primary": {
@@ -1894,7 +1913,7 @@
           "title": "A villa built on warmth, detail and quiet luxury.",
           "story": [
             "Villa Devonté began with a simple idea: that a stay should feel like being welcomed into someone's home — only with better linen, better food and a much better bar.",
-            "What started as a private family residence in Lekki Phase 1 has grown into a full hospitality destination. The rooms remain intimate. The kitchen still cooks to order. The lounge still fills with friends who arrived as strangers.",
+            "What started as a private family residence in Calabar has grown into a full hospitality destination. The rooms remain intimate. The kitchen still cooks to order. The lounge still fills with friends who arrived as strangers.",
             "We are a small team. We remember your name, your table and how you take your coffee. That is not a policy — it is simply how we were raised."
           ],
           "philosophy": [
@@ -2508,7 +2527,7 @@
                 },
                 {
                   "id": "ck2",
-                  "name": "Lekki Sunset",
+                  "name": "Cali Sunset",
                   "desc": "Dark rum, passionfruit, hibiscus, lime.",
                   "price": 8000,
                   "image": "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=600&q=80"
@@ -2798,7 +2817,7 @@
               "date": "2025-11-22",
               "dateLabel": "Sat, 22 November 2025",
               "time": "6:00 PM – 1:00 AM",
-              "location": "Pool Deck",
+              "location": "Pool Deck & Hot Tub",
               "image": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1400&q=80",
               "short": "An open-fire grill, a five-piece jazz band and 180 guests on the deck.",
               "description": "Our outdoor grill worked all night while a five-piece jazz band played two sets on the deck. The evening sold out in four days.",
@@ -4850,14 +4869,14 @@
         const desc = document.querySelector('meta[name="description"]');
         if (desc) {
           const map = {
-            home: "Villa Devonté is a luxury villa, restaurant, lounge and hot tub destination in Lekki, Lagos. Book rooms, order food and drinks, and buy event tickets on WhatsApp.",
+            home: "Villa Devonté is a luxury villa, restaurant, lounge and hot tub destination in Calabar, Cross River. Book rooms, order food and drinks, and buy event tickets on WhatsApp.",
             rooms:
               "Browse six private rooms and suites at Villa Devonté, Lekki. Premium linens, rain showers and WhatsApp reservations.",
             menu: "Explore the full Villa Devonté menu — Nigerian classics, continental plates, signature cocktails and wines. Order on WhatsApp.",
             events:
               "Upcoming and past events at Villa Devonté — live music, wine dinners and full-moon hot tub soirées. Buy tickets on WhatsApp.",
             "hot-tub":
-              "Book a private heated hot tub session at Villa Devonté, Lekki. Day, evening and private buyout sessions available.",
+              "Book a private heated hot tub session at Villa Devonté, Calabar. Day, evening and private buyout sessions available.",
           };
           if (map[root]) desc.setAttribute("content", map[root]);
         }

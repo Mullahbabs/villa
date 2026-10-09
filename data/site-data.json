@@ -2,18 +2,18 @@
   "site": {
     "name": "Villa Devonté",
     "tagline": "Stay. Dine. Unwind. Experience.",
-    "description": "A private luxury villa, restaurant, lounge and hot tub destination in Lekki, Lagos — designed for slow mornings, long dinners and unforgettable nights.",
+    "description": "A private luxury villa, restaurant, lounge and hot tub destination in Calli, Calabar — designed for slow mornings, long dinners and unforgettable nights.",
     "currency": "₦",
     "whatsapp": "2348012345678",
     "phoneDisplay": "+234 801 234 5678",
     "email": "reservations@villadevonte.com",
-    "address": "12 Devonté Close, Lekki Phase 1, Lagos, Nigeria",
+    "address": "12 Devonté Close, Calli Phase 1, Calabar, Nigeria",
     "instagram": "https://instagram.com/villadevonte",
     "instagramHandle": "@villadevonte",
     "facebook": "https://facebook.com/villadevonte",
     "tiktok": "https://tiktok.com/@villadevonte",
-    "mapEmbed": "https://www.google.com/maps?q=Lekki%20Phase%201%2C%20Lagos&output=embed",
-    "mapLink": "https://maps.google.com/?q=Lekki+Phase+1+Lagos",
+    "mapEmbed": "https://www.google.com/maps?q=Calli%20Phase%201%2C%20Calabar&output=embed",
+    "mapLink": "https://maps.google.com/?q=Calli+Phase+1+Calabar",
     "hours": [
       { "label": "Restaurant", "value": "Daily · 8:00 AM – 11:00 PM" },
       { "label": "Lounge", "value": "Daily · 5:00 PM – 2:00 AM" },
@@ -41,7 +41,7 @@
     "slides": [
       {
         "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80",
-        "kicker": "Lekki · Lagos · Nigeria",
+        "kicker": "Calli · Calabar · Nigeria",
         "title": "VILLA DEVONTÉ",
         "subtitle": "Stay. Dine. Unwind. Experience.",
         "primary": {
@@ -78,7 +78,7 @@
     "eyebrow": "Welcome to Villa Devonté",
     "title": "Not just a place to stay. An experience to remember.",
     "body": [
-      "Villa Devonté was created for people who believe hospitality should feel personal. Tucked away in the quiet streets of Lekki Phase 1, our villa blends warm Nigerian generosity with quietly confident luxury.",
+      "Villa Devonté was created for people who believe hospitality should feel personal. Tucked away in the quiet streets of Calli Phase 1, our villa blends warm Nigerian generosity with quietly confident luxury.",
       "Come for a night, stay for a weekend, or simply arrive for dinner and a cocktail by the water. Every corner of the property — from the sunlit suites to the softly lit lounge — is designed to slow you down."
     ],
     "image": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1400&q=80",
@@ -114,7 +114,7 @@
     },
     {
       "title": "Hot Tub",
-      "text": "A private, heated outdoor soak under the Lagos sky. Bookable by the hour.",
+      "text": "A private, heated outdoor soak under the Calabar sky. Bookable by the hour.",
       "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80",
       "href": "#/hot-tub",
       "cta": "BOOK A SESSION"
@@ -126,7 +126,7 @@
     "title": "A villa built on warmth, detail and quiet luxury.",
     "story": [
       "Villa Devonté began with a simple idea: that a stay should feel like being welcomed into someone's home — only with better linen, better food and a much better bar.",
-      "What started as a private family residence in Lekki Phase 1 has grown into a full hospitality destination. The rooms remain intimate. The kitchen still cooks to order. The lounge still fills with friends who arrived as strangers.",
+      "What started as a private family residence in Calli Phase 1 has grown into a full hospitality destination. The rooms remain intimate. The kitchen still cooks to order. The lounge still fills with friends who arrived as strangers.",
       "We are a small team. We remember your name, your table and how you take your coffee. That is not a policy — it is simply how we were raised."
     ],
     "philosophy": [
@@ -404,7 +404,7 @@
         "desc": "Bourbon, brown sugar, cocoa bitters, orange oil"
       },
       {
-        "name": "Lekki Sunset",
+        "name": "Calli Sunset",
         "desc": "Dark rum, passionfruit, hibiscus, lime"
       },
       {
@@ -426,7 +426,7 @@
 
   "hotTub": {
     "eyebrow": "The Hot Tub",
-    "title": "A private heated soak, under the Lagos sky.",
+    "title": "A private heated soak, under the Calabar sky.",
     "intro": "Our outdoor hot tub is heated to 38°C and screened for privacy. It is bookable by the hour — for couples, small groups or a quiet solo reset.",
     "body": [
       "Each session includes fresh towels, robes, a fruit platter and still water. Add a bottle of wine or a cocktail pitcher and we'll have it waiting on the deck when you arrive.",
@@ -740,7 +740,7 @@
           },
           {
             "id": "ck2",
-            "name": "Lekki Sunset",
+            "name": "Calli Sunset",
             "desc": "Dark rum, passionfruit, hibiscus, lime.",
             "price": 8000,
             "image": "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=600&q=80"
@@ -776,7 +776,7 @@
         "items": [
           {
             "id": "mk1",
-            "name": "Virgin Lekki Sunset",
+            "name": "Virgin Calli Sunset",
             "desc": "Passionfruit, hibiscus, lime, soda.",
             "price": 5000,
             "image": "https://images.unsplash.com/photo-1546171753-97d7676e4602?auto=format&fit=crop&w=600&q=80"
@@ -1030,7 +1030,7 @@
         "date": "2025-11-22",
         "dateLabel": "Sat, 22 November 2025",
         "time": "6:00 PM – 1:00 AM",
-        "location": "Pool Deck",
+        "location": "Pool Deck & HOT Tub",
         "image": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1400&q=80",
         "short": "An open-fire grill, a five-piece jazz band and 180 guests on the deck.",
         "description": "Our outdoor grill worked all night while a five-piece jazz band played two sets on the deck. The evening sold out in four days.",
