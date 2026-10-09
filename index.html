@@ -1675,6 +1675,126 @@
         display: block;
         filter: grayscale(0.25) contrast(1.05);
       }
+
+      /* Admin UI */
+      .admin-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        padding-bottom: 22px;
+        border-bottom: 1px solid var(--line);
+        margin-bottom: 24px;
+      }
+      .admin-bar .menu-tabs {
+        margin-bottom: 0;
+        border-bottom: 0;
+        padding-bottom: 0;
+        flex: 1;
+        min-width: 280px;
+      }
+      .admin-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .admin-section {
+        margin-bottom: 44px;
+      }
+      .admin-section-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 18px;
+        flex-wrap: wrap;
+      }
+      .admin-card {
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 22px;
+        margin-bottom: 16px;
+        background: #fcfaf8;
+      }
+      .admin-card-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 14px;
+      }
+      .admin-card-num {
+        font-size: 0.62rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--brand);
+        opacity: 0.7;
+      }
+      details.admin-card > summary {
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        font-family: var(--ff-display);
+        font-size: 1.2rem;
+        line-height: 1.3;
+      }
+      details.admin-card > summary::-webkit-details-marker {
+        display: none;
+      }
+      details.admin-card > summary::after {
+        content: "▾";
+        color: var(--muted);
+        font-size: 0.9rem;
+        flex: none;
+      }
+      details.admin-card[open] > summary::after {
+        content: "▴";
+      }
+      details.admin-card[open] > summary {
+        margin-bottom: 16px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--line);
+      }
+      .admin-nested {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px dashed var(--line);
+      }
+      .af-image {
+        display: grid;
+        grid-template-columns: 1fr 84px;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .af-image-preview {
+        width: 84px;
+        aspect-ratio: 1/1;
+        border-radius: 4px;
+        overflow: hidden;
+        background: var(--sand-soft);
+        border: 1px solid var(--line);
+      }
+      .af-image-preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .af-hint {
+        font-size: 0.72rem;
+        color: var(--muted);
+        margin-top: 4px;
+        display: block;
+      }
+      .field input[type="checkbox"] {
+        padding: 0;
+        width: auto;
+        height: auto;
+        accent-color: var(--brand);
+      }
     </style>
   </head>
   <body>
@@ -3063,9 +3183,7 @@
           ...lines,
         ];
         const text = parts.join("\n");
-        return (
-          "https://wa.me/61474451382/?text=" + encodeURIComponent(text)
-        );
+        return "https://wa.me/61474451382/?text=" + encodeURIComponent(text);
       }
 
       function openWhatsApp(label, lines) {
@@ -3868,26 +3986,44 @@
       }
 
       /* ---------- LOUNGE ---------- */
-function viewLounge() {
-  const l = DATA.lounge;
+      function viewLounge() {
+        const l = DATA.lounge;
 
-  // Full gallery grid (HTML string, used in the bottom gallery section)
-  const galleryHtml = l.gallery.map((src, i) =>
-    '<div class="media ratio-1x1 reveal" style="transition-delay:' + (i % 4) * 70 + 'ms">' +
-      img(src, 'The Lounge', 'The Lounge') +
-    '</div>'
-  ).join('');
+        // Full gallery grid (HTML string, used in the bottom gallery section)
+        const galleryHtml = l.gallery
+          .map(
+            (src, i) =>
+              '<div class="media ratio-1x1 reveal" style="transition-delay:' +
+              (i % 4) * 70 +
+              'ms">' +
+              img(src, "The Lounge", "The Lounge") +
+              "</div>",
+          )
+          .join("");
 
-  // Two-up stacked images for the "Opening Hours" split section
-  const galleryPairHtml = l.gallery.slice(0, 2).map((src, i) =>
-    '<div class="media ratio-3x4" style="margin-top:' + (i === 1 ? '34px' : '0') + '">' +
-      img(l.gallery[i + 1] || l.gallery[0], 'The Lounge', 'The Lounge') +
-    '</div>'
-  ).join('');
+        // Two-up stacked images for the "Opening Hours" split section
+        const galleryPairHtml = l.gallery
+          .slice(0, 2)
+          .map(
+            (src, i) =>
+              '<div class="media ratio-3x4" style="margin-top:' +
+              (i === 1 ? "34px" : "0") +
+              '">' +
+              img(
+                l.gallery[i + 1] || l.gallery[0],
+                "The Lounge",
+                "The Lounge",
+              ) +
+              "</div>",
+          )
+          .join("");
 
-  const upcoming = (DATA.events.upcoming || []).slice(0, 3).map(eventCard).join('');
+        const upcoming = (DATA.events.upcoming || [])
+          .slice(0, 3)
+          .map(eventCard)
+          .join("");
 
-  return `
+        return `
   <section class="page-head" style="background:var(--brand-dark);color:#fff">
     <div class="container">
       <div class="breadcrumb" style="color:rgba(255,255,255,.6)"><a href="#/">Home</a> · Lounge</div>
@@ -3895,7 +4031,7 @@ function viewLounge() {
       <h1 class="h-display mb-2" style="font-size:clamp(2.1rem,5vw,3.6rem);color:#fff">${esc(l.title)}</h1>
       <p class="lead" style="color:rgba(255,255,255,.75)">${esc(l.intro)}</p>
       <div class="btn-row mt-4">
-        <a class="btn btn-sand" href="${waLink(L().lounge, ['I would like to reserve a table in the lounge.', '', 'Name:', 'Phone:', 'Date:', 'Time:', 'Guests:', 'Occasion:'])}" target="_blank" rel="noopener">RESERVE / ENQUIRE</a>
+        <a class="btn btn-sand" href="${waLink(L().lounge, ["I would like to reserve a table in the lounge.", "", "Name:", "Phone:", "Date:", "Time:", "Guests:", "Occasion:"])}" target="_blank" rel="noopener">RESERVE / ENQUIRE</a>
         <a class="btn btn-ghost" href="#/menu">SEE DRINKS MENU</a>
       </div>
     </div>
@@ -3903,14 +4039,14 @@ function viewLounge() {
 
   <section class="section">
     <div class="container split">
-      <div class="split-media media ratio-4x3 reveal">${img(l.gallery[0], 'The Lounge', 'The Lounge')}</div>
+      <div class="split-media media ratio-4x3 reveal">${img(l.gallery[0], "The Lounge", "The Lounge")}</div>
       <div class="reveal">
         <span class="eyebrow">The Space</span>
         <h2 class="h-section mb-3">After dark, the villa changes.</h2>
-        ${l.body.map(p => '<p class="lead">' + esc(p) + '</p>').join('')}
+        ${l.body.map((p) => '<p class="lead">' + esc(p) + "</p>").join("")}
         <div class="btn-row mt-4">
           <a class="btn btn-primary" href="#/menu">DRINKS MENU</a>
-          <a class="btn btn-outline" href="${waLink(L().lounge, ['I have a question about the lounge.', '', 'Name:', 'Phone:'])}" target="_blank" rel="noopener">ENQUIRE</a>
+          <a class="btn btn-outline" href="${waLink(L().lounge, ["I have a question about the lounge.", "", "Name:", "Phone:"])}" target="_blank" rel="noopener">ENQUIRE</a>
         </div>
       </div>
     </div>
@@ -3918,18 +4054,18 @@ function viewLounge() {
 
   <section class="section section--dark">
     <div class="container">
-      ${sectionHead('What To Expect', 'Experiences in the lounge.', '', false)}
+      ${sectionHead("What To Expect", "Experiences in the lounge.", "", false)}
       <div class="grid g-3">
-        ${l.experiences.map((e, i) => '<div class="reveal" style="transition-delay:' + (i % 3) * 80 + 'ms;padding:22px;border:1px solid rgba(219,193,172,.18);border-radius:6px"><span style="color:var(--sand);font-size:.7rem;letter-spacing:.2em">' + String(i + 1).padStart(2, '0') + '</span><p style="margin:12px 0 0;color:rgba(255,255,255,.85)">' + esc(e) + '</p></div>').join('')}
+        ${l.experiences.map((e, i) => '<div class="reveal" style="transition-delay:' + (i % 3) * 80 + 'ms;padding:22px;border:1px solid rgba(219,193,172,.18);border-radius:6px"><span style="color:var(--sand);font-size:.7rem;letter-spacing:.2em">' + String(i + 1).padStart(2, "0") + '</span><p style="margin:12px 0 0;color:rgba(255,255,255,.85)">' + esc(e) + "</p></div>").join("")}
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      ${sectionHead('Signature Serves', 'From our bar.', 'Ask for any of these at the bar, or let our bartender build something around what you usually drink.', true)}
+      ${sectionHead("Signature Serves", "From our bar.", "Ask for any of these at the bar, or let our bartender build something around what you usually drink.", true)}
       <div class="grid g-4">
-        ${l.signatureDrinks.map((d, i) => '<div class="card reveal" style="transition-delay:' + i * 70 + 'ms"><div class="card-body"><h3 class="card-title" style="font-size:1.15rem">' + esc(d.name) + '</h3><p class="card-text" style="font-size:.85rem">' + esc(d.desc) + '</p></div></div>').join('')}
+        ${l.signatureDrinks.map((d, i) => '<div class="card reveal" style="transition-delay:' + i * 70 + 'ms"><div class="card-body"><h3 class="card-title" style="font-size:1.15rem">' + esc(d.name) + '</h3><p class="card-text" style="font-size:.85rem">' + esc(d.desc) + "</p></div></div>").join("")}
       </div>
     </div>
   </section>
@@ -3940,7 +4076,7 @@ function viewLounge() {
         <span class="eyebrow">Opening Hours</span>
         <h2 class="h-section mb-3">When the lights go down.</h2>
         <ul class="info-list">
-          ${l.hours.map(h => '<li><span>' + esc(h.label) + '</span><span>' + esc(h.value) + '</span></li>').join('')}
+          ${l.hours.map((h) => "<li><span>" + esc(h.label) + "</span><span>" + esc(h.value) + "</span></li>").join("")}
         </ul>
       </div>
       <div class="grid g-2 reveal" style="gap:12px">
@@ -3951,7 +4087,7 @@ function viewLounge() {
 
   <section class="section">
     <div class="container">
-      ${sectionHead('Lounge Events', 'Coming up at the lounge.', '', false)}
+      ${sectionHead("Lounge Events", "Coming up at the lounge.", "", false)}
       <div class="grid g-3">${upcoming}</div>
     </div>
   </section>
@@ -3961,11 +4097,11 @@ function viewLounge() {
       <h2 class="h-section mb-3" style="color:#fff">Reserve your booth.</h2>
       <p class="lead" style="color:rgba(255,255,255,.78);margin:0 auto 28px">Tables are limited. Send us a message and we'll hold your spot.</p>
       <div class="btn-row" style="justify-content:center">
-        <a class="btn btn-sand" href="${waLink(L().lounge, ['I would like to reserve a table in the lounge.', '', 'Name:', 'Phone:', 'Date:', 'Time:', 'Guests:'])}" target="_blank" rel="noopener">RESERVE ON WHATSAPP</a>
+        <a class="btn btn-sand" href="${waLink(L().lounge, ["I would like to reserve a table in the lounge.", "", "Name:", "Phone:", "Date:", "Time:", "Guests:"])}" target="_blank" rel="noopener">RESERVE ON WHATSAPP</a>
       </div>
     </div>
   </section>`;
-}
+      }
 
       /* ---------- HOT TUB ---------- */
       function viewHotTub() {
@@ -4811,6 +4947,7 @@ function viewLounge() {
         observeReveal();
         renderTray();
         updateDocumentMeta(root, param);
+        if (root === "admin") renderAdminBody();
       }
 
       function updateActiveNav(root) {
@@ -5026,48 +5163,986 @@ function viewLounge() {
           .setAttribute("aria-expanded", "false");
       }
 
-      /* ------------------------------------------------------------
-   14. ADMIN ACTIONS
-   ------------------------------------------------------------ */
+      /* ---------- ADMIN (UI) ---------- */
+      let ADMIN = null;
+      let ADMIN_TAB = "general";
+
+      const ADMIN_TEMPLATES = {
+        heroSlide: () => ({
+          image: "",
+          kicker: "",
+          title: "New Slide",
+          subtitle: "",
+          primary: {
+            label: "RESERVE",
+            waLabel: "ROOM RESERVATION",
+            waLines: "",
+          },
+          secondary: { label: "EXPLORE", href: "#/about" },
+        }),
+        room: () => ({
+          id: "room-" + Date.now(),
+          name: "New Room",
+          featured: false,
+          image: "",
+          gallery: [],
+          short: "",
+          description: "",
+          amenities: [],
+          occupancy: "2 Adults",
+          bed: "1 King",
+          size: "",
+          view: "",
+          price: 0,
+          priceUnit: "per night",
+        }),
+        menuCategory: () => ({
+          id: "cat-" + Date.now(),
+          name: "New Category",
+          type: "food",
+          image: "",
+          items: [],
+        }),
+        menuItem: () => ({
+          id: "item-" + Date.now(),
+          name: "New Item",
+          desc: "",
+          price: 0,
+          image: "",
+          tag: "",
+        }),
+        event: () => ({
+          id: "event-" + Date.now(),
+          title: "New Event",
+          date: "",
+          dateLabel: "",
+          time: "",
+          location: "",
+          image: "",
+          short: "",
+          description: "",
+          highlights: [],
+          dressCode: "",
+          gallery: [],
+          tickets: [],
+        }),
+        ticket: () => ({
+          type: "New Ticket",
+          price: 0,
+          includes: "",
+          featured: false,
+        }),
+        hotTubPricing: () => ({
+          title: "New Package",
+          price: 0,
+          unit: "per hour",
+          text: "",
+          includes: [],
+        }),
+        hour: () => ({ label: "", value: "" }),
+        highlight: () => ({ title: "", text: "" }),
+        drink: () => ({ name: "", desc: "" }),
+        philosophy: () => ({ title: "", text: "" }),
+      };
+
+      function adminGet(path) {
+        return path
+          .split(".")
+          .reduce((o, k) => (o == null ? undefined : o[k]), ADMIN);
+      }
+      function adminSet(path, value) {
+        const keys = path.split(".");
+        const last = keys.pop();
+        let target = ADMIN;
+        for (const k of keys) {
+          if (target[k] == null) target[k] = /^\d+$/.test(k) ? [] : {};
+          target = target[k];
+        }
+        target[last] = value;
+      }
+
+      function af(path, label, opts) {
+        opts = opts || {};
+        const type = opts.type || "text";
+        const id = "af_" + path.replace(/[^a-z0-9]/gi, "_");
+        const value = adminGet(path);
+        let input = "";
+        let hint = opts.hint
+          ? '<small class="af-hint">' + esc(opts.hint) + "</small>"
+          : "";
+
+        if (type === "textarea") {
+          input =
+            '<textarea id="' +
+            id +
+            '" data-path="' +
+            path +
+            '" rows="' +
+            (opts.rows || 3) +
+            '" placeholder="' +
+            esc(opts.placeholder || "") +
+            '">' +
+            esc(value || "") +
+            "</textarea>";
+        } else if (type === "lines") {
+          const v = Array.isArray(value) ? value.join("\n") : value || "";
+          input =
+            '<textarea id="' +
+            id +
+            '" data-path="' +
+            path +
+            '" data-type="lines" rows="' +
+            (opts.rows || 4) +
+            '" placeholder="' +
+            esc(opts.placeholder || "") +
+            '">' +
+            esc(v) +
+            "</textarea>";
+          hint = hint || '<small class="af-hint">One item per line.</small>';
+        } else if (type === "image") {
+          const src = value && String(value).trim() ? value : PH("Image");
+          input =
+            '<div class="af-image">' +
+            '<input id="' +
+            id +
+            '" data-path="' +
+            path +
+            '" type="text" value="' +
+            esc(value || "") +
+            '" placeholder="https://...">' +
+            '<div class="af-image-preview"><img src="' +
+            esc(src) +
+            '" alt="" onerror="imgFail(this)" data-fb="Image"></div></div>';
+        } else if (type === "number") {
+          input =
+            '<input id="' +
+            id +
+            '" data-path="' +
+            path +
+            '" type="number" value="' +
+            esc(value == null ? "" : value) +
+            '" placeholder="' +
+            esc(opts.placeholder || "") +
+            '">';
+        } else {
+          input =
+            '<input id="' +
+            id +
+            '" data-path="' +
+            path +
+            '" type="text" value="' +
+            esc(value || "") +
+            '" placeholder="' +
+            esc(opts.placeholder || "") +
+            '">';
+        }
+        return (
+          '<div class="field"><label for="' +
+          id +
+          '">' +
+          esc(label) +
+          "</label>" +
+          input +
+          hint +
+          "</div>"
+        );
+      }
+
+      function adminAddBtn(collection, template, label) {
+        return (
+          '<button class="btn btn-outline btn-sm" data-action="admin-add" data-collection="' +
+          collection +
+          '" data-template="' +
+          template +
+          '">+ ' +
+          esc(label) +
+          "</button>"
+        );
+      }
+      function adminRemoveBtn(collection, index, label) {
+        return (
+          '<button class="btn btn-outline btn-sm" data-action="admin-remove" data-collection="' +
+          collection +
+          '" data-index="' +
+          index +
+          '">' +
+          esc(label || "Remove") +
+          "</button>"
+        );
+      }
+
+      /* ---------- Section renderers ---------- */
+      function renderAdminSection(id) {
+        const map = {
+          general: renderAdminGeneral,
+          hero: renderAdminHero,
+          rooms: renderAdminRooms,
+          menu: renderAdminMenu,
+          events: renderAdminEvents,
+          hotTub: renderAdminHotTub,
+          restaurant: renderAdminRestaurant,
+          lounge: renderAdminLounge,
+          about: renderAdminAbout,
+          contact: renderAdminContact,
+          json: renderAdminJson,
+        };
+        return (map[id] || renderAdminGeneral)();
+      }
+
+      function renderAdminGeneral() {
+        return (
+          '<div class="admin-section"><h2 class="h-sub mb-3">Site Information</h2><div class="form">' +
+          af("site.name", "Business Name") +
+          af("site.tagline", "Tagline") +
+          af("site.description", "Short Description", { type: "textarea" }) +
+          af("site.currency", "Currency Symbol") +
+          af("site.whatsapp", "WhatsApp Number", {
+            hint: "Digits only with country code. e.g. 2348012345678",
+          }) +
+          af("site.phoneDisplay", "Phone (as displayed)") +
+          af("site.email", "Email") +
+          af("site.address", "Address", { type: "textarea", rows: 2 }) +
+          af("site.instagram", "Instagram URL") +
+          af("site.instagramHandle", "Instagram Handle") +
+          af("site.facebook", "Facebook URL") +
+          af("site.tiktok", "TikTok URL") +
+          af("site.mapEmbed", "Google Maps Embed URL", {
+            type: "textarea",
+            rows: 2,
+          }) +
+          af("site.mapLink", "Google Maps Link") +
+          af("site.footerNote", "Footer Copyright") +
+          "</div></div>"
+        );
+      }
+
+      function renderAdminHero() {
+        const slides = ADMIN.hero.slides || [];
+        return (
+          '<div class="admin-section">' +
+          '<div class="admin-section-head"><h2 class="h-sub">Hero Slides</h2>' +
+          adminAddBtn("hero.slides", "heroSlide", "Add Slide") +
+          "</div>" +
+          slides
+            .map(
+              (s, i) =>
+                '<details class="admin-card" open><summary>Slide ' +
+                (i + 1) +
+                ": " +
+                esc(s.title || "Untitled") +
+                "</summary>" +
+                '<div class="admin-card-head"><span class="admin-card-num">Slide ' +
+                (i + 1) +
+                " of " +
+                slides.length +
+                "</span>" +
+                adminRemoveBtn("hero.slides", i) +
+                "</div>" +
+                '<div class="form">' +
+                af("hero.slides." + i + ".image", "Background Image", {
+                  type: "image",
+                }) +
+                af("hero.slides." + i + ".kicker", "Kicker") +
+                af("hero.slides." + i + ".title", "Title") +
+                af("hero.slides." + i + ".subtitle", "Subtitle") +
+                af(
+                  "hero.slides." + i + ".primary.label",
+                  "Primary Button Label",
+                ) +
+                af(
+                  "hero.slides." + i + ".primary.href",
+                  "Primary Button Link",
+                  { hint: "Leave blank to make this a WhatsApp action" },
+                ) +
+                af(
+                  "hero.slides." + i + ".primary.waLabel",
+                  "Primary WhatsApp Label",
+                  { hint: "e.g. ROOM RESERVATION" },
+                ) +
+                af(
+                  "hero.slides." + i + ".primary.waLines",
+                  "Primary WhatsApp Message",
+                ) +
+                af(
+                  "hero.slides." + i + ".secondary.label",
+                  "Secondary Button Label",
+                ) +
+                af(
+                  "hero.slides." + i + ".secondary.href",
+                  "Secondary Button Link",
+                ) +
+                "</div></details>",
+            )
+            .join("") +
+          "</div>"
+        );
+      }
+
+      function renderAdminRooms() {
+        const rooms = ADMIN.rooms || [];
+        return (
+          '<div class="admin-section">' +
+          '<div class="admin-section-head"><h2 class="h-sub">Rooms</h2>' +
+          adminAddBtn("rooms", "room", "Add Room") +
+          "</div>" +
+          rooms
+            .map(
+              (r, i) =>
+                '<details class="admin-card"><summary>' +
+                esc(r.name || "Untitled Room") +
+                "</summary>" +
+                '<div class="admin-card-head"><span class="admin-card-num">Room ' +
+                (i + 1) +
+                " of " +
+                rooms.length +
+                "</span>" +
+                adminRemoveBtn("rooms", i) +
+                "</div>" +
+                '<div class="form">' +
+                af("rooms." + i + ".name", "Room Name") +
+                af("rooms." + i + ".id", "URL Slug (id)", {
+                  hint: "Lowercase, no spaces",
+                }) +
+                af("rooms." + i + ".image", "Main Image", { type: "image" }) +
+                af("rooms." + i + ".short", "Short Description", {
+                  type: "textarea",
+                  rows: 2,
+                }) +
+                af("rooms." + i + ".description", "Full Description", {
+                  type: "textarea",
+                  rows: 5,
+                }) +
+                af("rooms." + i + ".price", "Price", { type: "number" }) +
+                af("rooms." + i + ".priceUnit", "Price Unit", {
+                  hint: "e.g. per night",
+                }) +
+                af("rooms." + i + ".occupancy", "Occupancy") +
+                af("rooms." + i + ".bed", "Bed Setup") +
+                af("rooms." + i + ".size", "Size") +
+                af("rooms." + i + ".view", "View") +
+                af("rooms." + i + ".amenities", "Amenities", {
+                  type: "lines",
+                }) +
+                af("rooms." + i + ".gallery", "Gallery Image URLs", {
+                  type: "lines",
+                  rows: 3,
+                }) +
+                "</div>" +
+                '<label class="field" style="flex-direction:row;align-items:center;gap:10px;margin-top:16px">' +
+                '<input type="checkbox" data-path="rooms.' +
+                i +
+                '.featured" ' +
+                (r.featured ? "checked" : "") +
+                ">" +
+                '<span style="font-size:.85rem">Feature on homepage</span></label>' +
+                "</details>",
+            )
+            .join("") +
+          "</div>"
+        );
+      }
+
+      function renderAdminMenu() {
+        const cats = ADMIN.menu.categories || [];
+        return (
+          '<div class="admin-section">' +
+          '<div class="admin-section-head"><h2 class="h-sub">Menu Categories</h2>' +
+          adminAddBtn("menu.categories", "menuCategory", "Add Category") +
+          "</div>" +
+          cats
+            .map((c, ci) => {
+              const items = c.items || [];
+              return (
+                '<details class="admin-card"><summary>' +
+                esc(c.name || "Untitled Category") +
+                " (" +
+                items.length +
+                ")</summary>" +
+                '<div class="admin-card-head"><span class="admin-card-num">Category ' +
+                (ci + 1) +
+                "</span>" +
+                adminRemoveBtn("menu.categories", ci) +
+                "</div>" +
+                '<div class="form">' +
+                af("menu.categories." + ci + ".name", "Category Name") +
+                af("menu.categories." + ci + ".id", "Category Slug (id)") +
+                af("menu.categories." + ci + ".type", "Type", {
+                  hint: "food or drink",
+                }) +
+                af("menu.categories." + ci + ".image", "Category Image", {
+                  type: "image",
+                }) +
+                "</div>" +
+                '<div class="admin-nested">' +
+                '<div class="admin-section-head"><h3 class="h-sub" style="font-size:1.05rem">Items</h3>' +
+                adminAddBtn(
+                  "menu.categories." + ci + ".items",
+                  "menuItem",
+                  "Add Item",
+                ) +
+                "</div>" +
+                items
+                  .map(
+                    (it, ii) =>
+                      '<details class="admin-card" style="background:#fff"><summary>' +
+                      esc(it.name || "Untitled Item") +
+                      "</summary>" +
+                      '<div class="admin-card-head"><span class="admin-card-num">Item ' +
+                      (ii + 1) +
+                      "</span>" +
+                      adminRemoveBtn("menu.categories." + ci + ".items", ii) +
+                      "</div>" +
+                      '<div class="form">' +
+                      af(
+                        "menu.categories." + ci + ".items." + ii + ".name",
+                        "Item Name",
+                      ) +
+                      af(
+                        "menu.categories." + ci + ".items." + ii + ".desc",
+                        "Description",
+                        { type: "textarea", rows: 2 },
+                      ) +
+                      af(
+                        "menu.categories." + ci + ".items." + ii + ".price",
+                        "Price",
+                        { type: "number" },
+                      ) +
+                      af(
+                        "menu.categories." + ci + ".items." + ii + ".image",
+                        "Image",
+                        { type: "image" },
+                      ) +
+                      af(
+                        "menu.categories." + ci + ".items." + ii + ".tag",
+                        "Tag (optional)",
+                        { hint: "e.g. Signature, Vegetarian" },
+                      ) +
+                      af(
+                        "menu.categories." + ci + ".items." + ii + ".id",
+                        "Item ID (internal)",
+                      ) +
+                      "</div></details>",
+                  )
+                  .join("") +
+                "</div></details>"
+              );
+            })
+            .join("") +
+          "</div>"
+        );
+      }
+
+      function renderAdminEvents() {
+        const secs = [
+          { key: "upcoming", label: "Upcoming Events" },
+          { key: "previous", label: "Previous Events" },
+        ];
+        return secs
+          .map((sec) => {
+            const list = (ADMIN.events && ADMIN.events[sec.key]) || [];
+            return (
+              '<div class="admin-section">' +
+              '<div class="admin-section-head"><h2 class="h-sub">' +
+              sec.label +
+              "</h2>" +
+              adminAddBtn("events." + sec.key, "event", "Add Event") +
+              "</div>" +
+              list
+                .map((ev, ei) => {
+                  const tickets = ev.tickets || [];
+                  return (
+                    '<details class="admin-card"><summary>' +
+                    esc(ev.title || "Untitled Event") +
+                    "</summary>" +
+                    '<div class="admin-card-head"><span class="admin-card-num">Event ' +
+                    (ei + 1) +
+                    "</span>" +
+                    adminRemoveBtn("events." + sec.key, ei) +
+                    "</div>" +
+                    '<div class="form">' +
+                    af(
+                      "events." + sec.key + "." + ei + ".title",
+                      "Event Title",
+                    ) +
+                    af(
+                      "events." + sec.key + "." + ei + ".date",
+                      "Date (YYYY-MM-DD)",
+                    ) +
+                    af(
+                      "events." + sec.key + "." + ei + ".dateLabel",
+                      "Date Label (as displayed)",
+                    ) +
+                    af("events." + sec.key + "." + ei + ".time", "Time") +
+                    af(
+                      "events." + sec.key + "." + ei + ".location",
+                      "Location",
+                    ) +
+                    af(
+                      "events." + sec.key + "." + ei + ".image",
+                      "Cover Image",
+                      { type: "image" },
+                    ) +
+                    af(
+                      "events." + sec.key + "." + ei + ".short",
+                      "Short Description",
+                      { type: "textarea", rows: 2 },
+                    ) +
+                    af(
+                      "events." + sec.key + "." + ei + ".description",
+                      "Full Description",
+                      { type: "textarea", rows: 5 },
+                    ) +
+                    af(
+                      "events." + sec.key + "." + ei + ".dressCode",
+                      "Dress Code",
+                    ) +
+                    af(
+                      "events." + sec.key + "." + ei + ".highlights",
+                      "Highlights",
+                      { type: "lines" },
+                    ) +
+                    af(
+                      "events." + sec.key + "." + ei + ".gallery",
+                      "Gallery Image URLs",
+                      { type: "lines", rows: 3 },
+                    ) +
+                    "</div>" +
+                    '<div class="admin-nested">' +
+                    '<div class="admin-section-head"><h3 class="h-sub" style="font-size:1.05rem">Tickets</h3>' +
+                    adminAddBtn(
+                      "events." + sec.key + "." + ei + ".tickets",
+                      "ticket",
+                      "Add Ticket",
+                    ) +
+                    "</div>" +
+                    tickets
+                      .map(
+                        (t, ti) =>
+                          '<div class="admin-card" style="background:#fff">' +
+                          '<div class="admin-card-head"><span class="admin-card-num">Ticket ' +
+                          (ti + 1) +
+                          "</span>" +
+                          adminRemoveBtn(
+                            "events." + sec.key + "." + ei + ".tickets",
+                            ti,
+                          ) +
+                          "</div>" +
+                          '<div class="form">' +
+                          af(
+                            "events." +
+                              sec.key +
+                              "." +
+                              ei +
+                              ".tickets." +
+                              ti +
+                              ".type",
+                            "Ticket Type",
+                          ) +
+                          af(
+                            "events." +
+                              sec.key +
+                              "." +
+                              ei +
+                              ".tickets." +
+                              ti +
+                              ".price",
+                            "Price",
+                            { type: "number" },
+                          ) +
+                          af(
+                            "events." +
+                              sec.key +
+                              "." +
+                              ei +
+                              ".tickets." +
+                              ti +
+                              ".includes",
+                            "What's Included",
+                            { type: "textarea", rows: 2 },
+                          ) +
+                          "</div></div>",
+                      )
+                      .join("") +
+                    "</div></details>"
+                  );
+                })
+                .join("") +
+              "</div>"
+            );
+          })
+          .join("");
+      }
+
+      function renderAdminHotTub() {
+        const t = ADMIN.hotTub;
+        return (
+          '<div class="admin-section">' +
+          '<h2 class="h-sub mb-3">Hot Tub</h2>' +
+          '<div class="form">' +
+          af("hotTub.eyebrow", "Eyebrow") +
+          af("hotTub.title", "Title") +
+          af("hotTub.intro", "Intro", { type: "textarea", rows: 2 }) +
+          af("hotTub.body", "Body Paragraphs", { type: "lines", rows: 4 }) +
+          af("hotTub.gallery", "Gallery Image URLs", { type: "lines" }) +
+          af("hotTub.sessions", "Available Session Times", { type: "lines" }) +
+          af("hotTub.rules", "House Rules", { type: "lines", rows: 6 }) +
+          "</div>" +
+          '<div class="admin-nested">' +
+          '<div class="admin-section-head"><h3 class="h-sub" style="font-size:1.05rem">Pricing Packages</h3>' +
+          adminAddBtn("hotTub.pricing", "hotTubPricing", "Add Package") +
+          "</div>" +
+          (t.pricing || [])
+            .map(
+              (p, pi) =>
+                '<details class="admin-card" style="background:#fff"><summary>' +
+                esc(p.title || "Untitled Package") +
+                "</summary>" +
+                '<div class="admin-card-head"><span class="admin-card-num">Package ' +
+                (pi + 1) +
+                "</span>" +
+                adminRemoveBtn("hotTub.pricing", pi) +
+                "</div>" +
+                '<div class="form">' +
+                af("hotTub.pricing." + pi + ".title", "Package Name") +
+                af("hotTub.pricing." + pi + ".price", "Price", {
+                  type: "number",
+                }) +
+                af("hotTub.pricing." + pi + ".unit", "Price Unit") +
+                af("hotTub.pricing." + pi + ".text", "Description", {
+                  type: "textarea",
+                  rows: 2,
+                }) +
+                af("hotTub.pricing." + pi + ".includes", "Includes", {
+                  type: "lines",
+                }) +
+                "</div></details>",
+            )
+            .join("") +
+          "</div>" +
+          '<div class="admin-nested">' +
+          '<div class="admin-section-head"><h3 class="h-sub" style="font-size:1.05rem">Hours</h3>' +
+          adminAddBtn("hotTub.hours", "hour", "Add Row") +
+          "</div>" +
+          (t.hours || [])
+            .map(
+              (h, hi) =>
+                '<div class="admin-card" style="background:#fff;padding:14px">' +
+                '<div class="admin-card-head"><span class="admin-card-num">Row ' +
+                (hi + 1) +
+                "</span>" +
+                adminRemoveBtn("hotTub.hours", hi) +
+                "</div>" +
+                '<div class="form" style="grid-template-columns:1fr 1fr">' +
+                af("hotTub.hours." + hi + ".label", "Label") +
+                af("hotTub.hours." + hi + ".value", "Value") +
+                "</div></div>",
+            )
+            .join("") +
+          "</div></div>"
+        );
+      }
+
+      function renderAdminRestaurant() {
+        const r = ADMIN.restaurant;
+        return (
+          '<div class="admin-section">' +
+          '<h2 class="h-sub mb-3">Restaurant</h2>' +
+          '<div class="form">' +
+          af("restaurant.eyebrow", "Eyebrow") +
+          af("restaurant.title", "Title") +
+          af("restaurant.intro", "Intro", { type: "textarea", rows: 2 }) +
+          af("restaurant.body", "Body Paragraphs", { type: "lines", rows: 4 }) +
+          af("restaurant.gallery", "Gallery Image URLs", { type: "lines" }) +
+          "</div>" +
+          '<div class="admin-nested">' +
+          '<div class="admin-section-head"><h3 class="h-sub" style="font-size:1.05rem">Highlights</h3>' +
+          adminAddBtn("restaurant.highlights", "highlight", "Add Highlight") +
+          "</div>" +
+          (r.highlights || [])
+            .map(
+              (h, hi) =>
+                '<div class="admin-card" style="background:#fff;padding:14px">' +
+                '<div class="admin-card-head"><span class="admin-card-num">Highlight ' +
+                (hi + 1) +
+                "</span>" +
+                adminRemoveBtn("restaurant.highlights", hi) +
+                "</div>" +
+                '<div class="form">' +
+                af("restaurant.highlights." + hi + ".title", "Title") +
+                af("restaurant.highlights." + hi + ".text", "Text", {
+                  type: "textarea",
+                  rows: 2,
+                }) +
+                "</div></div>",
+            )
+            .join("") +
+          "</div>" +
+          '<div class="admin-nested">' +
+          '<div class="admin-section-head"><h3 class="h-sub" style="font-size:1.05rem">Hours</h3>' +
+          adminAddBtn("restaurant.hours", "hour", "Add Row") +
+          "</div>" +
+          (r.hours || [])
+            .map(
+              (h, hi) =>
+                '<div class="admin-card" style="background:#fff;padding:14px">' +
+                '<div class="admin-card-head"><span class="admin-card-num">Row ' +
+                (hi + 1) +
+                "</span>" +
+                adminRemoveBtn("restaurant.hours", hi) +
+                "</div>" +
+                '<div class="form" style="grid-template-columns:1fr 1fr">' +
+                af("restaurant.hours." + hi + ".label", "Label") +
+                af("restaurant.hours." + hi + ".value", "Value") +
+                "</div></div>",
+            )
+            .join("") +
+          "</div></div>"
+        );
+      }
+
+      function renderAdminLounge() {
+        const l = ADMIN.lounge;
+        return (
+          '<div class="admin-section">' +
+          '<h2 class="h-sub mb-3">Lounge</h2>' +
+          '<div class="form">' +
+          af("lounge.eyebrow", "Eyebrow") +
+          af("lounge.title", "Title") +
+          af("lounge.intro", "Intro", { type: "textarea", rows: 2 }) +
+          af("lounge.body", "Body Paragraphs", { type: "lines", rows: 4 }) +
+          af("lounge.gallery", "Gallery Image URLs", { type: "lines" }) +
+          af("lounge.experiences", "Experiences", { type: "lines", rows: 5 }) +
+          "</div>" +
+          '<div class="admin-nested">' +
+          '<div class="admin-section-head"><h3 class="h-sub" style="font-size:1.05rem">Signature Drinks</h3>' +
+          adminAddBtn("lounge.signatureDrinks", "drink", "Add Drink") +
+          "</div>" +
+          (l.signatureDrinks || [])
+            .map(
+              (d, di) =>
+                '<div class="admin-card" style="background:#fff;padding:14px">' +
+                '<div class="admin-card-head"><span class="admin-card-num">Drink ' +
+                (di + 1) +
+                "</span>" +
+                adminRemoveBtn("lounge.signatureDrinks", di) +
+                "</div>" +
+                '<div class="form" style="grid-template-columns:1fr 2fr">' +
+                af("lounge.signatureDrinks." + di + ".name", "Name") +
+                af("lounge.signatureDrinks." + di + ".desc", "Description") +
+                "</div></div>",
+            )
+            .join("") +
+          "</div>" +
+          '<div class="admin-nested">' +
+          '<div class="admin-section-head"><h3 class="h-sub" style="font-size:1.05rem">Hours</h3>' +
+          adminAddBtn("lounge.hours", "hour", "Add Row") +
+          "</div>" +
+          (l.hours || [])
+            .map(
+              (h, hi) =>
+                '<div class="admin-card" style="background:#fff;padding:14px">' +
+                '<div class="admin-card-head"><span class="admin-card-num">Row ' +
+                (hi + 1) +
+                "</span>" +
+                adminRemoveBtn("lounge.hours", hi) +
+                "</div>" +
+                '<div class="form" style="grid-template-columns:1fr 1fr">' +
+                af("lounge.hours." + hi + ".label", "Label") +
+                af("lounge.hours." + hi + ".value", "Value") +
+                "</div></div>",
+            )
+            .join("") +
+          "</div></div>"
+        );
+      }
+
+      function renderAdminAbout() {
+        const a = ADMIN.about;
+        return (
+          '<div class="admin-section">' +
+          '<h2 class="h-sub mb-3">About Villa Devonté</h2>' +
+          '<div class="form">' +
+          af("about.eyebrow", "Eyebrow") +
+          af("about.title", "Title") +
+          af("about.story", "Story Paragraphs", { type: "lines", rows: 5 }) +
+          af("about.gallery", "Gallery Image URLs", { type: "lines" }) +
+          "</div>" +
+          '<div class="admin-nested">' +
+          '<div class="admin-section-head"><h3 class="h-sub" style="font-size:1.05rem">Philosophy</h3>' +
+          adminAddBtn("about.philosophy", "philosophy", "Add Point") +
+          "</div>" +
+          (a.philosophy || [])
+            .map(
+              (p, pi) =>
+                '<div class="admin-card" style="background:#fff;padding:14px">' +
+                '<div class="admin-card-head"><span class="admin-card-num">Point ' +
+                (pi + 1) +
+                "</span>" +
+                adminRemoveBtn("about.philosophy", pi) +
+                "</div>" +
+                '<div class="form">' +
+                af("about.philosophy." + pi + ".title", "Title") +
+                af("about.philosophy." + pi + ".text", "Text", {
+                  type: "textarea",
+                  rows: 2,
+                }) +
+                "</div></div>",
+            )
+            .join("") +
+          "</div></div>"
+        );
+      }
+
+      function renderAdminContact() {
+        const s = ADMIN.site;
+        return (
+          '<div class="admin-section">' +
+          '<h2 class="h-sub mb-3">Contact & Hours</h2>' +
+          '<div class="form">' +
+          af("site.phoneDisplay", "Phone Number") +
+          af("site.whatsapp", "WhatsApp Number", {
+            hint: "Digits only with country code",
+          }) +
+          af("site.email", "Email") +
+          af("site.address", "Address", { type: "textarea", rows: 2 }) +
+          af("site.instagram", "Instagram URL") +
+          af("site.instagramHandle", "Instagram Handle") +
+          af("site.mapEmbed", "Google Maps Embed URL", {
+            type: "textarea",
+            rows: 2,
+          }) +
+          af("site.mapLink", "Google Maps Link") +
+          "</div>" +
+          '<div class="admin-nested">' +
+          '<div class="admin-section-head"><h3 class="h-sub" style="font-size:1.05rem">Operating Hours</h3>' +
+          adminAddBtn("site.hours", "hour", "Add Row") +
+          "</div>" +
+          (s.hours || [])
+            .map(
+              (h, hi) =>
+                '<div class="admin-card" style="background:#fff;padding:14px">' +
+                '<div class="admin-card-head"><span class="admin-card-num">Row ' +
+                (hi + 1) +
+                "</span>" +
+                adminRemoveBtn("site.hours", hi) +
+                "</div>" +
+                '<div class="form" style="grid-template-columns:1fr 1fr">' +
+                af("site.hours." + hi + ".label", "Label") +
+                af("site.hours." + hi + ".value", "Value") +
+                "</div></div>",
+            )
+            .join("") +
+          "</div></div>"
+        );
+      }
+
+      function renderAdminJson() {
+        return (
+          '<div class="admin-section">' +
+          '<h2 class="h-sub mb-3">Advanced — Raw JSON</h2>' +
+          '<p class="lead" style="font-size:.9rem;margin-bottom:18px">For power users. Any valid edits here sync back to the visual editors.</p>' +
+          '<textarea id="admin-json" spellcheck="false" style="min-height:60vh;width:100%;padding:18px;' +
+          "border:1px solid var(--line);border-radius:4px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;" +
+          'font-size:.8rem;line-height:1.6;background:#FCFAF8;resize:vertical">' +
+          esc(JSON.stringify(ADMIN, null, 2)) +
+          "</textarea></div>"
+        );
+      }
+
+      /* ---------- Shell ---------- */
+      function viewAdmin() {
+        if (!ADMIN) ADMIN = JSON.parse(JSON.stringify(DATA));
+        return `
+  <section class="page-head">
+    <div class="container">
+      <div class="breadcrumb"><a href="#/">Home</a> · Staff</div>
+      <span class="eyebrow">Staff Area</span>
+      <h1 class="h-display mb-2" style="font-size:clamp(1.9rem,4vw,2.8rem)">Content Manager</h1>
+      <p class="lead">Edit rooms, menu items, prices, events and more. Changes are saved to this browser — download the JSON to publish them live.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container" id="adminRoot"></div>
+  </section>`;
+      }
+
+      function renderAdminBody() {
+        const root = document.getElementById("adminRoot");
+        if (!root) return;
+
+        const tabs = [
+          ["general", "Site Info"],
+          ["hero", "Hero"],
+          ["rooms", "Rooms"],
+          ["menu", "Menu"],
+          ["events", "Events"],
+          ["hotTub", "Hot Tub"],
+          ["restaurant", "Restaurant"],
+          ["lounge", "Lounge"],
+          ["about", "About"],
+          ["contact", "Contact & Hours"],
+          ["json", "Advanced (JSON)"],
+        ];
+
+        root.innerHTML =
+          '<div class="admin-bar">' +
+          '<div class="menu-tabs">' +
+          tabs
+            .map(
+              (t) =>
+                '<button class="menu-tab' +
+                (ADMIN_TAB === t[0] ? " active" : "") +
+                '" data-action="admin-tab" data-tab="' +
+                t[0] +
+                '">' +
+                t[1] +
+                "</button>",
+            )
+            .join("") +
+          "</div>" +
+          '<div class="admin-actions">' +
+          '<button class="btn btn-primary btn-sm" data-action="admin-save">SAVE CHANGES</button>' +
+          '<button class="btn btn-outline btn-sm" data-action="admin-export">DOWNLOAD JSON</button>' +
+          '<button class="btn btn-outline btn-sm" data-action="admin-reset">RESET</button>' +
+          "</div>" +
+          "</div>" +
+          '<div class="status-msg" id="adminStatus"></div>' +
+          '<div id="adminBody">' +
+          renderAdminSection(ADMIN_TAB) +
+          "</div>" +
+          '<p class="admin-note"><strong>How publishing works:</strong> click <em>Download JSON</em>, then replace ' +
+          "<code>data/site-data.json</code> on your server with the downloaded file.</p>";
+      }
+
+      /* ---------- Actions ---------- */
       function adminStatus(msg, color) {
         const el = document.getElementById("adminStatus");
         if (!el) return;
         el.textContent = msg;
         el.style.color = color || "var(--brand)";
-        setTimeout(() => {
+        clearTimeout(el._t);
+        el._t = setTimeout(() => {
           el.textContent = "";
         }, 4000);
       }
 
       function adminSave() {
-        const ta = document.getElementById("admin-json");
-        if (!ta) return;
         try {
-          const parsed = JSON.parse(ta.value);
-          localStorage.setItem("vd_site_data", JSON.stringify(parsed));
-          DATA = parsed;
+          localStorage.setItem("vd_site_data", JSON.stringify(ADMIN));
+          DATA = JSON.parse(JSON.stringify(ADMIN));
           renderNav();
           renderFooter();
           router();
-          adminStatus(
-            "Saved. Changes are now live in this browser.",
-            "#2f7d43",
-          );
+          adminStatus("Saved. Changes are live in this browser.", "#2f7d43");
         } catch (err) {
-          adminStatus("Invalid JSON: " + err.message, "#b3261e");
+          adminStatus("Save failed: " + err.message, "#b3261e");
         }
       }
 
       function adminExport() {
-        const ta = document.getElementById("admin-json");
-        if (!ta) return;
-        try {
-          JSON.parse(ta.value);
-        } catch (err) {
-          adminStatus("Invalid JSON: " + err.message, "#b3261e");
-          return;
-        }
-        const blob = new Blob([ta.value], { type: "application/json" });
+        const blob = new Blob([JSON.stringify(ADMIN, null, 2)], {
+          type: "application/json",
+        });
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.href = url;
@@ -5079,19 +6154,7 @@ function viewLounge() {
         adminStatus("Downloaded site-data.json", "#2f7d43");
       }
 
-      function adminCopy() {
-        const ta = document.getElementById("admin-json");
-        if (!ta) return;
-        ta.select();
-        try {
-          document.execCommand("copy");
-          adminStatus("Copied to clipboard.", "#2f7d43");
-        } catch (e) {
-          adminStatus("Copy failed — select and copy manually.", "#b3261e");
-        }
-      }
-
-      function adminReset() {
+      async function adminReset() {
         if (
           !confirm(
             "Restore the published data? Any unsaved local edits will be lost.",
@@ -5099,7 +6162,8 @@ function viewLounge() {
         )
           return;
         localStorage.removeItem("vd_site_data");
-        DATA = JSON.parse(document.getElementById("site-data").textContent);
+        await loadData();
+        ADMIN = JSON.parse(JSON.stringify(DATA));
         renderNav();
         renderFooter();
         router();
@@ -5238,6 +6302,28 @@ function viewLounge() {
             case "admin-reset":
               adminReset();
               return;
+            case "admin-tab": {
+              ADMIN_TAB = actionEl.dataset.tab;
+              renderAdminBody();
+              return;
+            }
+            case "admin-add": {
+              const arr = adminGet(actionEl.dataset.collection);
+              const tpl = ADMIN_TEMPLATES[actionEl.dataset.template];
+              if (!Array.isArray(arr) || !tpl) return;
+              arr.push(tpl());
+              renderAdminBody();
+              return;
+            }
+            case "admin-remove": {
+              const arr = adminGet(actionEl.dataset.collection);
+              const idx = parseInt(actionEl.dataset.index, 10);
+              if (!Array.isArray(arr) || isNaN(idx)) return;
+              if (!confirm("Remove this item?")) return;
+              arr.splice(idx, 1);
+              renderAdminBody();
+              return;
+            }
           }
         }
 
@@ -5260,6 +6346,41 @@ function viewLounge() {
         /* Close drawer when a link inside it is clicked */
         if (e.target.closest("#drawerNav a, .drawer-foot a")) {
           closeDrawer();
+        }
+      });
+
+      document.addEventListener("input", function (e) {
+        /* Raw JSON tab */
+        if (e.target.id === "admin-json") {
+          try {
+            ADMIN = JSON.parse(e.target.value);
+            adminStatus("JSON is valid ✓", "#2f7d43");
+          } catch (err) {
+            adminStatus("JSON error: " + err.message, "#b3261e");
+          }
+          return;
+        }
+
+        /* All visually-edited fields */
+        const el = e.target.closest("[data-path]");
+        if (!el) return;
+        if (document.body.dataset.route !== "admin") return;
+
+        let value = el.value;
+        if (el.type === "checkbox") value = el.checked;
+        else if (el.dataset.type === "lines")
+          value = value
+            .split("\n")
+            .map((s) => s.trim())
+            .filter(Boolean);
+        else if (el.type === "number") value = value === "" ? 0 : Number(value);
+
+        adminSet(el.dataset.path, value);
+
+        const wrap = el.closest(".af-image");
+        if (wrap) {
+          const preview = wrap.querySelector("img");
+          if (preview) preview.src = value || PH("Image");
         }
       });
 

@@ -7,7 +7,7 @@
     "whatsapp": "2348160549506",
     "phoneDisplay": "+234 816 054 9506",
     "email": "reservations@villadevonte.com",
-    "address": "12 IBB WAY, Calabar, Cross River State, Nigeria",
+    "address": "12 IBB WAY, Calabar, Cross River, Nigeria",
     "instagram": "https://instagram.com/villadevonte",
     "instagramHandle": "@villadevonte",
     "facebook": "https://facebook.com/villadevonte",
@@ -15,28 +15,71 @@
     "mapEmbed": "https://www.google.com/maps?q=Calli%20Phase%201%2C%20Calabar&output=embed",
     "mapLink": "https://maps.google.com/?q=Calli+Phase+1+Calabar",
     "hours": [
-      { "label": "Restaurant", "value": "Daily · 8:00 AM – 11:00 PM" },
-      { "label": "Lounge", "value": "Daily · 5:00 PM – 2:00 AM" },
-      { "label": "Hot Tub", "value": "Daily · 9:00 AM – 10:00 PM" },
-      { "label": "Front Desk", "value": "24 Hours" },
-      { "label": "Check-in / Check-out", "value": "2:00 PM / 11:00 AM" }
+      {
+        "label": "Restaurant",
+        "value": "Daily · 8:00 AM – 11:00 PM"
+      },
+      {
+        "label": "Lounge",
+        "value": "Daily · 5:00 PM – 2:00 AM"
+      },
+      {
+        "label": "Hot Tub",
+        "value": "Daily · 9:00 AM – 10:00 PM"
+      },
+      {
+        "label": "Front Desk",
+        "value": "24 Hours"
+      },
+      {
+        "label": "Check-in / Check-out",
+        "value": "2:00 PM / 11:00 AM"
+      }
     ],
     "footerNote": "© 2026 Villa Devonté. All Rights Reserved."
   },
-
   "nav": [
-    { "label": "Home", "href": "#/" },
-    { "label": "About", "href": "#/about" },
-    { "label": "Rooms", "href": "#/rooms" },
-    { "label": "Restaurant", "href": "#/restaurant" },
-    { "label": "Lounge", "href": "#/lounge" },
-    { "label": "Hot Tub", "href": "#/hot-tub" },
-    { "label": "Menu", "href": "#/menu" },
-    { "label": "Events", "href": "#/events" },
-    { "label": "Reservation", "href": "#/reservation" },
-    { "label": "Contact", "href": "#/contact" }
+    {
+      "label": "Home",
+      "href": "#/"
+    },
+    {
+      "label": "About",
+      "href": "#/about"
+    },
+    {
+      "label": "Rooms",
+      "href": "#/rooms"
+    },
+    {
+      "label": "Restaurant",
+      "href": "#/restaurant"
+    },
+    {
+      "label": "Lounge",
+      "href": "#/lounge"
+    },
+    {
+      "label": "Hot Tub",
+      "href": "#/hot-tub"
+    },
+    {
+      "label": "Menu",
+      "href": "#/menu"
+    },
+    {
+      "label": "Events",
+      "href": "#/events"
+    },
+    {
+      "label": "Reservation",
+      "href": "#/reservation"
+    },
+    {
+      "label": "Contact",
+      "href": "#/contact"
+    }
   ],
-
   "hero": {
     "slides": [
       {
@@ -49,7 +92,10 @@
           "waLabel": "ROOM RESERVATION",
           "waLines": "I would like to reserve a stay at Villa Devonté."
         },
-        "secondary": { "label": "EXPLORE VILLA DEVONTÉ", "href": "#/about" }
+        "secondary": {
+          "label": "EXPLORE VILLA DEVONTÉ",
+          "href": "#/about"
+        }
       },
       {
         "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=2000&q=80",
@@ -61,19 +107,27 @@
           "waLabel": "ROOM RESERVATION",
           "waLines": "I would like to reserve a stay at Villa Devonté."
         },
-        "secondary": { "label": "VIEW ROOMS", "href": "#/rooms" }
+        "secondary": {
+          "label": "VIEW ROOMS",
+          "href": "#/rooms"
+        }
       },
       {
         "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2000&q=80",
         "kicker": "Restaurant · Lounge · Hot Tub",
         "title": "DINE. DRINK. UNWIND.",
         "subtitle": "A table, a cocktail and a warm soak — all in one place.",
-        "primary": { "label": "EXPLORE THE MENU", "href": "#/menu" },
-        "secondary": { "label": "BOOK HOT TUB", "href": "#/hot-tub" }
+        "primary": {
+          "label": "EXPLORE THE MENU",
+          "href": "#/menu"
+        },
+        "secondary": {
+          "label": "BOOK HOT TUB",
+          "href": "#/hot-tub"
+        }
       }
     ]
   },
-
   "welcome": {
     "eyebrow": "Welcome to Villa Devonté",
     "title": "Not just a place to stay. An experience to remember.",
@@ -83,13 +137,24 @@
     ],
     "image": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1400&q=80",
     "stats": [
-      { "value": "6", "label": "Private Rooms" },
-      { "value": "40+", "label": "Menu Creations" },
-      { "value": "3", "label": "Experiences In One" },
-      { "value": "24/7", "label": "WhatsApp Concierge" }
+      {
+        "value": "6",
+        "label": "Private Rooms"
+      },
+      {
+        "value": "40+",
+        "label": "Menu Creations"
+      },
+      {
+        "value": "3",
+        "label": "Experiences In One"
+      },
+      {
+        "value": "24/7",
+        "label": "WhatsApp Concierge"
+      }
     ]
   },
-
   "experiences": [
     {
       "title": "Rooms & Suites",
@@ -120,7 +185,6 @@
       "cta": "BOOK A SESSION"
     }
   ],
-
   "about": {
     "eyebrow": "About Villa Devonté",
     "title": "A villa built on warmth, detail and quiet luxury.",
@@ -152,7 +216,6 @@
       "https://images.unsplash.com/photo-1470229722913-7ea0d1c1e7d4?auto=format&fit=crop&w=1400&q=80"
     ]
   },
-
   "rooms": [
     {
       "id": "devonte-suite",
@@ -184,7 +247,7 @@
       "bed": "1 King",
       "size": "52 sqm",
       "view": "Garden & Pool",
-      "price": 185000,
+      "price": 195000,
       "priceUnit": "per night"
     },
     {
@@ -215,7 +278,7 @@
       "bed": "1 Queen",
       "size": "34 sqm",
       "view": "Garden",
-      "price": 120000,
+      "price": 125000,
       "priceUnit": "per night"
     },
     {
@@ -339,7 +402,6 @@
       "priceUnit": "per night"
     }
   ],
-
   "restaurant": {
     "eyebrow": "The Restaurant",
     "title": "Nigerian soul. Continental polish. One kitchen.",
@@ -369,13 +431,24 @@
       }
     ],
     "hours": [
-      { "label": "Breakfast", "value": "8:00 AM – 11:30 AM" },
-      { "label": "Lunch", "value": "12:30 PM – 4:00 PM" },
-      { "label": "Dinner", "value": "6:30 PM – 11:00 PM" },
-      { "label": "Last Order", "value": "10:30 PM" }
+      {
+        "label": "Breakfast",
+        "value": "8:00 AM – 11:30 AM"
+      },
+      {
+        "label": "Lunch",
+        "value": "12:30 PM – 4:00 PM"
+      },
+      {
+        "label": "Dinner",
+        "value": "6:30 PM – 11:00 PM"
+      },
+      {
+        "label": "Last Order",
+        "value": "10:30 PM"
+      }
     ]
   },
-
   "lounge": {
     "eyebrow": "The Lounge",
     "title": "Low light. Good sound. Better company.",
@@ -417,13 +490,24 @@
       }
     ],
     "hours": [
-      { "label": "Monday – Wednesday", "value": "5:00 PM – 12:00 AM" },
-      { "label": "Thursday – Saturday", "value": "5:00 PM – 2:00 AM" },
-      { "label": "Sunday", "value": "4:00 PM – 12:00 AM" },
-      { "label": "Kitchen", "value": "Until 11:00 PM" }
+      {
+        "label": "Monday – Wednesday",
+        "value": "5:00 PM – 12:00 AM"
+      },
+      {
+        "label": "Thursday – Saturday",
+        "value": "5:00 PM – 2:00 AM"
+      },
+      {
+        "label": "Sunday",
+        "value": "4:00 PM – 12:00 AM"
+      },
+      {
+        "label": "Kitchen",
+        "value": "Until 11:00 PM"
+      }
     ]
   },
-
   "hotTub": {
     "eyebrow": "The Hot Tub",
     "title": "A private heated soak, under the Calabar sky.",
@@ -496,13 +580,24 @@
       "Sessions may be rescheduled for weather at no cost."
     ],
     "hours": [
-      { "label": "Sessions", "value": "Daily · 9:00 AM – 10:00 PM" },
-      { "label": "Last Booking", "value": "8:00 PM" },
-      { "label": "Water Temperature", "value": "38°C / 100°F" },
-      { "label": "Capacity", "value": "Up to 6 guests" }
+      {
+        "label": "Sessions",
+        "value": "Daily · 9:00 AM – 10:00 PM"
+      },
+      {
+        "label": "Last Booking",
+        "value": "8:00 PM"
+      },
+      {
+        "label": "Water Temperature",
+        "value": "38°C / 100°F"
+      },
+      {
+        "label": "Capacity",
+        "value": "Up to 6 guests"
+      }
     ]
   },
-
   "menu": {
     "eyebrow": "Menu & Ordering",
     "title": "Order in a few taps. Delivered to your table, room or door.",
@@ -865,7 +960,6 @@
       }
     ]
   },
-
   "events": {
     "eyebrow": "Events at Villa Devonté",
     "title": "Nights worth clearing your calendar for.",
@@ -1074,7 +1168,6 @@
       }
     ]
   },
-
   "socialGallery": {
     "eyebrow": "Follow The Story",
     "title": "@villadevonte",
@@ -1088,7 +1181,6 @@
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80"
     ]
   },
-
   "whatsappLabels": {
     "room": "ROOM RESERVATION",
     "food": "FOOD ORDER",
