@@ -3868,25 +3868,26 @@
       }
 
       /* ---------- LOUNGE ---------- */
-      function viewLounge() {
-        const l = DATA.lounge;
-        const gallery = l.gallery
-          .map(
-            (src, i) =>
-              '<div class="media ratio-1x1 reveal" style="transition-delay:' +
-              (i % 4) * 70 +
-              'ms">' +
-              img(src, "The Lounge", "The Lounge") +
-              "</div>",
-          )
-          .join("");
+function viewLounge() {
+  const l = DATA.lounge;
 
-        const upcoming = (DATA.events.upcoming || [])
-          .slice(0, 3)
-          .map(eventCard)
-          .join("");
+  // Full gallery grid (HTML string, used in the bottom gallery section)
+  const galleryHtml = l.gallery.map((src, i) =>
+    '<div class="media ratio-1x1 reveal" style="transition-delay:' + (i % 4) * 70 + 'ms">' +
+      img(src, 'The Lounge', 'The Lounge') +
+    '</div>'
+  ).join('');
 
-        return `
+  // Two-up stacked images for the "Opening Hours" split section
+  const galleryPairHtml = l.gallery.slice(0, 2).map((src, i) =>
+    '<div class="media ratio-3x4" style="margin-top:' + (i === 1 ? '34px' : '0') + '">' +
+      img(l.gallery[i + 1] || l.gallery[0], 'The Lounge', 'The Lounge') +
+    '</div>'
+  ).join('');
+
+  const upcoming = (DATA.events.upcoming || []).slice(0, 3).map(eventCard).join('');
+
+  return `
   <section class="page-head" style="background:var(--brand-dark);color:#fff">
     <div class="container">
       <div class="breadcrumb" style="color:rgba(255,255,255,.6)"><a href="#/">Home</a> · Lounge</div>
@@ -3894,7 +3895,7 @@
       <h1 class="h-display mb-2" style="font-size:clamp(2.1rem,5vw,3.6rem);color:#fff">${esc(l.title)}</h1>
       <p class="lead" style="color:rgba(255,255,255,.75)">${esc(l.intro)}</p>
       <div class="btn-row mt-4">
-        <a class="btn btn-sand" href="${waLink(L().lounge, ["I would like to reserve a table in the lounge.", "", "Name:", "Phone:", "Date:", "Time:", "Guests:", "Occasion:"])}" target="_blank" rel="noopener">RESERVE / ENQUIRE</a>
+        <a class="btn btn-sand" href="${waLink(L().lounge, ['I would like to reserve a table in the lounge.', '', 'Name:', 'Phone:', 'Date:', 'Time:', 'Guests:', 'Occasion:'])}" target="_blank" rel="noopener">RESERVE / ENQUIRE</a>
         <a class="btn btn-ghost" href="#/menu">SEE DRINKS MENU</a>
       </div>
     </div>
@@ -3902,14 +3903,14 @@
 
   <section class="section">
     <div class="container split">
-      <div class="split-media media ratio-4x3 reveal">${img(l.gallery[0], "The Lounge", "The Lounge")}</div>
+      <div class="split-media media ratio-4x3 reveal">${img(l.gallery[0], 'The Lounge', 'The Lounge')}</div>
       <div class="reveal">
         <span class="eyebrow">The Space</span>
         <h2 class="h-section mb-3">After dark, the villa changes.</h2>
-        ${l.body.map((p) => '<p class="lead">' + esc(p) + "</p>").join("")}
+        ${l.body.map(p => '<p class="lead">' + esc(p) + '</p>').join('')}
         <div class="btn-row mt-4">
           <a class="btn btn-primary" href="#/menu">DRINKS MENU</a>
-          <a class="btn btn-outline" href="${waLink(L().lounge, ["I have a question about the lounge.", "", "Name:", "Phone:"])}" target="_blank" rel="noopener">ENQUIRE</a>
+          <a class="btn btn-outline" href="${waLink(L().lounge, ['I have a question about the lounge.', '', 'Name:', 'Phone:'])}" target="_blank" rel="noopener">ENQUIRE</a>
         </div>
       </div>
     </div>
@@ -3917,18 +3918,18 @@
 
   <section class="section section--dark">
     <div class="container">
-      ${sectionHead("What To Expect", "Experiences in the lounge.", "", false)}
+      ${sectionHead('What To Expect', 'Experiences in the lounge.', '', false)}
       <div class="grid g-3">
-        ${l.experiences.map((e, i) => '<div class="reveal" style="transition-delay:' + (i % 3) * 80 + 'ms;padding:22px;border:1px solid rgba(219,193,172,.18);border-radius:6px"><span style="color:var(--sand);font-size:.7rem;letter-spacing:.2em">' + String(i + 1).padStart(2, "0") + '</span><p style="margin:12px 0 0;color:rgba(255,255,255,.85)">' + esc(e) + "</p></div>").join("")}
+        ${l.experiences.map((e, i) => '<div class="reveal" style="transition-delay:' + (i % 3) * 80 + 'ms;padding:22px;border:1px solid rgba(219,193,172,.18);border-radius:6px"><span style="color:var(--sand);font-size:.7rem;letter-spacing:.2em">' + String(i + 1).padStart(2, '0') + '</span><p style="margin:12px 0 0;color:rgba(255,255,255,.85)">' + esc(e) + '</p></div>').join('')}
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      ${sectionHead("Signature Serves", "From our bar.", "Ask for any of these at the bar, or let our bartender build something around what you usually drink.", true)}
+      ${sectionHead('Signature Serves', 'From our bar.', 'Ask for any of these at the bar, or let our bartender build something around what you usually drink.', true)}
       <div class="grid g-4">
-        ${l.signatureDrinks.map((d, i) => '<div class="card reveal" style="transition-delay:' + i * 70 + 'ms"><div class="card-body"><h3 class="card-title" style="font-size:1.15rem">' + esc(d.name) + '</h3><p class="card-text" style="font-size:.85rem">' + esc(d.desc) + "</p></div></div>").join("")}
+        ${l.signatureDrinks.map((d, i) => '<div class="card reveal" style="transition-delay:' + i * 70 + 'ms"><div class="card-body"><h3 class="card-title" style="font-size:1.15rem">' + esc(d.name) + '</h3><p class="card-text" style="font-size:.85rem">' + esc(d.desc) + '</p></div></div>').join('')}
       </div>
     </div>
   </section>
@@ -3939,32 +3940,18 @@
         <span class="eyebrow">Opening Hours</span>
         <h2 class="h-section mb-3">When the lights go down.</h2>
         <ul class="info-list">
-          ${l.hours.map((h) => "<li><span>" + esc(h.label) + "</span><span>" + esc(h.value) + "</span></li>").join("")}
+          ${l.hours.map(h => '<li><span>' + esc(h.label) + '</span><span>' + esc(h.value) + '</span></li>').join('')}
         </ul>
       </div>
       <div class="grid g-2 reveal" style="gap:12px">
-        ${gallery
-          .slice(0, 2)
-          .map(
-            (g, i) =>
-              '<div class="media ratio-3x4" style="margin-top:' +
-              (i === 1 ? "34px" : "0") +
-              '">' +
-              img(
-                l.gallery[i + 1] || l.gallery[0],
-                "The Lounge",
-                "The Lounge",
-              ) +
-              "</div>",
-          )
-          .join("")}
+        ${galleryPairHtml}
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      ${sectionHead("Lounge Events", "Coming up at the lounge.", "", false)}
+      ${sectionHead('Lounge Events', 'Coming up at the lounge.', '', false)}
       <div class="grid g-3">${upcoming}</div>
     </div>
   </section>
@@ -3974,11 +3961,11 @@
       <h2 class="h-section mb-3" style="color:#fff">Reserve your booth.</h2>
       <p class="lead" style="color:rgba(255,255,255,.78);margin:0 auto 28px">Tables are limited. Send us a message and we'll hold your spot.</p>
       <div class="btn-row" style="justify-content:center">
-        <a class="btn btn-sand" href="${waLink(L().lounge, ["I would like to reserve a table in the lounge.", "", "Name:", "Phone:", "Date:", "Time:", "Guests:"])}" target="_blank" rel="noopener">RESERVE ON WHATSAPP</a>
+        <a class="btn btn-sand" href="${waLink(L().lounge, ['I would like to reserve a table in the lounge.', '', 'Name:', 'Phone:', 'Date:', 'Time:', 'Guests:'])}" target="_blank" rel="noopener">RESERVE ON WHATSAPP</a>
       </div>
     </div>
   </section>`;
-      }
+}
 
       /* ---------- HOT TUB ---------- */
       function viewHotTub() {
