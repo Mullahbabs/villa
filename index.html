@@ -1795,6 +1795,116 @@
         height: auto;
         accent-color: var(--brand);
       }
+            /* ---------- Admin tray + auth ---------- */
+      .admin-current-tab {
+        font-family: var(--ff-display);
+        font-size: 1.15rem;
+        color: var(--brand);
+        flex: 1;
+        text-align: center;
+        letter-spacing: 0.02em;
+      }
+      .admin-tray-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(20, 10, 4, 0.55);
+        z-index: 400;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.35s ease, visibility 0.35s ease;
+        backdrop-filter: blur(2px);
+      }
+      .admin-tray-backdrop.open {
+        opacity: 1;
+        visibility: visible;
+      }
+      .admin-tray {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: min(320px, 86vw);
+        background: var(--brand-dark);
+        color: #fff;
+        z-index: 401;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(-100%);
+        transition: transform 0.42s cubic-bezier(0.2, 0.7, 0.3, 1);
+        box-shadow: 22px 0 60px -30px rgba(0, 0, 0, 0.75);
+        overflow-y: auto;
+      }
+      .admin-tray.open {
+        transform: translateX(0);
+      }
+      .admin-tray-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 22px 22px 18px;
+        border-bottom: 1px solid rgba(219, 193, 172, 0.16);
+      }
+      .admin-tray-head .logo {
+        font-family: var(--ff-display);
+        font-size: 1rem;
+        letter-spacing: 0.22em;
+      }
+      .admin-tray-close {
+        background: none;
+        border: 0;
+        color: #fff;
+        font-size: 1.8rem;
+        line-height: 1;
+        cursor: pointer;
+        padding: 4px 8px;
+        transition: color 0.25s;
+      }
+      .admin-tray-close:hover {
+        color: var(--sand);
+      }
+      .admin-tray-nav {
+        display: flex;
+        flex-direction: column;
+        padding: 12px 0;
+        flex: 1;
+      }
+      .admin-tray-nav button {
+        background: none;
+        border: 0;
+        color: rgba(255, 255, 255, 0.78);
+        text-align: left;
+        padding: 15px 22px;
+        font-family: var(--ff-body);
+        font-size: 0.78rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-left: 3px solid transparent;
+        transition: all 0.25s ease;
+        font-weight: 500;
+      }
+      .admin-tray-nav button:hover {
+        background: rgba(219, 193, 172, 0.08);
+        color: var(--sand);
+        padding-left: 26px;
+      }
+      .admin-tray-nav button.active {
+        color: var(--sand);
+        border-left-color: var(--sand);
+        background: rgba(219, 193, 172, 0.1);
+      }
+      @media (max-width: 720px) {
+        .admin-current-tab {
+          display: none;
+        }
+        .admin-actions {
+          gap: 6px;
+        }
+        .admin-actions .btn {
+          font-size: 0.58rem;
+          padding: 0.6rem 0.8rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -4947,7 +5057,14 @@
         observeReveal();
         renderTray();
         updateDocumentMeta(root, param);
-        if (root === "admin") renderAdminBody();
+                if (root === "admin") {
+          if (isAdminAuthed()) {
+            renderAdminBody();
+          } else {
+            const pw = document.getElementById("adminLockPass");
+            if (pw) setTimeout(() => pw.focus(), 60);
+          }
+        }
       }
 
       function updateActiveNav(root) {
@@ -6049,8 +6166,61 @@
         );
       }
 
+            /* ---------- Admin auth ---------- */
+      const ADMIN_PASSWORD = "villadevonte2026"; // ← change this
+      const ADMIN_AUTH_KEY = "vd_admin_auth";
+
+      function isAdminAuthed() {
+        try {
+          return localStorage.getItem(ADMIN_AUTH_KEY) === "1";
+        } catch (e) {
+          return false;
+        }
+      }
+      function setAdminAuthed() {
+        try {
+          localStorage.setItem(ADMIN_AUTH_KEY, "1");
+        } catch (e) {}
+      }
+      function clearAdminAuth() {
+        try {
+          localStorage.removeItem(ADMIN_AUTH_KEY);
+        } catch (e) {}
+      }
+
+      function viewAdminLock() {
+        return `
+  <section class="page-head">
+    <div class="container">
+      <div class="breadcrumb"><a href="#/">Home</a> · Staff</div>
+      <span class="eyebrow">Staff Area</span>
+      <h1 class="h-display mb-2" style="font-size:clamp(1.9rem,4vw,2.8rem)">Content Manager</h1>
+      <p class="lead">This area is password-protected. Enter the staff password to continue.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container" style="max-width:480px">
+      <div class="card">
+        <div class="card-body">
+          <span class="eyebrow">Admin Access</span>
+          <h2 class="card-title mb-3">Enter staff password</h2>
+          <form id="adminLockForm" novalidate>
+            <div class="field">
+              <label for="adminLockPass">Password</label>
+              <input id="adminLockPass" type="password" autocomplete="current-password" placeholder="••••••••" required>
+            </div>
+            <div class="status-msg" id="adminLockMsg" style="color:#b3261e"></div>
+            <button class="btn btn-primary btn-block mt-3" type="submit">UNLOCK</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>`;
+      }
+
       /* ---------- Shell ---------- */
       function viewAdmin() {
+        if (!isAdminAuthed()) return viewAdminLock();
         if (!ADMIN) ADMIN = JSON.parse(JSON.stringify(DATA));
         return `
   <section class="page-head">
@@ -6066,7 +6236,7 @@
   </section>`;
       }
 
-      function renderAdminBody() {
+            function renderAdminBody() {
         const root = document.getElementById("adminRoot");
         if (!root) return;
 
@@ -6084,26 +6254,23 @@
           ["json", "Advanced (JSON)"],
         ];
 
+        const currentLabel =
+          (tabs.find((t) => t[0] === ADMIN_TAB) || tabs[0])[1];
+
         root.innerHTML =
           '<div class="admin-bar">' +
-          '<div class="menu-tabs">' +
-          tabs
-            .map(
-              (t) =>
-                '<button class="menu-tab' +
-                (ADMIN_TAB === t[0] ? " active" : "") +
-                '" data-action="admin-tab" data-tab="' +
-                t[0] +
-                '">' +
-                t[1] +
-                "</button>",
-            )
-            .join("") +
-          "</div>" +
+          '<button class="btn btn-outline btn-sm" data-action="admin-tray-open" aria-label="Open categories tray">' +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:15px;height:15px;flex:none"><path d="M4 6h16M4 12h16M4 18h16"/></svg>' +
+          "CATEGORIES" +
+          "</button>" +
+          '<span class="admin-current-tab">' +
+          esc(currentLabel) +
+          "</span>" +
           '<div class="admin-actions">' +
           '<button class="btn btn-primary btn-sm" data-action="admin-save">SAVE CHANGES</button>' +
           '<button class="btn btn-outline btn-sm" data-action="admin-export">DOWNLOAD JSON</button>' +
           '<button class="btn btn-outline btn-sm" data-action="admin-reset">RESET</button>' +
+          '<button class="btn btn-outline btn-sm" data-action="admin-logout">LOG OUT</button>' +
           "</div>" +
           "</div>" +
           '<div class="status-msg" id="adminStatus"></div>' +
@@ -6111,7 +6278,28 @@
           renderAdminSection(ADMIN_TAB) +
           "</div>" +
           '<p class="admin-note"><strong>How publishing works:</strong> click <em>Download JSON</em>, then replace ' +
-          "<code>data/site-data.json</code> on your server with the downloaded file.</p>";
+          "<code>data/site-data.json</code> on your server with the downloaded file.</p>" +
+          '<div class="admin-tray-backdrop" id="adminTrayBackdrop" data-action="admin-tray-close"></div>' +
+          '<aside class="admin-tray" id="adminTray" aria-hidden="true">' +
+          '<div class="admin-tray-head">' +
+          '<span class="logo">CONTENT <span style="color:var(--sand)">CATEGORIES</span></span>' +
+          '<button class="admin-tray-close" data-action="admin-tray-close" aria-label="Close categories">&times;</button>' +
+          "</div>" +
+          '<nav class="admin-tray-nav">' +
+          tabs
+            .map(
+              (t) =>
+                '<button data-action="admin-tab" data-tab="' +
+                t[0] +
+                '"' +
+                (ADMIN_TAB === t[0] ? ' class="active"' : "") +
+                ">" +
+                t[1] +
+                "</button>",
+            )
+            .join("") +
+          "</nav>" +
+          "</aside>";
       }
 
       /* ---------- Actions ---------- */
@@ -6302,9 +6490,44 @@
             case "admin-reset":
               adminReset();
               return;
-            case "admin-tab": {
+                       case "admin-tab": {
               ADMIN_TAB = actionEl.dataset.tab;
+              const trayEl = document.getElementById("adminTray");
+              const bdEl = document.getElementById("adminTrayBackdrop");
+              if (trayEl) {
+                trayEl.classList.remove("open");
+                trayEl.setAttribute("aria-hidden", "true");
+              }
+              if (bdEl) bdEl.classList.remove("open");
               renderAdminBody();
+              return;
+            }
+            case "admin-tray-open": {
+              const trayEl = document.getElementById("adminTray");
+              const bdEl = document.getElementById("adminTrayBackdrop");
+              if (trayEl) {
+                trayEl.classList.add("open");
+                trayEl.setAttribute("aria-hidden", "false");
+              }
+              if (bdEl) bdEl.classList.add("open");
+              return;
+            }
+            case "admin-tray-close": {
+              const trayEl = document.getElementById("adminTray");
+              const bdEl = document.getElementById("adminTrayBackdrop");
+              if (trayEl) {
+                trayEl.classList.remove("open");
+                trayEl.setAttribute("aria-hidden", "true");
+              }
+              if (bdEl) bdEl.classList.remove("open");
+              return;
+            }
+            case "admin-logout": {
+              if (!confirm("Log out of the staff area?")) return;
+              clearAdminAuth();
+              ADMIN = null;
+              ADMIN_TAB = "general";
+              router();
               return;
             }
             case "admin-add": {
@@ -6385,6 +6608,23 @@
       });
 
       document.addEventListener("submit", handleFormSubmit);
+            document.addEventListener("submit", function (e) {
+        const lockForm = e.target.closest("#adminLockForm");
+        if (!lockForm) return;
+        e.preventDefault();
+        const input = document.getElementById("adminLockPass");
+        const msg = document.getElementById("adminLockMsg");
+        if (input && input.value.trim() === ADMIN_PASSWORD) {
+          setAdminAuthed();
+          router();
+        } else if (msg) {
+          msg.textContent = "Incorrect password. Please try again.";
+          if (input) {
+            input.value = "";
+            input.focus();
+          }
+        }
+      });
 
       /* ------------------------------------------------------------
    16. INIT
@@ -6411,9 +6651,17 @@
           .getElementById("drawerClose")
           .addEventListener("click", closeDrawer);
 
-        // Keyboard: ESC closes drawer
+          // Keyboard: ESC closes drawer + admin tray
         document.addEventListener("keydown", (e) => {
-          if (e.key === "Escape") closeDrawer();
+          if (e.key !== "Escape") return;
+          closeDrawer();
+          const tray = document.getElementById("adminTray");
+          const bd = document.getElementById("adminTrayBackdrop");
+          if (tray) {
+            tray.classList.remove("open");
+            tray.setAttribute("aria-hidden", "true");
+          }
+          if (bd) bd.classList.remove("open");
         });
 
         // Routing
